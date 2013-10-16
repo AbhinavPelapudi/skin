@@ -1,0 +1,63 @@
+/**/
+[class^="table"],
+[class*=" table"] {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+[class^="table"] a,
+[class*=" table"] a {
+  text-decoration: none;
+}
+[class^="table"] th,
+[class*=" table"] th,
+[class^="table"] td,
+[class*=" table"] td {
+  line-height: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+[class^="table"] th,
+[class*=" table"] th {
+  color: #777777;
+  background-color: #f7f7f7;
+  font-weight: bold;
+  border-bottom: 1px solid #eeeeee;
+}
+[class^="table"] th.table-sort,
+[class*=" table"] th.table-sort {
+  background-color: #ececec;
+}
+[class^="table"] > tfoot td,
+[class*=" table"] > tfoot td {
+  padding: 20px auto 10px;
+  border-top: 1px solid #eeeeee;
+}
+[class^="table"] .table-sort,
+[class*=" table"] .table-sort {
+  width: auto;
+  /*needed to override width from the "table-sort" inheritance*/
+  color: #333333;
+  background-color: #f4f4f4;
+}
+[class^="table"] > thead > tr,
+[class*=" table"] > thead > tr {
+  /*styling for non striped tables */
+
+  background-color: #f7f7f7;
+}
+.table-no-stripe td {
+  border-top: 1px solid #eeeeee;
+}
+.table-stripe > tbody > tr:nth-child(2n-1) {
+  background-color: #f7f7f7;
+}
+.table-stripe > tbody > tr:nth-child(2n-1) > td.table-sort {
+  background-color: #ececec;
+}
+.table-stripe > thead th {
+  background-color: #fff;
+}
+.table-stripe > thead th.table-sort {
+  background-color: #f4f4f4;
+}

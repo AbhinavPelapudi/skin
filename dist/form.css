@@ -1,0 +1,231 @@
+/**/
+.form > .form-input-text,
+.form > input[type=text],
+.form > input[type=password],
+.form > textarea {
+  padding: 9px 11px 6px 11px;
+  font-size: 14px;
+  min-width: 100px;
+  background: #fff;
+  box-shadow: inset 0 1px 2px 0 rgba(0, 0, 0, 0.15);
+  border: 1px solid #dddddd;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+.form > .form-input-text:focus,
+.form > input[type=text]:focus,
+.form > input[type=password]:focus,
+.form > textarea:focus {
+  border: 1px solid #aaaaaa;
+  border-radius: 2px;
+  outline: none;
+  transition: border 0.1s linear 0s, box-shadow 0.2s linear 0s;
+  background-color: #fefefe;
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #fefefe), color-stop(1, #fafafa));
+  background-image: -ms-linear-gradient(bottom, #fefefe, #fafafa);
+  background-image: -moz-linear-gradient(center bottom, #fefefe 0, #fafafa 100%);
+  background-image: -o-linear-gradient(#fafafa, #fefefe);
+  background-image: linear-gradient(to top, #fefefe, #fafafa);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fafafa', endColorstr='#fefefe', GradientType=0);
+}
+.form > input.form-error,
+.form > input.form-error:focus,
+.form > textarea.form-error,
+.form > textarea.error:focus {
+  border: 1px solid #dd1e31;
+}
+.form.large > .form-input-text,
+.form.large > input[type=text],
+.form.large > input[type=password],
+.form.large > textarea {
+  padding: 13px 15px 8px 15px;
+  font-size: 18px;
+}
+.form.small > .form-input-text,
+.form.small > input[type=text],
+.form.small > input[type=password],
+.form.small > textarea {
+  padding: 5px 8px 4px 8px;
+  font-size: 12px;
+}
+.form.disabled,
+.form .disabled {
+  opacity: 0.4;
+  cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+.lt-ie9 .form.disabled,
+.lt-ie9 .form .disabled {
+  color: #d5d5d5;
+}
+.form i {
+  display: inline-block;
+  background-image: url('http://p.ebaystatic.com/aw/cmp/ds3/skin_sprite2.png;');
+  margin: 0;
+  padding: 0;
+}
+.form input[type=radio],
+.form input[type=checkbox] {
+  display: none;
+}
+.form input[type=checkbox] + i {
+  height: 22px;
+  width: 22px;
+  background-position: -240px -207px;
+}
+.form input[type=checkbox].checked + i,
+.form input[type=checkbox]:checked + i {
+  background-position: -290px -207px;
+}
+.form input[type=radio] + i {
+  height: 21px;
+  width: 21px;
+  background-position: -168px -207px;
+}
+.form input[type=radio].checked + i,
+.form input[type=radio]:checked + i {
+  background-position: -216px -207px;
+}
+.form.large input[type=checkbox] + i {
+  height: 27px;
+  width: 27px;
+  background-position: -95px -265px;
+}
+.form.large input[type=checkbox].checked + i,
+.form.large input[type=checkbox]:checked + i {
+  background-position: -155px -265px;
+}
+.form.large input[type=radio] + i {
+  height: 27px;
+  width: 27px;
+  background-position: -2px -265px;
+}
+.form.large input[type=radio].checked + i,
+.form.large input[type=radio]:checked + i {
+  background-position: -64px -265px;
+}
+.form.small input[type=checkbox] + i {
+  height: 14px;
+  width: 14px;
+  background-position: -239px -270px;
+}
+.form.small input[type=checkbox].checked + i,
+.form.small input[type=checkbox]:checked + i {
+  background-position: -271px -270px;
+}
+.form.small input[type=radio] + i {
+  height: 14px;
+  width: 14px;
+  background-position: -186px -271px;
+}
+.form.small input[type=radio].checked + i,
+.form.small input[type=radio]:checked + i {
+  background-position: -219px -271px;
+}
+.form input[type=checkbox] + i:hover {
+  background-position: -265px -207px;
+}
+.form input[type=checkbox].checked + i:hover,
+.form input[type=checkbox]:checked + i:hover {
+  background-position: -375px -207px;
+}
+.form input[type=radio] + i:hover {
+  background-position: -192px -207px;
+}
+.form input[type=radio].checked + i:hover,
+.form input[type=radio]:checked + i:hover {
+  background-position: -316px -267px;
+}
+.form.disabled input[type=checkbox] + i:hover,
+.form .disabled input[type=checkbox] + i:hover {
+  background-position: -240px -207px;
+}
+.form.disabled input[type=checkbox].checked + i:hover,
+.form .disabled input[type=checkbox].checked + i:hover,
+.form.disabled input[type=checkbox]:checked + i:hover,
+.form .disabled input[type=checkbox]:checked + i:hover {
+  background-position: -290px -207px;
+}
+.form.disabled input[type=radio] + i:hover,
+.form .disabled input[type=radio] + i:hover {
+  background-position: -168px -207px;
+}
+.form.disabled input[type=radio].checked + i:hover,
+.form .disabled input[type=radio].checked + i:hover,
+.form.disabled input[type=radio]:checked + i:hover,
+.form .disabled input[type=radio]:checked + i:hover {
+  background-position: -216px -207px;
+}
+.form.large input[type=checkbox] + i:hover {
+  background-position: -125px -265px;
+}
+.form.large input[type=checkbox].checked + i:hover,
+.form.large input[type=checkbox]:checked + i:hover {
+  background-position: -352px -265px;
+}
+.form.large input[type=radio] + i:hover {
+  background-position: -33px -265px;
+}
+.form.large input[type=radio].checked + i:hover,
+.form.large input[type=radio]:checked + i:hover {
+  background-position: -287px -265px;
+}
+.form.large.disabled input[type=checkbox] + i:hover,
+.form.large .disabled input[type=checkbox] + i:hover {
+  background-position: -95px -265px;
+}
+.form.large.disabled input[type=checkbox].checked + i:hover,
+.form.large .disabled input[type=checkbox].checked + i:hover,
+.form.large.disabled input[type=checkbox]:checked + i:hover,
+.form.large .disabled input[type=checkbox]:checked + i:hover {
+  background-position: -155px -265px;
+}
+.form.large.disabled input[type=radio] + i:hover,
+.form.large .disabled input[type=radio] + i:hover {
+  background-position: -2px -265px;
+}
+.form.large.disabled input[type=radio].checked + i:hover,
+.form.large .disabled input[type=radio].checked + i:hover,
+.form.large.disabled input[type=radio]:checked + i:hover,
+.form.large .disabled input[type=radio]:checked + i:hover {
+  background-position: -64px -265px;
+}
+.form.small input[type=checkbox] + i:hover {
+  background-position: -255px -270px;
+}
+.form.small input[type=checkbox].checked + i:hover,
+.form.small input[type=checkbox]:checked + i:hover {
+  background-position: -382px -270px;
+}
+.form.small input[type=radio] + i:hover {
+  background-position: -203px -271px;
+}
+.form.small input[type=radio].checked + i:hover,
+.form.small input[type=radio]:checked + i:hover {
+  background-position: -338px -271px;
+}
+.form.small.disabled input[type=checkbox] + i:hover,
+.form.small .disabled input[type=checkbox] + i:hover {
+  background-position: -239px -270px;
+}
+.form.small.disabled input[type=checkbox].checked + i:hover,
+.form.small .disabled input[type=checkbox].checked + i:hover,
+.form.small.disabled input[type=checkbox]:checked + i:hover,
+.form.small .disabled input[type=checkbox]:checked + i:hover {
+  background-position: -271px -270px;
+}
+.form.small.disabled input[type=radio] + i:hover,
+.form.small .disabled input[type=radio] + i:hover {
+  background-position: -186px -271px;
+}
+.form.small.disabled input[type=radio].checked + i:hover,
+.form.small .disabled input[type=radio].checked + i:hover,
+.form.small.disabled input[type=radio]:checked + i:hover,
+.form.small .disabled input[type=radio]:checked + i:hover {
+  background-position: -219px -271px;
+}

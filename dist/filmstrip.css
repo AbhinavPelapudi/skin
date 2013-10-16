@@ -1,0 +1,55 @@
+/**/
+.filmstrip {
+  display: block;
+  position: relative;
+  z-index: 0;
+}
+.filmstrip ul {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+.filmstrip > ul > li {
+  list-style-type: none;
+  display: inline-block;
+}
+.filmstrip > ul > li.hide {
+  display: none;
+}
+.filmstrip > button {
+  vertical-align: top;
+  border: 1px solid transparent;
+  background-color: transparent;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  display: inline-block;
+  background-image: url('http://p.ebaystatic.com/aw/cmp/ds3/skin_sprite2.png;');
+  margin: 0;
+  padding: 0;
+  width: 13px;
+  height: 20px;
+  background-position: -35px -138px;
+}
+.filmstrip > button:first-child {
+  background-position: -1px -138px;
+}
+.filmstrip > button[disabled] {
+  background-position: -84px -138px;
+}
+.filmstrip > button[disabled]:first-child {
+  background-position: -67px -138px;
+}
+.filmstrip > button:hover {
+  border: 1px solid transparent;
+  background-position: -51px -138px;
+}
+.filmstrip > button:first-child:hover {
+  background-position: -17px -138px;
+}
+.filmstrip > button[disabled]:hover {
+  background-position: -84px -138px;
+}
+.filmstrip > button[disabled]:first-child:hover {
+  background-position: -67px -138px;
+}

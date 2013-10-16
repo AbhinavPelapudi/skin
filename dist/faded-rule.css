@@ -1,0 +1,38 @@
+/**/
+.hr-faded {
+  /* replaced .faded-rule */
+
+  display: block;
+  margin: 28px 0;
+  height: 1px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid #dddddd;
+  background: #777777;
+  width: 98%;
+  background: #c8c8c8;
+  /* Old browsers */
+
+  background: -moz-linear-gradient(left, rgba(200, 200, 200, 0.1) 0%, rgba(120, 120, 120, 0.5) 30%, rgba(120, 120, 120, 0.5) 65%, rgba(200, 200, 200, 0.1) 99%);
+  /* FF3.6+ */
+
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(200, 200, 200, 0.1)), color-stop(45%, rgba(120, 120, 120, 0.5)), color-stop(55%, rgba(120, 120, 120, 0.5)), color-stop(99%, rgba(200, 200, 200, 0.1)));
+  /* Chrome,Safari4+ */
+
+  background: -webkit-linear-gradient(left, rgba(200, 200, 200, 0.1) 0%, rgba(120, 120, 120, 0.5) 45%, rgba(120, 120, 120, 0.5) 55%, rgba(200, 200, 200, 0.1) 99%);
+  /* Chrome10+,Safari5.1+ */
+
+  background: -o-linear-gradient(left, rgba(200, 200, 200, 0.1) 0%, rgba(120, 120, 120, 0.5) 45%, rgba(120, 120, 120, 0.5) 55%, rgba(200, 200, 200, 0.1) 99%);
+  /* Opera 11.10+ */
+
+  background: -ms-linear-gradient(left, rgba(200, 200, 200, 0.1) 0%, rgba(120, 120, 120, 0.5) 45%, rgba(120, 120, 120, 0.5) 55%, rgba(200, 200, 200, 0.1) 99%);
+  /* IE10+ */
+
+  background: linear-gradient(left, rgba(200, 200, 200, 0.1) 0%, rgba(120, 120, 120, 0.5) 45%, rgba(120, 120, 120, 0.5) 55%, rgba(200, 200, 200, 0.1) 99%);
+  /* W3C */
+
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#dddddd', endColorstr='#dddddd', GradientType=1);
+  /* IE6-8 */
+
+}
