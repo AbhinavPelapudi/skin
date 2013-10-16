@@ -1,6 +1,6 @@
 {
     "name": "skin",
-    "description": "CSS modules for building e-commerce applications",
+    "description": "CSS modules designed by eBay to create an online store",
     "version": "0.0.1",
     "keywords": [
         "skin",
