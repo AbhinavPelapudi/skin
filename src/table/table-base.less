@@ -1,0 +1,55 @@
+@import "../core/variables.less";
+@import "../core/mixins.less";
+
+[class^="table"],
+[class*=" table"]{
+    width:              100%;
+    border-collapse:    collapse;
+    text-align:         left;
+    
+    a{
+        text-decoration: none;
+    }
+    
+    th,
+    td{
+        line-height:    40px;
+        padding-left:20px;
+        padding-right:20px;
+        
+    }
+
+    th{
+        color:              @tableGreyText; 
+        background-color:   @tableNoStripe;
+        font-weight:        bold;
+        border-bottom:     @borderTable; 
+
+        &.table-sort{
+            background-color: @tableNoStripeSort;
+        }
+    }
+
+    & > tfoot  td{
+        padding: 20px auto 10px;
+        border-top:     @borderTable;
+    }
+
+    .table-sort{
+        width:              auto; /*needed to override width from the "table-sort" inheritance*/       
+        color:              @greyDark;
+        background-color:   @tableStripe;
+    }
+
+    & > thead > tr{ /*styling for non striped tables */
+    background-color: @tableNoStripe;
+    }
+}
+
+.table-no-stripe{
+    td{
+       border-top:     @borderTable; 
+    }
+}
+
+

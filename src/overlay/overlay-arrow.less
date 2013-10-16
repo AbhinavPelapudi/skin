@@ -1,0 +1,39 @@
+@import "../core/variables.less";
+@import "../core/mixins.less";
+@import "overlay-mixins";
+
+//Dependent Modules
+//@import "overlay-base.less";
+//@import "overlay-arrow-ie.less";
+
+//These define the arrows for the regular sized overlay
+.overlay-left:after{
+  .overlay-arrow();
+}
+
+.overlay-top:after{
+  .overlay-arrow(24px,-13px,32px, auto, auto, 135deg);
+}
+
+.overlay-right:after{
+  .overlay-arrow(24px, 32px, auto, auto, -13px, 225deg);
+  .box-shadow(-9px 5px 7px rgba(0,0,0,.25));
+}
+
+.overlay-bottom{
+	&:after{
+  		.overlay-arrow(24px, auto, 30px, -13px, auto, -45deg);
+  		.box-shadow(-3px 9px 10px rgba(0,0,0,.15));
+  	}
+
+	&:before{
+		content:'';
+		position: absolute;
+		width: 52px;
+		height: 20px;
+		background-color: #fff;
+		bottom: 0;
+		left: 10px;
+		z-index:1;
+	}
+}

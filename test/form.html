@@ -1,0 +1,196 @@
+{{#extend "stylesheets"}}
+        <meta charset="utf-8" />
+        <link rel="stylesheet" type="text/css" href="/css/form/form.css">
+        <style type="text/css">
+        .form > input{
+          margin: 0 0 20px 0;
+          width: 240px;
+        }
+
+        .form.large > input{
+          width: 260px;
+        }
+
+        .form.small > input{
+          width: 220px;
+        }
+
+        .form span{
+          display: block;
+          margin-bottom:5px;
+        }
+
+        .form span > label{
+          display: inline-block;
+          position: relative;
+          top: -5px;
+        }
+
+        .form.small span > label{
+          top:-1px;
+        }
+
+      
+        </style>
+{{/extend}}
+
+<div class="form large">
+  <label>User ID</label>
+  <input type="password">   
+</div>
+
+<div class="form">
+  <label>User ID</label>
+  <input type="text">
+</div>
+
+<div class="form small">
+  <label>User ID</label>
+  <input type="text">
+</div>
+
+<div class="form disabled">
+  <label>User ID</label>
+  <input type="text" DISABLED>
+</div>          
+	
+<div class="form large">
+  <label>User ID</label>
+  <input type="text" placeholder="YESSIR">
+</div>
+
+<div class="form">
+  <label>User ID</label>
+  <input class= "form-error" type="text">
+</div>
+
+<div class="form">
+  <label>User ID</label>
+  <input type="text">
+  <input class="form-error" type="text">
+</div>
+<br>
+
+<div class="form large">
+    <label> Select something bro</label>
+    <span>
+      <input type="radio">
+      <i></i>
+      <label> Check it D00D</label>
+    </span>
+    <span>
+      <input type="radio" class="checked">
+      <i></i>
+      <label> Check it D00D</label>
+    </span>
+    <span>
+      <input type="checkbox">
+      <i></i>
+      <label> Check it D00D</label>
+    </span>
+    <span>
+      <input type="checkbox" class="checked">
+      <i></i>
+      <label> Check it D00D</label>
+    </span>
+</div>
+
+<div class="form">
+    <label> Select something bro</label>
+    <span>
+      <input type="radio">
+      <i></i>
+      <label> Check it D00D</label>
+    </span>
+    <span>
+      <input type="radio" class="checked">
+      <i></i>
+      <label> Check it D00D</label>
+    </span>
+    <span>
+      <input type="checkbox">
+      <i></i>
+      <label> Check it D00D</label>
+    </span>
+    <span>
+      <input type="checkbox" class="checked">
+      <i></i>
+      <label> Check it D00D</label>
+    </span>
+</div>
+
+<div class="form small">
+    <label> Select something bro</label>
+    <span>
+      <input type="radio">
+      <i></i>
+      <label> Check it D00D</label>
+    </span>
+    <span>
+      <input type="radio" class="checked">
+      <i></i>
+      <label> Check it D00D</label>
+    </span>
+    <span>
+      <input type="checkbox">
+      <i></i>
+      <label> Check it D00D</label>
+    </span>
+    <span>
+      <input type="checkbox" class="checked">
+      <i></i>
+      <label> Check it D00D</label>
+    </span>
+</div>
+
+<div class="form">
+    <label> Select something bro</label>
+    <span class="disabled">
+      <input type="radio">
+      <i></i>
+      <label> Check it D00D</label>
+    </span>
+    <span>
+      <input type="radio" class="checked">
+      <i></i>
+      <label> Check it D00D</label>
+    </span>
+    <span>
+      <input type="checkbox">
+      <i></i>
+      <label> Check it D00D</label>
+    </span>
+    <span class="disabled">
+      <input type="checkbox" class="checked">
+      <i></i>
+      <label> Check it D00D</label>
+    </span>
+</div>
+
+<div class="form disabled">
+    <label> Select something bro</label>
+    <span>
+      <input type="radio">
+      <i></i>
+      <label> Check it D00D</label>
+    </span>
+    <span>
+      <input type="radio" class="checked">
+      <i></i>
+      <label> Check it D00D</label>
+    </span>
+    <span>
+      <input type="checkbox">
+      <i></i>
+      <label> Check it D00D</label>
+    </span>
+    <span>
+      <input type="checkbox" class="checked">
+      <i></i>
+      <label> Check it D00D</label>
+    </span>
+</div>
+
+{{#extend "scripts"}}
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+{{/extend}}

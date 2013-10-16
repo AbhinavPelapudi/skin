@@ -1,0 +1,25 @@
+{{#extend "stylesheets"}}
+        <meta charset="utf-8" />
+        <link rel="stylesheet" type="text/css" href="/css/core/core.css">
+        <link rel="stylesheet" type="text/css" href="/css/pagination/pagination.css">
+        <link rel="stylesheet" type="text/css" href="/css/container/container.css">
+{{/extend}}
+
+<nav class="pagination">
+	<a rel="prev" hrev="#"></a>
+	<a href="#">1</a href="#">
+	<a class="current" href="#">2</a>
+	<a href="#">3</a>
+	<a rel="next" href="#" class="pagination-forward"></a>
+</nav>
+
+<nav class="pagination-alternate container">
+	<a href="#" class="current">10</a>
+	<a href="#">25</a>
+	<a href="#">100</a>
+</nav>
+
+
+{{#extend "scripts"}}
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+{{/extend}}

@@ -1,0 +1,28 @@
+@import "icon-mixins.less";
+
+//Dependent Modules
+//@import "icon-base.less";
+
+.icon-checkmark{
+	height: 11px;
+	width:  13px;
+	background-position: -317px -213px;
+}
+
+/* Icons without boxes
+------------------------------*/
+
+[class *= "icon-close"]{
+	.icon-close();
+}
+
+.icon-close{
+	.icon-close-mix();
+}
+
+.icon-close-hover{
+	.icon-close-hover-mix();
+}
+
+
+

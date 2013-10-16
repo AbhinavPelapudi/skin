@@ -1,0 +1,41 @@
+@import "../core/variables.less";
+@import "../core/mixins.less";
+
+.left-nav(@navFontWeight:normal; @navFontSize: 14px; @navColor: #333; @headingFontSize: 18px; @headingColor:#333; 
+	        @navPadding: 14px 0 14px 11px; @navBottomBorder: @borderGrey; @headingBottomBorder: none){
+	
+	padding-left: 0;
+	margin-bottom: 50px;
+
+	a{  
+		display:			block;
+		padding:			@navPadding;
+		border-bottom: 		@navBottomBorder;
+		font-size:			@navFontSize;
+		font-weight: 		@navFontWeight;
+		color:				@navColor;
+		text-decoration:	none;
+	}
+
+	a:visited{
+		color:				@navColor;
+	}
+
+	& > h3{
+		padding-left:	0;
+		border-bottom:	@headingBottomBorder;
+		margin-bottom: 	10px;
+		font-size:		@headingFontSize;
+		font-weight:	bold;
+		color:			@headingColor;	
+	}
+}
+
+.left-nav-expand-arrow(){
+	content: 		'';
+	position: 		relative;
+	display: 		inline-block;
+	vertical-align: middle;
+	top: 			-2px;
+	margin: 		0 7px 0 0;
+}

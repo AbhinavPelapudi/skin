@@ -1,0 +1,258 @@
+{{#extend "stylesheets"}}
+        <meta charset="utf-8" />
+        <link rel="stylesheet" type="text/css" href="/css/table/table.css">
+        <style type="text/css">
+          .container{
+            width: 900px;
+          }
+
+          td:last-child,
+          th:last-child{
+            font-weight:bold;
+            text-align:center;
+          }
+
+          tfoot td:last-child{
+            font-size: 18px;
+          }
+
+          tfoot td:nth-child(5){
+            font-size: 16px;
+          }
+        </style>
+{{/extend}}
+
+<div class="intro">
+    <h2>
+      Simple CSS for HTML Tables
+    </h2>
+  </div>
+
+
+  <div class="container">
+    <table class="table-stripe">
+      <thead>
+        <tr>
+          <th>Item title</th>
+          <th>Price</th>
+          <th>Qty</th>
+          <th>Shipping &amp; handling</th>
+          <th>Expected delivery</th>
+          <th>Total price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a href="#">iPhone 5 Black</a></td>
+          <td>$499.00</td>
+          <td>2</td>
+          <td>FedEx Express Saver</td>
+          <td>Apr 24th - Apr 25th</td>
+          <td>$988.00</td>
+        </tr>
+        <tr>
+          <td><a href="#">iPhone 5 White w/ cover</a></td>
+          <td>$519.99</td>
+          <td>2</td>
+          <td>FedEx Express Saver</td>
+          <td>Apr 24th - Apr 25th</td>
+          <td>$519.00</td>
+        </tr>
+        <tr>
+          <td><a href="#">iPhone 5 Black</a></td>
+          <td>$499</td>
+          <td>2</td>
+          <td>FedEx Express Saver</td>
+          <td>Apr 24th - Apr 25th</td>
+          <td>$988.00</td>
+        </tr>
+        <tr>
+          <td><a href="#">iPhone 5 White w/ cover</a></td>
+          <td>$519.99</td>
+          <td>2</td>
+          <td>FedEx Express Saver</td>
+          <td>Apr 24th - Apr 25th</td>
+          <td>$519.00</td>
+        </tr>
+        <tr>
+          <td><a href="#">iPhone 5 Black</a></td>
+          <td>$499</td>
+          <td>2</td>
+          <td>FedEx Express Saver</td>
+          <td>Apr 24th - Apr 25th</td>
+          <td>$988.00</td>
+        </tr>
+        <tr>
+          <td><a href="#">iPhone 5 White w/ cover</a></td>
+          <td>$519.99</td>
+          <td>2</td>
+          <td>FedEx Express Saver</td>
+          <td>Apr 24th - Apr 25th</td>
+          <td>$519.00</td>
+        </tr>
+      </tbody><tfoot>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>Shipping cost</td>
+          <td>$29.00</td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+
+  <div class="container table-container">
+    <table class="table-stripe">
+      <thead>
+        <tr>
+          <th>Item title</th>
+          <th>Price</th>
+          <th>Qty</th>
+          <th>Shipping &amp; handling</th>
+          <th>Expected delivery</th>
+          <th class="table-sort">Total price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a href="#">iPhone 5 Black</a></td>
+          <td>$499.00</td>
+          <td>2</td>
+          <td>FedEx Express Saver</td>
+          <td>Apr 24th - Apr 25th</td>
+          <td class="table-sort">$988.00</td>
+        </tr>
+        <tr>
+          <td><a href="#">iPhone 5 White w/ cover</a></td>
+          <td>$519.99</td>
+          <td>2</td>
+          <td>FedEx Express Saver</td>
+          <td>Apr 24th - Apr 25th</td>
+          <td class="table-sort">$519.00</td>
+        </tr>
+        <tr>
+          <td><a href="#">iPhone 5 Black</a></td>
+          <td>$499</td>
+          <td>2</td>
+          <td>FedEx Express Saver</td>
+          <td>Apr 24th - Apr 25th</td>
+          <td class="table-sort">$988.00</td>
+        </tr>
+        <tr>
+          <td><a href="#">iPhone 5 White w/ cover</a></td>
+          <td>$519.99</td>
+          <td>2</td>
+          <td>FedEx Express Saver</td>
+          <td>Apr 24th - Apr 25th</td>
+          <td class="table-sort">$519.00</td>
+        </tr>
+        <tr>
+          <td><a href="#">iPhone 5 Black</a></td>
+          <td>$499</td>
+          <td>2</td>
+          <td>FedEx Express Saver</td>
+          <td>Apr 24th - Apr 25th</td>
+          <td class="table-sort">$988.00</td>
+        </tr>
+        <tr>
+          <td><a href="#">iPhone 5 White w/ cover</a></td>
+          <td>$519.99</td>
+          <td>2</td>
+          <td>FedEx Express Saver</td>
+          <td>Apr 24th - Apr 25th</td>
+          <td class="table-sort">$519.00</td>
+        </tr>
+      </tbody><tfoot>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>Shipping cost</td>
+          <td>$29.00</td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+
+  <div class="container">
+    <table class="table-no-stripe">
+      <thead>
+        <tr>
+          <th>Item title</th>
+          <th>Price</th>
+          <th>Qty</th>
+          <th class="table-sort">Shipping &amp; handling</th>
+          <th>Expected delivery</th>
+          <th>Total price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a href="#">iPhone 5 Black</a></td>
+          <td>$499.00</td>
+          <td>2</td>
+          <td class="table-sort">FedEx Express Saver</td>
+          <td>Apr 24th - Apr 25th</td>
+          <td>$988.00</td>
+        </tr>
+        <tr>
+          <td><a href="#">iPhone 5 White w/ cover</a></td>
+          <td>$519.99</td>
+          <td>2</td>
+          <td class="table-sort">FedEx Express Saver</td>
+          <td>Apr 24th - Apr 25th</td>
+          <td>$519.00</td>
+        </tr>
+        <tr>
+          <td><a href="#">iPhone 5 Black</a></td>
+          <td>$499</td>
+          <td>2</td>
+          <td class="table-sort">FedEx Express Saver</td>
+          <td>Apr 24th - Apr 25th</td>
+          <td>$988.00</td>
+        </tr>
+        <tr>
+          <td><a href="#">iPhone 5 White w/ cover</a></td>
+          <td>$519.99</td>
+          <td>2</td>
+          <td class="table-sort">FedEx Express Saver</td>
+          <td>Apr 24th - Apr 25th</td>
+          <td>$519.00</td>
+        </tr>
+        <tr>
+          <td><a href="#">iPhone 5 Black</a></td>
+          <td>$499</td>
+          <td>2</td>
+          <td class="table-sort">FedEx Express Saver</td>
+          <td>Apr 24th - Apr 25th</td>
+          <td>$988.00</td>
+        </tr>
+        <tr>
+          <td><a href="#">iPhone 5 White w/ cover</a></td>
+          <td>$519.99</td>
+          <td>2</td>
+          <td class="table-sort">FedEx Express Saver</td>
+          <td>Apr 24th - Apr 25th</td>
+          <td>$519.00</td>
+        </tr>
+      </tbody><tfoot>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>Shipping cost</td>
+          <td>$29.00</td>
+        </tr>
+      </tfoot>
+      
+      </table>
+  </div>
+
+
+{{#extend "scripts"}}
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+{{/extend}}

@@ -1,0 +1,45 @@
+@import "../core/variables.less";
+@import "../core/mixins.less";
+@import "left-nav-mixins.less";
+@import "../icon/icon-mixins.less";
+
+[class *= " left-nav"],
+[class ^= "left-nav"]{
+	margin-left:	0;
+	width:			210px;
+	.left-nav();
+
+	&.left-nav-arrow{
+		& a:after{
+			content:	'';
+			float:		right;
+			margin-top: 2px;
+			.icon();
+			.icon-arrow-tiny-right-left();
+			.icon-arrow-tiny-right-disabled-mix();
+		}
+
+		& i{
+			display: none;
+		}
+	}
+
+	& ul{
+
+		padding:0;
+		margin:0;
+
+	 	& > li{
+			list-style-type:none
+		}
+	}
+}
+
+
+[class *= " left-nav"],
+[class ^= "left-nav"]{
+	ul > li:hover a{
+		color:@linkBlue;
+		text-decoration:underline;
+	}
+}

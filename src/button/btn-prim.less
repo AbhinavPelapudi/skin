@@ -1,0 +1,71 @@
+@import "../core/variables.less";
+@import "../core/mixins.less";
+@import "btn-mixins.less";
+//Dependent Modules
+//@import "btn-base.less";
+//@import "btn-disabled.less";
+
+.btn-prim,
+.dropdown-prim > a,
+.dropdown-prim > button{
+	color: 			#fff;
+	border: 		none;
+	background-color:@btnPrimStart;
+	.border-radius(3px);
+	.btn-color();
+
+	&:visited{
+		color: #fff;
+		text-decoration:none;
+	}
+}
+
+.btn-prim,
+.dropdown-prim > a,
+.dropdown-prim > button{
+	.btn-color-hover();
+}
+
+.btn-prim.disabled:hover,
+.dropdown-prim.disabled > a:hover,
+.dropdown-prim.disabled > button:hover{
+	.gradient(@btnPrimStart, @btnPrimStart, @btnPrimBkg);
+}
+
+.dropdown-prim.disabled > a:hover + a,
+.dropdown-prim.disabled > button:hover + button{
+	border-left: 1px solid @btnPrimSplitColorRGBA;    // split border color to 
+}
+
+.dropdown-prim.disabled > a + a:hover,
+.dropdown-prim.disabled > button + button:hover{
+	border-left: 1px solid @btnPrimSplitColorRGBA;    // split border color to 
+}
+
+
+
+.lt-ie9{
+
+	.dropdown-prim.disabled > a:hover + a,
+	.dropdown-prim.disabled > button:hover + button{
+		border-left: 1px solid @btnPrimSplitColorRGBA;    // split border color to 
+	}
+
+	.dropdown-prim.disabled > a + a:hover,
+	.dropdown-prim.disabled > button + button:hover{
+		border-left: 1px solid @btnPrimSplitColorRGBA;    // split border color to 
+	}
+
+
+	.dropdown-prim.disabled > a:first-child:hover,
+	.dropdown-prim.disabled > button:first-child:hover{
+		border-right: none;    
+	}	
+
+	.btn-prim,
+	.dropdown-prim > a,
+	.dropdown-prim > button{
+			.btn-ie-hover();
+	}
+}
+

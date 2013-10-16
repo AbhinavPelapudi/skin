@@ -1,0 +1,67 @@
+@import "../core/variables.less";
+@import "../core/mixins.less";
+
+//Dependent Modules
+//@import "tab-base.less";
+
+.tab-pad{
+	& > ul{
+		position: relative;
+		z-index:1;
+		width: auto;
+		.border-top-radius(2px);
+	
+		& > li{
+			padding: 15px 30px;
+			margin: 0;
+			border: 1px solid transparent;
+			background: transparent;
+			.box-shadow(none);
+
+			&:first-child{
+				margin:0;
+			}
+
+			& > a{
+				.font-define(16px, bold, @linkBlue, none);
+			}
+
+			&.active{
+				padding: 15px 30px;
+				border: @borderGrey;
+				border-bottom: 1px solid #fff;
+			}
+		}
+	}
+
+	& > div{
+		position:relative;
+		top: -1px;
+		border-top: @borderGrey;
+		z-index: 0;
+	}
+}
+
+.tab-pad{
+	& > ul > li{
+		&:hover{
+			.box-shadow(none);
+			border: @borderGrey;
+			border-bottom: 1px solid #ddd;
+		}
+
+		&.active:hover{
+			.box-shadow(none);
+			border-bottom: 1px solid #fff;
+
+			& a{
+				color:#333;
+
+				a:hover{
+				color:#333;
+				}
+			}
+		}
+
+	}
+}

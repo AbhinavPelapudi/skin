@@ -1,0 +1,126 @@
+@import "../core/variables.less";
+@import "../core/mixins.less";
+
+
+[class*=" tab"],
+[class^="tab"]{
+	position: relative;
+	z-index:0;
+
+	& > ul{
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		position:relative;
+		z-index:0;
+
+		& > li{
+		display: inline-block; 
+		margin: 0 -3px;
+		padding: 15px 0;
+		border: @borderGrey;
+		text-align: center;
+		background-color: @greyLightExtra;
+		.border-top-radius(2px);
+		.box-shadow(4px 4px 1px 0 rgba(0,0,0,.05));
+
+
+			& > a{
+				.font-define(12px, bold, @greyMedium, none);
+			}
+
+			&.active{
+				position:relative;
+				padding: 15px 0;
+				background-color: #fff;
+				border-bottom: 1px solid #fff;
+				z-index: 1;
+
+				& > a{
+					color: @greyDark;
+
+				}
+			}
+
+			&:first-child{
+				margin: 0 -3px 0 0;
+			}
+		}
+	}
+
+	& > div{
+		display:none;
+		background-color: #fff;
+		border: @borderGrey;
+		border-top: 1px solid #fff;
+		width: 100%;
+		.border-bottom-radius(2px);
+		.box-shadow(4px 4px 1px 0 rgba(0,0,0,.05));
+		padding: 5px 0;
+		margin: 0;
+		position:relative;
+		z-index:1;
+	}
+	& > div.active{
+		display:block;
+	}
+}
+
+[class*=" tab"],
+[class^="tab"]{
+	& > ul > li:hover{
+		background-color: #fff;
+		cursor:pointer;
+
+		& > a{
+			color: @linkBlue;
+		}
+
+		&.active{
+			.box-shadow(4px 4px 1px 0 rgba(0,0,0,.05));
+			cursor:default;
+			& > a{
+				color: @greyDark;
+
+				&:hover{
+					color: @greyDark;
+					cursor:default;
+				}
+			}
+		}	
+	}
+}
+
+[class*=" tab"],
+[class^="tab"]{
+
+}
+
+.tab-2{
+	& > ul > li{
+		width: 50%;
+	}
+}
+
+.tab-3{
+	& > ul > li{
+		width: 33.333%;
+
+	}
+}
+
+.tab-4{
+	& > ul > li{
+		width: 25%;
+
+	}
+}
+
+.tab-5{
+	& > ul > li{
+		width: 20%;
+
+	}
+}
+
+

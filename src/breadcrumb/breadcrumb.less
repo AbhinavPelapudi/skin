@@ -1,0 +1,75 @@
+@import "../core/variables.less";
+@import "../core/mixins.less";
+@import "../icon/icon-mixins.less";
+
+
+.breadcrumb{
+
+	& > a{
+		.font-define(12px, normal, @breadCrumbFontColor, none);
+
+		&:after{
+			content: '';
+			.icon();
+			.icon-carat-right-grey-light-mix();
+			.icon-carat-right-left();
+			margin: 0 9px;
+		}
+
+		&:visited{
+			color:#777;
+		}
+	}
+
+	& > a.breadcrumb-reverse{
+		margin:	0 25px 0 0;
+		color:	@breadCrumbReverseColor;
+
+		&:after{
+			display: none;
+		}
+
+		&:before{
+			content: '';
+			.icon();
+			.icon-carat-right-left();
+			.icon-carat-left-blue-mix();
+			margin: 0 7px 0 11px;
+		}
+	}
+
+	& > i{
+		display: none;
+
+		&.breadcrumb-reverse{
+			display:none;
+		}
+	}
+
+	& > span{
+		margin:  0;
+		padding: 0;
+		.font-define(12px, normal, @breadCrumbCurrentColor, none);
+	}
+}
+
+.breadcrumb{
+
+	a:hover{
+			color: @breadCrumbFontColor;
+			font-size:1000!important;
+	}
+
+	.breadcrumb-reverse:hover{
+			color:	@breadCrumbReverseColor;
+	}
+}
+
+
+
+
+
+
+
+
+

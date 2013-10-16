@@ -1,0 +1,209 @@
+@import "../core/variables.less";
+@import "../core/mixins.less";
+@import "../icon/icon-mixins.less";
+
+.form{
+    & i{
+        .icon();
+    }
+
+    & input[type=radio],
+    & input[type=checkbox]{
+        display:none;
+    }
+
+    & input[type=checkbox] + i{
+        .icon-check-medium();
+        .icon-check-medium-mix();
+    }
+
+    & input[type=checkbox].checked + i,
+    & input[type=checkbox]:checked + i{
+        .icon-check-medium-checked-mix();
+    }
+
+    & input[type=radio] + i{
+        .icon-radio-medium();
+        .icon-radio-medium-mix();
+    }
+
+    & input[type=radio].checked + i,
+    & input[type=radio]:checked + i{
+        .icon-radio-medium-checked-mix();
+    }
+
+    &.large{
+
+        & input[type=checkbox] + i{
+        .icon-check-large();
+        .icon-check-large-mix();
+        }
+
+        & input[type=checkbox].checked + i,
+        & input[type=checkbox]:checked + i{
+            .icon-check-large-checked-mix();
+        }
+
+        & input[type=radio] + i{
+            .icon-radio-large();
+            .icon-radio-large-mix();
+        }
+
+        & input[type=radio].checked + i,
+        & input[type=radio]:checked + i{
+            .icon-radio-large-checked-mix();
+        }
+    }
+
+    &.small{
+        & input[type=checkbox] + i{
+            .icon-check-small();
+            .icon-check-small-mix();
+        }
+
+        & input[type=checkbox].checked + i,
+        & input[type=checkbox]:checked + i{
+            .icon-check-small-checked-mix();
+        }
+
+        & input[type=radio] + i{
+            .icon-radio-small();
+            .icon-radio-small-mix();
+        }
+
+        & input[type=radio].checked + i,
+        & input[type=radio]:checked + i{
+            .icon-radio-small-checked-mix();
+        }
+    }
+
+}
+
+.form{
+    & input[type=checkbox] + i:hover{
+        .icon-check-medium-hover-mix();
+    }
+
+    & input[type=checkbox].checked + i:hover,
+    & input[type=checkbox]:checked + i:hover{
+        .icon-check-medium-checked-hover-mix();
+    }
+
+    & input[type=radio] + i:hover{
+        .icon-radio-medium-hover-mix();
+    }
+
+    & input[type=radio].checked + i:hover,
+    & input[type=radio]:checked + i:hover{
+        .icon-radio-medium-checked-hover-mix();
+    }
+
+    &.disabled,
+    & .disabled{
+        input[type=checkbox] + i:hover{
+                .icon-check-medium-mix();
+        }
+
+        & input[type=checkbox].checked + i:hover,
+        & input[type=checkbox]:checked + i:hover{
+                .icon-check-medium-checked-mix();
+        }
+
+        & input[type=radio] + i:hover{
+                .icon-radio-medium-mix();
+        }
+
+        & input[type=radio].checked + i:hover,
+        & input[type=radio]:checked + i:hover{
+                .icon-radio-medium-checked-mix();
+        }
+    }
+
+    &.large{
+
+        & input[type=checkbox] + i:hover{
+        .icon-check-large-hover-mix();
+        }
+
+        & input[type=checkbox].checked + i:hover,
+        & input[type=checkbox]:checked + i:hover{
+            .icon-check-large-checked-hover-mix();
+        }
+
+        & input[type=radio] + i:hover{
+            .icon-radio-large-hover-mix();
+        }
+
+        & input[type=radio].checked + i:hover,
+        & input[type=radio]:checked + i:hover{
+            .icon-radio-large-checked-hover-mix();
+        }
+
+        &.disabled,
+        & .disabled{
+            & input[type=checkbox] + i:hover{
+            .icon-check-large-mix();
+            }
+
+            & input[type=checkbox].checked + i:hover,
+            & input[type=checkbox]:checked + i:hover{
+                .icon-check-large-checked-mix();
+            }
+
+            & input[type=radio] + i:hover{
+                .icon-radio-large-mix();
+            }
+
+            & input[type=radio].checked + i:hover,
+            & input[type=radio]:checked + i:hover{
+                .icon-radio-large-checked-mix();
+            }
+        }
+    }
+
+    &.small{
+        & input[type=checkbox] + i:hover{
+        .icon-check-small-hover-mix();
+        }
+
+        & input[type=checkbox].checked + i:hover,
+        & input[type=checkbox]:checked + i:hover{
+            .icon-check-small-checked-hover-mix();
+        }
+
+        & input[type=radio] + i:hover{
+            .icon-radio-small-hover-mix();
+        }
+
+        & input[type=radio].checked + i:hover,
+        & input[type=radio]:checked + i:hover{
+            .icon-radio-small-checked-hover-mix();
+        }
+
+        &.disabled,
+        & .disabled{
+            & input[type=checkbox] + i:hover{
+            .icon-check-small-mix();
+            }
+
+            & input[type=checkbox].checked + i:hover,
+            & input[type=checkbox]:checked + i:hover{
+                .icon-check-small-checked-mix();
+            }
+
+            & input[type=radio] + i:hover{
+                .icon-radio-small-mix();
+            }
+
+            & input[type=radio].checked + i:hover,
+            & input[type=radio]:checked + i:hover{
+                .icon-radio-small-checked-mix();
+            }
+        }
+    }
+
+}
+
+
+
+

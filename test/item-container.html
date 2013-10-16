@@ -1,0 +1,154 @@
+{{#extend "stylesheets"}}
+        <meta charset="utf-8"/>
+        <!--[if lt IE 9]>
+    	<script src="components/html5shiv/html5shiv.js"></script>
+		<![endif]-->
+        <link rel="stylesheet" type="text/css" href="/css/item-box/item-box.css">
+        <link rel="stylesheet" type="text/css" href="/css/container/container.css">
+
+       
+
+
+
+        <style type="text/css">
+		    
+
+		    <!-- bug in chrome?? the first element doesn't get styled -->
+		    .fakeclass{}
+
+		    .large{
+		    	height: 500px;
+				width: 500px;
+		    }
+
+		    .medium{
+				height: 300px;
+				width: 300px;
+			}
+
+		    .small{
+		    	height:	200px;
+		    	width: 200px;
+		    }
+
+		    .tiny{
+				height: 150px;
+				width: 150px;
+		    }
+        </style>
+{{/extend}}
+
+<div style="position:relative; z-index:0;margin:10px; border: 1px solid #ddd; padding: 20px; background-color: #ffe">
+	<h2 style"width= 300px; display:inline-block">need to wrap item container in a div that creates a stacking index<h2>
+	<div class="item-box medium">
+		
+		<img src="http://thumbs1.ebaystatic.com/m/meb51zV3MrJ2N1oh7N30UrQ/140.jpg" alt="Item..."/>
+	</div>
+</div>
+<div class="container">
+	<figure class="item-box large">
+		
+		<img src="http://thumbs1.ebaystatic.com/m/meb51zV3MrJ2N1oh7N30UrQ/140.jpg" alt="Item..."/>
+	</figure>
+</div>
+<div class="container"> 
+	<figure class="item-box small">
+		<img src="http://thumbs1.ebaystatic.com/m/meb51zV3MrJ2N1oh7N30UrQ/140.jpg" alt="Item...">
+		
+	</figure>
+</div>
+<div class="container"> 
+	<figure class="item-box tiny">
+		
+		<img src="http://thumbs1.ebaystatic.com/m/meb51zV3MrJ2N1oh7N30UrQ/140.jpg" alt="Item...">
+	</figure>
+</div>
+<div class="container">
+	<figure class="item-box-green medium">
+		
+		<img src="http://thumbs1.ebaystatic.com/m/meb51zV3MrJ2N1oh7N30UrQ/140.jpg" alt="Item..."/>
+		<figcaption>purchased!</figcaption>
+	</figure>
+</div>
+<div class="container">
+	<div class="item-box-orange medium">
+		
+		<img src="http://thumbs1.ebaystatic.com/m/meb51zV3MrJ2N1oh7N30UrQ/140.jpg" alt="Item..."/>
+		<span>ending soon</span>
+	</div>
+</div>
+<div class="container">
+	<figure class="item-box-red medium">
+		
+		<img src="http://thumbs1.ebaystatic.com/m/meb51zV3MrJ2N1oh7N30UrQ/140.jpg" alt="Item..."/>
+		<span>outbid!</span>
+	</figure>
+</div>
+<div class="container">
+	<figure class="item-box-gray medium">
+		
+		<img src="http://thumbs1.ebaystatic.com/m/meb51zV3MrJ2N1oh7N30UrQ/140.jpg" alt="Item..."/>
+		<span>offer pending</span>
+	</figure>
+</div>
+<div class="container">
+	<figure class="item-box-black medium">
+		
+		<img src="http://thumbs1.ebaystatic.com/m/meb51zV3MrJ2N1oh7N30UrQ/140.jpg" alt="Item..."/>
+		<figcaption>ended</figcaption>
+	</figure>
+</div>
+<div class="container">
+	<figure class="item-box medium">
+		
+		<img src="http://thumbs1.ebaystatic.com/m/meb51zV3MrJ2N1oh7N30UrQ/140.jpg" alt="Item..."/>
+		<div class="corner-promo-green"><span>testing</span></div>
+	</figure>
+</div>
+<div class="container">
+	<figure class="item-box medium">
+		
+		<img src="http://thumbs1.ebaystatic.com/m/meb51zV3MrJ2N1oh7N30UrQ/140.jpg" alt="Item..."/>
+		<div class="corner-promo-orange"><span>testing</span></div>
+	</figure>
+</div>
+<div class="container">
+	<figure class="item-box large">
+		
+		<img src="http://thumbs1.ebaystatic.com/m/meb51zV3MrJ2N1oh7N30UrQ/140.jpg" alt="Item..."/>
+		<div class="corner-promo-green"><span>testing</span></div>
+	</figure>
+</div>
+<div class="container">
+	<figure class="item-box small">
+		
+		<img src="http://thumbs1.ebaystatic.com/m/meb51zV3MrJ2N1oh7N30UrQ/140.jpg" alt="Item..."/>
+		<div class="corner-promo-orange"><span>testing</span></div>
+	</figure>
+</div>
+<div class="container">
+	<figure class="item-box tiny">
+		
+		<img src="http://thumbs1.ebaystatic.com/m/meb51zV3MrJ2N1oh7N30UrQ/140.jpg" alt="Item..."/>
+		<div class="corner-promo-green"><span>testing</span></div>
+	</figure>
+</div>
+<div class="container">
+	<figure class="item-box-black medium">
+		
+		<img src="http://thumbs1.ebaystatic.com/m/meb51zV3MrJ2N1oh7N30UrQ/140.jpg" alt="Item..."/>
+		<div class="corner-promo-orange"><span>testing</span></div>
+		<figcaption>ended</figcaption>
+	</figure>
+</div>
+<div class="container">
+	<figure class="item-box medium item-box-stack">
+		
+		<img src="http://thumbs1.ebaystatic.com/m/meb51zV3MrJ2N1oh7N30UrQ/140.jpg" alt="Item..."/>
+	</figure>
+</div>
+
+
+{{#extend "scripts"}}
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+{{/extend}}

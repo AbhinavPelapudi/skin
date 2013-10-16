@@ -1,0 +1,208 @@
+/* ========================================
+   Utility Classes & Mixins
+   ======================================= */
+
+
+/*	CLEAR FIX - Mixin
+----------------------*/
+.clearfix {
+  *zoom: 1;
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+    // Fixes Opera/contenteditable bug:
+    // http://nicolasgallagher.com/micro-clearfix-hack/#comment-36952
+    line-height: 0;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+/*	CAPITALIZE - Mixin
+------------------*/
+.capitalize() { 
+	text-transform: capitalize;
+}
+
+/*	GENERAL
+------------------*/
+.hide {
+	display: none;
+}
+
+.hide-force {
+	display: none !important;
+}
+
+/* CSS image replacement
+-------------------------*/
+// Source: https://github.com/h5bp/html5-boilerplate/commit/aa0396eae757
+.hide-text {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+
+.show {
+	display: block;
+}
+
+.show-force {
+	display: block !important;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.center {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.block {
+	display: block;
+}
+
+.inline {
+	display: inline;
+}
+
+.inline-block {
+	display: inline-block;
+}
+
+.clear {
+	clear: both;
+}
+
+.float-row {
+	.clearfix();
+	& > div,
+	& > li{
+		.block();
+		.left();
+	}
+}
+
+.invisible {
+	visibility: hidden;
+}
+
+.relative {
+	position: relative;
+}
+
+.absolute {
+	position: absolute;
+}
+
+.fixed {
+	position: fixed;
+}
+
+.uppercase {
+	text-transform: uppercase;	
+}
+
+.pointer {
+	cursor: pointer;
+}
+
+.txt-center {
+	text-align: center;
+}
+
+.full-width {
+	width: 100%;
+}
+
+.split {
+	width: 50%;
+}
+
+.space-top {
+	margin-top: 10px;
+}
+
+.space-bottom {
+	margin-bottom: 10px;
+}
+
+.space-left {
+	margin-left: 10px;
+}
+
+.space-right {
+	margin-right: 10px;
+}
+
+.space-vertical {
+	.space-top();
+	.space-bottom();
+}
+
+.space-horizontal {
+	.space-left();
+	.space-right();
+}
+
+.pad-top {
+	padding-top: 10px;
+}
+
+.pad-bottom {
+	padding-bottom: 10px;
+}
+
+.pad-left {
+	padding-left: 10px;
+}
+
+.pad-right {
+	padding-right: 10px;
+}
+
+.pad-vertical {
+	.pad-top();
+	.pad-bottom();
+}
+
+.pad-horizontal {
+	.pad-left();
+	.pad-right();
+}
+
+.z-index {
+	z-index: 1;
+}
+
+.x-small {
+    font-size: .71em;
+    font-family: Verdana, Geneva, sans-serif;
+}
+
+.small {
+    font-size: .86em;
+}
+
+.medium {
+    font-size: 1em;
+} 
+
+.large {
+    font-size: 1.43em;
+}
+
+.x-large {
+    font-size: 2.57em;
+}
+

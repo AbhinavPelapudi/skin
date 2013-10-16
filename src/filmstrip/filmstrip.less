@@ -1,0 +1,77 @@
+@import "../core/variables.less";
+@import "../core/mixins.less";
+@import "../icon/icon-mixins.less";
+//Dependent Modules
+//@import "../item-box/item-box.less";
+
+.filmstrip{
+	display:block;
+	position:relative;
+	z-index:0;
+
+	ul{
+		display:inline-block;
+		margin:0;
+		padding:0;
+	}
+
+	& > ul > li{
+		list-style-type: none;
+		display: inline-block;
+	}
+
+
+	& > ul > li.hide{
+		display:none;
+	}
+
+	& > button{
+	vertical-align:		top;
+	border: 			1px solid transparent;
+	background-color:	transparent;
+
+	.border-radius(3px);
+	.icon();
+	.icon-arrow-large-left-right();
+	.icon-arrow-large-right-mix();
+
+		&:first-child{
+
+			.icon-arrow-large-left-mix();
+		}
+	}
+
+	& > button[disabled]{
+		.icon-arrow-large-right-disabled-mix();
+
+		&:first-child{
+			.icon-arrow-large-left-disabled-mix();
+		}
+	}
+}
+
+
+.filmstrip{
+	& > button{
+		
+		&:hover{
+			border: 				1px solid transparent;
+			.icon-arrow-large-right-hover-mix();
+		}
+
+		&:first-child:hover{
+				.icon-arrow-large-left-hover-mix();
+		}
+	}
+
+	& > button[disabled]{
+
+		&:hover{
+			.icon-arrow-large-right-disabled-mix();
+		}
+
+		&:first-child:hover{
+				.icon-arrow-large-left-disabled-mix();
+		}
+	}
+}

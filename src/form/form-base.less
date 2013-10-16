@@ -1,0 +1,66 @@
+@import "../core/variables.less";
+@import "../core/mixins.less";
+@import "form-mixins.less";
+
+.form{ 
+    & > .form-input-text,
+    & > input[type=text],
+    & > input[type=password], 
+    & > textarea{
+        .form-size(9px 11px 6px 11px, 14px);  
+
+        min-width:      100px;
+        background:     #fff;
+        box-shadow:     inset 0 1px 2px 0 rgba(0,0,0,0.15);
+        border:         @formBorder;
+        .border-radius(3px);
+    }
+
+    & > .form-input-text:focus,
+    & > input[type=text]:focus, 
+    & > input[type=password]:focus, 
+    & > textarea:focus{
+        border:         @formBorderFocus;
+        border-radius:  2px;
+        outline:        none;
+        transition:     border  0.1s linear 0s, box-shadow 0.2s linear 0s;
+        .gradient(@formGradientStart, @formGradientStart, @formGradientEnd);
+    }
+
+    & > input.form-error, 
+    & > input.form-error:focus,
+    & > textarea.form-error, 
+    & > textarea.error:focus{
+        border: @formBorderError;
+    }
+
+    &.large{
+        & > .form-input-text,
+        & > input[type=text],
+        & > input[type=password], 
+        & > textarea{
+            .form-size(13px 15px 8px 15px, 18px); 
+        }
+    }
+
+    &.small{
+        & > .form-input-text,
+        & > input[type=text],
+        & > input[type=password], 
+        & > textarea{
+            .form-size(5px 8px 4px 8px, 12px);
+        }
+    }
+
+    &.disabled,
+    .disabled{
+        opacity: 0.4;
+        cursor: default;
+        .user-select(none);
+    }
+}
+
+.lt-ie9 .form.disabled,
+.lt-ie9 .form .disabled{
+    color: #d5d5d5;
+}
