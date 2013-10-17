@@ -7,9 +7,9 @@
         "src",
         "test",
         "tools",
-        "*.md",
         ".gitignore",
-        "package.json",
-        "bower.json"
+        "*.md",
+        "*.json",
+        "**/*.txt"
     ]
 }
