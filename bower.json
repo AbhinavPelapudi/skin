@@ -1,5 +1,15 @@
 {
     "name": "skin",
     "version": "0.0.1",
-    "main": "./dist/skin.css"
+    "main": "./dist/*",
+    "ignore": [
+        "**/.*",
+        "src",
+        "test",
+        "tools",
+        "*.md",
+        ".gitignore",
+        "package.json",
+        "bower.json"
+    ]
 }
