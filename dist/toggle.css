@@ -1,4 +1,5 @@
 /**/
+
 .toggle > button,
 .toggle > a {
   padding: 8px;
@@ -7,23 +8,25 @@
   font-weight: bold;
   color: #0654ba;
   text-decoration: none;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-  border: 1px solid #dddddd;
   background-color: #fefefe;
   background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #fefefe), color-stop(1, #fafafa));
   background-image: -ms-linear-gradient(bottom, #fefefe, #fafafa);
   background-image: -moz-linear-gradient(center bottom, #fefefe 0, #fafafa 100%);
   background-image: -o-linear-gradient(#fafafa, #fefefe);
   background-image: linear-gradient(to top, #fefefe, #fafafa);
+  border: 1px solid #dddddd;
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fafafa', endColorstr='#fefefe', GradientType=0);
   -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
-  -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
-  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
+     -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
+          box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
 }
+
 .toggle > button.active,
 .toggle > a.active {
+  color: #333;
   background-color: #e6e6e6;
   background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #e6e6e6), color-stop(1, #f2f2f2));
   background-image: -ms-linear-gradient(bottom, #e6e6e6, #f2f2f2);
@@ -32,21 +35,22 @@
   background-image: linear-gradient(to top, #e6e6e6, #f2f2f2);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f2f2f2', endColorstr='#e6e6e6', GradientType=0);
   -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.65);
-  -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.65);
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.65);
-  color: #333;
+     -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.65);
+          box-shadow: 0 1px 0 rgba(255, 255, 255, 0.65);
 }
+
 .toggle > button:hover,
 .toggle > a:hover {
   border: 1px solid #aaa;
   -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
+     -moz-box-shadow: none;
+          box-shadow: none;
 }
+
 .toggle > button.active:hover,
 .toggle > a.active:hover {
   border: 1px solid #ddd;
   -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.65);
-  -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.65);
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.65);
+     -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.65);
+          box-shadow: 0 1px 0 rgba(255, 255, 255, 0.65);
 }

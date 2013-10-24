@@ -1,60 +1,71 @@
 /**/
+
 .breadcrumb > a {
   font-size: 12px;
   font-weight: normal;
   color: #777777;
   text-decoration: none;
 }
+
 .breadcrumb > a:after {
-  content: '';
   display: inline-block;
-  background-image: url('http://p.ebaystatic.com/aw/cmp/ds3/skin_sprite2.png;');
-  margin: 0;
-  padding: 0;
-  background-position: -263px -194px;
-  height: 8px;
   width: 5px;
+  height: 8px;
+  padding: 0;
+  margin: 0;
   margin: 0 9px;
+  background-image: url('http://p.ebaystatic.com/aw/cmp/ds3/skin_sprite2.png;');
+  background-position: -263px -194px;
+  content: '';
 }
+
 .breadcrumb > a:visited {
   color: #777;
 }
+
 .breadcrumb > a.breadcrumb-reverse {
   margin: 0 25px 0 0;
   color: #0654ba;
 }
+
 .breadcrumb > a.breadcrumb-reverse:after {
   display: none;
 }
+
 .breadcrumb > a.breadcrumb-reverse:before {
-  content: '';
   display: inline-block;
-  background-image: url('http://p.ebaystatic.com/aw/cmp/ds3/skin_sprite2.png;');
-  margin: 0;
-  padding: 0;
-  height: 8px;
   width: 5px;
-  background-position: -315px -171px;
+  height: 8px;
+  padding: 0;
+  margin: 0;
   margin: 0 7px 0 11px;
+  background-image: url('http://p.ebaystatic.com/aw/cmp/ds3/skin_sprite2.png;');
+  background-position: -315px -171px;
+  content: '';
 }
+
 .breadcrumb > i {
   display: none;
 }
+
 .breadcrumb > i.breadcrumb-reverse {
   display: none;
 }
+
 .breadcrumb > span {
-  margin: 0;
   padding: 0;
+  margin: 0;
   font-size: 12px;
   font-weight: normal;
   color: #333333;
   text-decoration: none;
 }
+
 .breadcrumb a:hover {
-  color: #777777;
   font-size: 1000!important;
+  color: #777777;
 }
+
 .breadcrumb .breadcrumb-reverse:hover {
   color: #0654ba;
 }

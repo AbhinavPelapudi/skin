@@ -1,142 +1,182 @@
 /**/
+
+/**/
+
 [class*=" icon"],
 [class^="icon"] {
   display: inline-block;
-  background-image: url('http://p.ebaystatic.com/aw/cmp/ds3/skin_sprite2.png;');
-  margin: 0;
   padding: 0;
+  margin: 0;
+  background-image: url('http://p.ebaystatic.com/aw/cmp/ds3/skin_sprite2.png;');
 }
+
 /* Member Badge Elements
 -------------------------*/
+
 [class*=" icon-star"],
 [class^="icon-star"] {
-  height: 12px;
   width: 12px;
+  height: 12px;
 }
+
 .icon-star-orange {
   background-position: -2px -325px;
 }
+
 .icon-star {
   background-position: -21px -325px;
 }
+
 .icon-star-light {
   background-position: -40px -325px;
 }
+
 .icon-star-purple {
   background-position: -59px -325px;
 }
+
 .icon-star-bronze {
   background-position: -78px -325px;
 }
+
 .icon-star-green {
   background-position: -97px -325px;
 }
+
 [class*="icon-shoot"] {
-  height: 21px;
   width: 21px;
+  height: 21px;
 }
+
 .icon-shoot-orange {
   background-position: -116px -325px;
 }
+
 .icon-shoot-light {
   background-position: -138px -325px;
 }
+
 .icon-shoot-purple {
   background-position: -160px -325px;
 }
+
 .icon-shoot-bronze {
   background-position: -182px -325px;
 }
+
 .icon-shoot-green {
   background-position: -204px -325px;
 }
+
 .icon-shoot-black {
   background-position: -227px -320px;
 }
+
 [class*=" icon-head"],
 [class^="icon-head"] {
-  height: 16px;
   width: 16px;
+  height: 16px;
 }
+
 .icon-head {
   background-position: -259px -323px;
 }
+
 .icon-head-purple {
   background-position: -283px -323px;
 }
+
 .icon-head-check {
   background-position: -308px -323px;
 }
+
 .icon-head-black {
   background-position: -2px -297px;
 }
+
 .icon-door {
-  height: 20px;
   width: 13px;
+  height: 20px;
   background-position: -31px -298px;
 }
+
 [class*=" icon-rating"],
 [class^="icon-rating"] {
   height: 17px;
 }
+
 .icon-rating-25 {
   width: 34px;
   background-position: -53px -297px;
 }
+
 .icon-rating-100 {
   width: 38px;
   background-position: -92px -297px;
 }
+
 .icon-rating-1k {
   width: 46px;
   background-position: -135px -297px;
 }
+
 .icon-rating-5k {
   width: 48px;
   background-position: -186px -297px;
 }
+
 .icon-rating-10k {
   width: 51px;
   background-position: -240px -297px;
 }
+
 .icon-trophy {
-  height: 23px;
   width: 20px;
+  height: 23px;
   background-position: -296px -297px;
 }
+
 .icon-ribon {
-  height: 19px;
   width: 14px;
+  height: 19px;
   background-position: -332px -158px;
 }
+
 [class*=" icon-medal"],
 [class^="icon-medal"] {
-  height: 15px;
   width: 15px;
+  height: 15px;
 }
+
 .icon-medal {
   background-position: -351px -159px;
 }
+
 .icon-medal-silver {
   background-position: -368px -159px;
 }
+
 .member-badge {
   display: inline-block;
 }
+
 .member-badge > a {
-  cursor: pointer;
   margin: 0;
+  cursor: pointer;
 }
+
 .member-badge > a + i {
   margin: 0;
 }
+
 .member-badge > span {
+  margin: 0 5px 0 0;
   font-size: 14px;
   font-weight: normal;
   color: #777777;
   text-decoration: none;
-  margin: 0 5px 0 0;
 }
+
 .member-badge > i {
   margin: 0 5px 0 0;
 }

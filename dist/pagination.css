@@ -1,117 +1,131 @@
 /**/
+
 .pagination > [rel="next"],
 .pagination > [rel="prev"] {
   position: relative;
-  vertical-align: top;
-  border: none;
   display: inline-block;
-  background-image: url('http://p.ebaystatic.com/aw/cmp/ds3/skin_sprite2.png;');
-  margin: 0;
-  padding: 0;
-  height: 36px;
   width: 37px;
+  height: 36px;
+  padding: 0;
+  margin: 0;
+  vertical-align: top;
+  background-image: url('http://p.ebaystatic.com/aw/cmp/ds3/skin_sprite2.png;');
   background-position: -3px -165px;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
+  border: none;
   -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  border-radius: 2px;
+     -moz-border-radius: 2px;
+          border-radius: 2px;
+  -webkit-box-shadow: none;
+     -moz-box-shadow: none;
+          box-shadow: none;
 }
+
 .pagination > [rel="prev"]:disabled {
   background-position: -167px -165px;
 }
+
 .pagination > [rel="next"] {
   background-position: -85px -165px;
 }
+
 .pagination > [rel="next"]:disabled {
   background-position: -208px -165px;
 }
+
 .pagination > a {
   display: inline-block;
+  width: 34px;
   height: 34px;
   line-height: 34px;
-  width: 34px;
-  border: 1px solid transparent;
-  text-align: center;
   color: #333;
+  text-align: center;
   text-decoration: none;
+  border: 1px solid transparent;
   -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
 }
+
 .pagination > a.current {
+  color: #333333;
+  text-decoration: none;
+  background-color: #fff;
   border: 1px solid #dddddd;
-  color: #333333;
-  background-color: #fff;
-  text-decoration: none;
   -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
   -webkit-transition: background-color 0.17s ease;
-  -moz-transition: background-color 0.17s ease;
-  -o-transition: background-color 0.17s ease;
-  transition: background-color 0.17s ease;
+     -moz-transition: background-color 0.17s ease;
+       -o-transition: background-color 0.17s ease;
+          transition: background-color 0.17s ease;
 }
+
 .pagination > [rel="prev"]:hover {
-  border: none;
   background-position: -43px -165px;
-  -webkit-transition: box-shadow 0.05s linear;
-  -moz-transition: box-shadow 0.05s linear;
-  -o-transition: box-shadow 0.05s linear;
-  transition: box-shadow 0.05s linear;
-}
-.pagination > [rel="next"]:hover {
   border: none;
-  background-position: -126px -165px;
   -webkit-transition: box-shadow 0.05s linear;
-  -moz-transition: box-shadow 0.05s linear;
-  -o-transition: box-shadow 0.05s linear;
-  transition: box-shadow 0.05s linear;
+     -moz-transition: box-shadow 0.05s linear;
+       -o-transition: box-shadow 0.05s linear;
+          transition: box-shadow 0.05s linear;
 }
+
+.pagination > [rel="next"]:hover {
+  background-position: -126px -165px;
+  border: none;
+  -webkit-transition: box-shadow 0.05s linear;
+     -moz-transition: box-shadow 0.05s linear;
+       -o-transition: box-shadow 0.05s linear;
+          transition: box-shadow 0.05s linear;
+}
+
 .pagination > a:hover {
-  border: 1px solid #c9dde9;
   color: #333333;
-  background-color: #fff;
   text-decoration: none;
+  background-color: #fff;
+  border: 1px solid #c9dde9;
   -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
   -webkit-transition: background-color 0.17s ease;
-  -moz-transition: background-color 0.17s ease;
-  -o-transition: background-color 0.17s ease;
-  transition: background-color 0.17s ease;
+     -moz-transition: background-color 0.17s ease;
+       -o-transition: background-color 0.17s ease;
+          transition: background-color 0.17s ease;
 }
+
 .pagination > a.current:hover {
-  user-select: none;
   cursor: default;
   border: 1px solid #dddddd;
+  user-select: none;
 }
+
 .pagination-alternate > a {
   display: inline-block;
+  width: 34px;
   height: 34px;
   line-height: 34px;
-  width: 34px;
   text-align: center;
   text-decoration: none;
   -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
 }
+
 .pagination-alternate > a.current {
   color: #333333;
+  text-decoration: none;
+  cursor: default;
   background-color: #fff;
   border: 1px solid #c9dde9;
-  text-decoration: none;
-  cursor: default;
 }
+
 .pagination-alternate a:hover {
-  background-color: #c9dde9;
   text-decoration: none;
   cursor: pointer;
+  background-color: #c9dde9;
 }
+
 .pagination-alternate a.current:hover {
-  user-select: none;
   cursor: default;
   background-color: #ffffff;
+  user-select: none;
 }

@@ -1,4 +1,9 @@
 /**/
+
+/**/
+
+/**/
+
 .overlay,
 .overlay-left,
 .overlay-top,
@@ -11,9 +16,10 @@
   border: 1px solid #dddddd;
   border-radius: 3px;
   -webkit-box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.35);
-  -moz-box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.35);
-  box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.35);
+     -moz-box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.35);
+          box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.35);
 }
+
 .overlay > .overlay-close,
 .overlay-left > .overlay-close,
 .overlay-top > .overlay-close,
@@ -22,15 +28,124 @@
   position: absolute;
   top: 25px;
   right: 20px;
+  display: inline-block;
   width: 13px;
   height: 14px;
-  cursor: pointer;
-  display: inline-block;
-  background-image: url('http://p.ebaystatic.com/aw/cmp/ds3/skin_sprite2.png;');
-  margin: 0;
   padding: 0;
+  margin: 0;
+  cursor: pointer;
+  background-image: url('http://p.ebaystatic.com/aw/cmp/ds3/skin_sprite2.png;');
   background-position: -338px -213px;
 }
+
+.overlay > .overlay-close,
+.overlay-left > .overlay-close,
+.overlay-top > .overlay-close,
+.overlay-right > .overlay-close,
+.overlay-bottom > .overlay-close {
+  position: absolute;
+  top: 25px;
+  right: 20px;
+  display: inline-block;
+  width: 13px;
+  height: 14px;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  background-image: url('http://p.ebaystatic.com/aw/cmp/ds3/skin_sprite2.png;');
+  background-position: -338px -213px;
+}
+
+.overlay > .overlay-close,
+.overlay-left > .overlay-close,
+.overlay-top > .overlay-close,
+.overlay-right > .overlay-close,
+.overlay-bottom > .overlay-close {
+  position: absolute;
+  top: 25px;
+  right: 20px;
+  display: inline-block;
+  width: 13px;
+  height: 14px;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  background-image: url('http://p.ebaystatic.com/aw/cmp/ds3/skin_sprite2.png;');
+  background-position: -338px -213px;
+}
+
+.overlay > .overlay-close,
+.overlay-left > .overlay-close,
+.overlay-top > .overlay-close,
+.overlay-right > .overlay-close,
+.overlay-bottom > .overlay-close {
+  position: absolute;
+  top: 25px;
+  right: 20px;
+  display: inline-block;
+  width: 13px;
+  height: 14px;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  background-image: url('http://p.ebaystatic.com/aw/cmp/ds3/skin_sprite2.png;');
+  background-position: -338px -213px;
+}
+
+.overlay > .overlay-close,
+.overlay-left > .overlay-close,
+.overlay-top > .overlay-close,
+.overlay-right > .overlay-close,
+.overlay-bottom > .overlay-close {
+  position: absolute;
+  top: 25px;
+  right: 20px;
+  display: inline-block;
+  width: 13px;
+  height: 14px;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  background-image: url('http://p.ebaystatic.com/aw/cmp/ds3/skin_sprite2.png;');
+  background-position: -338px -213px;
+}
+
+.overlay > .overlay-close,
+.overlay-left > .overlay-close,
+.overlay-top > .overlay-close,
+.overlay-right > .overlay-close,
+.overlay-bottom > .overlay-close {
+  position: absolute;
+  top: 25px;
+  right: 20px;
+  display: inline-block;
+  width: 13px;
+  height: 14px;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  background-image: url('http://p.ebaystatic.com/aw/cmp/ds3/skin_sprite2.png;');
+  background-position: -338px -213px;
+}
+
+.overlay > .overlay-close,
+.overlay-left > .overlay-close,
+.overlay-top > .overlay-close,
+.overlay-right > .overlay-close,
+.overlay-bottom > .overlay-close {
+  position: absolute;
+  top: 25px;
+  right: 20px;
+  display: inline-block;
+  width: 13px;
+  height: 14px;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  background-image: url('http://p.ebaystatic.com/aw/cmp/ds3/skin_sprite2.png;');
+  background-position: -338px -213px;
+}
+
 .overlay > .overlay-close:hover,
 .overlay-left > .overlay-close:hover,
 .overlay-top > .overlay-close:hover,
@@ -38,206 +153,400 @@
 .overlay-bottom > .overlay-close:hover {
   background-position: -354px -213px;
 }
+
+.overlay > .overlay-close:hover,
+.overlay-left > .overlay-close:hover,
+.overlay-top > .overlay-close:hover,
+.overlay-right > .overlay-close:hover,
+.overlay-bottom > .overlay-close:hover {
+  background-position: -354px -213px;
+}
+
+.overlay > .overlay-close:hover,
+.overlay-left > .overlay-close:hover,
+.overlay-top > .overlay-close:hover,
+.overlay-right > .overlay-close:hover,
+.overlay-bottom > .overlay-close:hover {
+  background-position: -354px -213px;
+}
+
+.overlay > .overlay-close:hover,
+.overlay-left > .overlay-close:hover,
+.overlay-top > .overlay-close:hover,
+.overlay-right > .overlay-close:hover,
+.overlay-bottom > .overlay-close:hover {
+  background-position: -354px -213px;
+}
+
+.overlay > .overlay-close:hover,
+.overlay-left > .overlay-close:hover,
+.overlay-top > .overlay-close:hover,
+.overlay-right > .overlay-close:hover,
+.overlay-bottom > .overlay-close:hover {
+  background-position: -354px -213px;
+}
+
+.overlay > .overlay-close:hover,
+.overlay-left > .overlay-close:hover,
+.overlay-top > .overlay-close:hover,
+.overlay-right > .overlay-close:hover,
+.overlay-bottom > .overlay-close:hover {
+  background-position: -354px -213px;
+}
+
+.overlay > .overlay-close:hover,
+.overlay-left > .overlay-close:hover,
+.overlay-top > .overlay-close:hover,
+.overlay-right > .overlay-close:hover,
+.overlay-bottom > .overlay-close:hover {
+  background-position: -354px -213px;
+}
+
+/**/
+
+/**/
+
 .overlay-left:after {
-  content: '';
   position: absolute;
-  z-index: 0;
   top: 32px;
+  right: 0;
+  bottom: 0;
   left: -13px;
-  bottom: 0px;
-  right: 0px;
-  height: 24px;
+  z-index: 0;
   width: 24px;
-  border-left: 1px solid #dddddd;
-  border-bottom: 1px solid #dddddd;
-  border-right: 1px solid #fff;
-  border-top: 1px solid #fff;
+  height: 24px;
   background: #fff;
+  border-top: 1px solid #fff;
+  border-right: 1px solid #fff;
+  border-bottom: 1px solid #dddddd;
+  border-left: 1px solid #dddddd;
+  content: '';
   -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  transform: rotate(45deg);
+     -moz-transform: rotate(45deg);
+       -o-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
+
 .overlay-top:after {
-  content: '';
   position: absolute;
-  z-index: 0;
   top: -13px;
+  right: auto;
+  bottom: auto;
   left: 32px;
-  bottom: auto;
-  right: auto;
-  height: 24px;
+  z-index: 0;
   width: 24px;
-  border-left: 1px solid #dddddd;
-  border-bottom: 1px solid #dddddd;
-  border-right: 1px solid #fff;
-  border-top: 1px solid #fff;
+  height: 24px;
   background: #fff;
+  border-top: 1px solid #fff;
+  border-right: 1px solid #fff;
+  border-bottom: 1px solid #dddddd;
+  border-left: 1px solid #dddddd;
+  content: '';
   -webkit-transform: rotate(135deg);
-  -moz-transform: rotate(135deg);
-  -o-transform: rotate(135deg);
-  transform: rotate(135deg);
+     -moz-transform: rotate(135deg);
+       -o-transform: rotate(135deg);
+          transform: rotate(135deg);
 }
+
 .overlay-right:after {
-  content: '';
   position: absolute;
-  z-index: 0;
   top: 32px;
-  left: auto;
-  bottom: auto;
   right: -13px;
-  height: 24px;
-  width: 24px;
-  border-left: 1px solid #dddddd;
-  border-bottom: 1px solid #dddddd;
-  border-right: 1px solid #fff;
-  border-top: 1px solid #fff;
-  background: #fff;
-  -webkit-transform: rotate(225deg);
-  -moz-transform: rotate(225deg);
-  -o-transform: rotate(225deg);
-  transform: rotate(225deg);
-  -webkit-box-shadow: -9px 5px 7px rgba(0, 0, 0, 0.25);
-  -moz-box-shadow: -9px 5px 7px rgba(0, 0, 0, 0.25);
-  box-shadow: -9px 5px 7px rgba(0, 0, 0, 0.25);
-}
-.overlay-bottom:after {
-  content: '';
-  position: absolute;
+  bottom: auto;
+  left: auto;
   z-index: 0;
-  top: auto;
-  left: 30px;
-  bottom: -13px;
-  right: auto;
-  height: 24px;
   width: 24px;
-  border-left: 1px solid #dddddd;
-  border-bottom: 1px solid #dddddd;
-  border-right: 1px solid #fff;
-  border-top: 1px solid #fff;
+  height: 24px;
   background: #fff;
-  -webkit-transform: rotate(-45deg);
-  -moz-transform: rotate(-45deg);
-  -o-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-  -webkit-box-shadow: -3px 9px 10px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: -3px 9px 10px rgba(0, 0, 0, 0.15);
-  box-shadow: -3px 9px 10px rgba(0, 0, 0, 0.15);
-}
-.overlay-bottom:before {
+  border-top: 1px solid #fff;
+  border-right: 1px solid #fff;
+  border-bottom: 1px solid #dddddd;
+  border-left: 1px solid #dddddd;
   content: '';
+  -webkit-transform: rotate(225deg);
+     -moz-transform: rotate(225deg);
+       -o-transform: rotate(225deg);
+          transform: rotate(225deg);
+  -webkit-box-shadow: -9px 5px 7px rgba(0, 0, 0, 0.25);
+     -moz-box-shadow: -9px 5px 7px rgba(0, 0, 0, 0.25);
+          box-shadow: -9px 5px 7px rgba(0, 0, 0, 0.25);
+}
+
+.overlay-bottom:after {
   position: absolute;
-  width: 52px;
-  height: 20px;
-  background-color: #fff;
+  top: auto;
+  right: auto;
+  bottom: -13px;
+  left: 30px;
+  z-index: 0;
+  width: 24px;
+  height: 24px;
+  background: #fff;
+  border-top: 1px solid #fff;
+  border-right: 1px solid #fff;
+  border-bottom: 1px solid #dddddd;
+  border-left: 1px solid #dddddd;
+  content: '';
+  -webkit-transform: rotate(-45deg);
+     -moz-transform: rotate(-45deg);
+       -o-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  -webkit-box-shadow: -3px 9px 10px rgba(0, 0, 0, 0.15);
+     -moz-box-shadow: -3px 9px 10px rgba(0, 0, 0, 0.15);
+          box-shadow: -3px 9px 10px rgba(0, 0, 0, 0.15);
+}
+
+.overlay-bottom:before {
+  position: absolute;
   bottom: 0;
   left: 10px;
   z-index: 1;
+  width: 52px;
+  height: 20px;
+  background-color: #fff;
+  content: '';
 }
+
+/**/
+
 [class*=" overlay"].small > .overlay-close,
 [class^="overlay-"].small > .overlay-close {
   position: absolute;
   top: 15px;
   right: 15px;
+  display: inline-block;
   width: 13px;
   height: 14px;
-  cursor: pointer;
-  display: inline-block;
-  background-image: url('http://p.ebaystatic.com/aw/cmp/ds3/skin_sprite2.png;');
-  margin: 0;
   padding: 0;
+  margin: 0;
+  cursor: pointer;
+  background-image: url('http://p.ebaystatic.com/aw/cmp/ds3/skin_sprite2.png;');
   background-position: -338px -213px;
 }
+
+[class*=" overlay"].small > .overlay-close,
+[class^="overlay-"].small > .overlay-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  display: inline-block;
+  width: 13px;
+  height: 14px;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  background-image: url('http://p.ebaystatic.com/aw/cmp/ds3/skin_sprite2.png;');
+  background-position: -338px -213px;
+}
+
+[class*=" overlay"].small > .overlay-close,
+[class^="overlay-"].small > .overlay-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  display: inline-block;
+  width: 13px;
+  height: 14px;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  background-image: url('http://p.ebaystatic.com/aw/cmp/ds3/skin_sprite2.png;');
+  background-position: -338px -213px;
+}
+
+[class*=" overlay"].small > .overlay-close,
+[class^="overlay-"].small > .overlay-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  display: inline-block;
+  width: 13px;
+  height: 14px;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  background-image: url('http://p.ebaystatic.com/aw/cmp/ds3/skin_sprite2.png;');
+  background-position: -338px -213px;
+}
+
+[class*=" overlay"].small > .overlay-close,
+[class^="overlay-"].small > .overlay-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  display: inline-block;
+  width: 13px;
+  height: 14px;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  background-image: url('http://p.ebaystatic.com/aw/cmp/ds3/skin_sprite2.png;');
+  background-position: -338px -213px;
+}
+
+[class*=" overlay"].small > .overlay-close,
+[class^="overlay-"].small > .overlay-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  display: inline-block;
+  width: 13px;
+  height: 14px;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  background-image: url('http://p.ebaystatic.com/aw/cmp/ds3/skin_sprite2.png;');
+  background-position: -338px -213px;
+}
+
+[class*=" overlay"].small > .overlay-close,
+[class^="overlay-"].small > .overlay-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  display: inline-block;
+  width: 13px;
+  height: 14px;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  background-image: url('http://p.ebaystatic.com/aw/cmp/ds3/skin_sprite2.png;');
+  background-position: -338px -213px;
+}
+
 [class*=" overlay"].small > .overlay-close:hover,
 [class^="overlay-"].small > .overlay-close:hover {
   background-position: -354px -213px;
 }
+
+[class*=" overlay"].small > .overlay-close:hover,
+[class^="overlay-"].small > .overlay-close:hover {
+  background-position: -354px -213px;
+}
+
+[class*=" overlay"].small > .overlay-close:hover,
+[class^="overlay-"].small > .overlay-close:hover {
+  background-position: -354px -213px;
+}
+
+[class*=" overlay"].small > .overlay-close:hover,
+[class^="overlay-"].small > .overlay-close:hover {
+  background-position: -354px -213px;
+}
+
+[class*=" overlay"].small > .overlay-close:hover,
+[class^="overlay-"].small > .overlay-close:hover {
+  background-position: -354px -213px;
+}
+
+[class*=" overlay"].small > .overlay-close:hover,
+[class^="overlay-"].small > .overlay-close:hover {
+  background-position: -354px -213px;
+}
+
+[class*=" overlay"].small > .overlay-close:hover,
+[class^="overlay-"].small > .overlay-close:hover {
+  background-position: -354px -213px;
+}
+
+/**/
+
+/**/
+
 .overlay-left.small:after {
-  content: '';
   position: absolute;
-  z-index: 0;
   top: 18px;
+  right: auto;
+  bottom: auto;
   left: -8px;
-  bottom: auto;
-  right: auto;
-  height: 13px;
+  z-index: 0;
   width: 13px;
-  border-left: 1px solid #dddddd;
-  border-bottom: 1px solid #dddddd;
-  border-right: 1px solid #fff;
-  border-top: 1px solid #fff;
+  height: 13px;
   background: #fff;
+  border-top: 1px solid #fff;
+  border-right: 1px solid #fff;
+  border-bottom: 1px solid #dddddd;
+  border-left: 1px solid #dddddd;
+  content: '';
   -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  transform: rotate(45deg);
+     -moz-transform: rotate(45deg);
+       -o-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
+
 .overlay-top.small:after {
-  content: '';
   position: absolute;
-  z-index: 0;
   top: -8px;
-  left: 18px;
-  bottom: auto;
   right: auto;
-  height: 13px;
+  bottom: auto;
+  left: 18px;
+  z-index: 0;
   width: 13px;
-  border-left: 1px solid #dddddd;
-  border-bottom: 1px solid #dddddd;
-  border-right: 1px solid #fff;
-  border-top: 1px solid #fff;
+  height: 13px;
   background: #fff;
+  border-top: 1px solid #fff;
+  border-right: 1px solid #fff;
+  border-bottom: 1px solid #dddddd;
+  border-left: 1px solid #dddddd;
+  content: '';
   -webkit-transform: rotate(135deg);
-  -moz-transform: rotate(135deg);
-  -o-transform: rotate(135deg);
-  transform: rotate(135deg);
+     -moz-transform: rotate(135deg);
+       -o-transform: rotate(135deg);
+          transform: rotate(135deg);
 }
+
 .overlay-right.small:after {
-  content: '';
   position: absolute;
-  z-index: 0;
   top: 18px;
-  left: auto;
-  bottom: auto;
   right: -8px;
-  height: 13px;
-  width: 13px;
-  border-left: 1px solid #dddddd;
-  border-bottom: 1px solid #dddddd;
-  border-right: 1px solid #fff;
-  border-top: 1px solid #fff;
-  background: #fff;
-  -webkit-transform: rotate(225deg);
-  -moz-transform: rotate(225deg);
-  -o-transform: rotate(225deg);
-  transform: rotate(225deg);
-  -webkit-box-shadow: -3px 9px 10px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: -3px 9px 10px rgba(0, 0, 0, 0.15);
-  box-shadow: -3px 9px 10px rgba(0, 0, 0, 0.15);
-}
-.overlay-bottom.small:after {
-  content: '';
-  position: absolute;
+  bottom: auto;
+  left: auto;
   z-index: 0;
-  top: auto;
-  left: 18px;
-  bottom: -8px;
-  right: auto;
-  height: 13px;
   width: 13px;
-  border-left: 1px solid #dddddd;
-  border-bottom: 1px solid #dddddd;
-  border-right: 1px solid #fff;
-  border-top: 1px solid #fff;
+  height: 13px;
   background: #fff;
-  -webkit-transform: rotate(-45deg);
-  -moz-transform: rotate(-45deg);
-  -o-transform: rotate(-45deg);
-  transform: rotate(-45deg);
+  border-top: 1px solid #fff;
+  border-right: 1px solid #fff;
+  border-bottom: 1px solid #dddddd;
+  border-left: 1px solid #dddddd;
+  content: '';
+  -webkit-transform: rotate(225deg);
+     -moz-transform: rotate(225deg);
+       -o-transform: rotate(225deg);
+          transform: rotate(225deg);
   -webkit-box-shadow: -3px 9px 10px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: -3px 9px 10px rgba(0, 0, 0, 0.15);
-  box-shadow: -3px 9px 10px rgba(0, 0, 0, 0.15);
+     -moz-box-shadow: -3px 9px 10px rgba(0, 0, 0, 0.15);
+          box-shadow: -3px 9px 10px rgba(0, 0, 0, 0.15);
 }
+
+.overlay-bottom.small:after {
+  position: absolute;
+  top: auto;
+  right: auto;
+  bottom: -8px;
+  left: 18px;
+  z-index: 0;
+  width: 13px;
+  height: 13px;
+  background: #fff;
+  border-top: 1px solid #fff;
+  border-right: 1px solid #fff;
+  border-bottom: 1px solid #dddddd;
+  border-left: 1px solid #dddddd;
+  content: '';
+  -webkit-transform: rotate(-45deg);
+     -moz-transform: rotate(-45deg);
+       -o-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  -webkit-box-shadow: -3px 9px 10px rgba(0, 0, 0, 0.15);
+     -moz-box-shadow: -3px 9px 10px rgba(0, 0, 0, 0.15);
+          box-shadow: -3px 9px 10px rgba(0, 0, 0, 0.15);
+}
+
+/**/
+
+/**/
+
 .lt-ie9 .overlay-left:after,
 .lt-ie9 .overlay-top:after,
 .lt-ie9 .overlay-right:after,
@@ -246,247 +555,286 @@
 .lt-ie9 .overlay-top:before,
 .lt-ie9 .overlay-right:before,
 .lt-ie9 .overlay-bottom:before {
-  border-left: none;
-  border-right: none;
-  border-top: none;
-  border-bottom: none;
-  border-style: solid;
-  border-color: transparent;
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
-  transform: rotate(0deg);
-  background: none;
-  content: "";
-  height: 0;
-  width: 0;
   position: absolute;
+  width: 0;
+  height: 0;
   pointer-events: none;
+  background: none;
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+  border-left: none;
+  border-color: transparent;
+  border-style: solid;
+  content: "";
+  -webkit-transform: rotate(0deg);
+     -moz-transform: rotate(0deg);
+       -o-transform: rotate(0deg);
+          transform: rotate(0deg);
 }
+
 .lt-ie9 .overlay-left:after,
 .lt-ie9 .overlay-top:after,
 .lt-ie9 .overlay-right:after,
 .lt-ie9 .overlay-bottom:after {
-  border-width: 17px;
   top: 0;
   left: 0;
+  border-width: 17px;
 }
+
 .lt-ie9 .overlay-left:before,
 .lt-ie9 .overlay-top:before,
 .lt-ie9 .overlay-right:before,
 .lt-ie9 .overlay-bottom:before {
   border-width: 18px;
 }
+
 .lt-ie9 .overlay-top:before,
 .lt-ie9 .overlay-top:after {
   bottom: 100%;
 }
+
 .lt-ie9 .overlay-top:before {
+  left: 51px;
   margin-left: -18px;
   border-bottom-color: #dddddd;
-  left: 51px;
 }
+
 .lt-ie9 .overlay-top:after {
-  margin-left: -17px;
-  border-bottom-color: #fff;
   top: -33px;
   left: 51px;
+  margin-left: -17px;
+  border-bottom-color: #fff;
 }
+
 .lt-ie9 .overlay-right:before,
 .lt-ie9 .overlay-right:after {
   left: 100%;
 }
+
 .lt-ie9 .overlay-right:before {
   top: 50px;
   margin-top: -18px;
   border-left-color: #dddddd;
 }
+
 .lt-ie9 .overlay-right:after {
   top: 50px;
   margin-top: -17px;
   border-left-color: #fff;
 }
+
 .lt-ie9 .overlay-bottom:before,
 .lt-ie9 .overlay-bottom:after {
   top: 100%;
 }
+
 .lt-ie9 .overlay-bottom:before {
   left: 50px;
+  z-index: 0;
   margin-left: -18px;
   border-top-color: #dddddd;
-  z-index: 0;
 }
+
 .lt-ie9 .overlay-bottom:after {
   left: 50px;
   margin-left: -17px;
   border-top-color: #fff;
 }
+
 .lt-ie9 .overlay-left:before,
 .lt-ie9 .overlay-left:after {
   right: %100;
 }
+
 .lt-ie9 .overlay-left:before {
   top: 7px;
+  left: -36px;
   margin-top: 18px;
   border-right-color: #dddddd;
-  left: -36px;
 }
+
 .lt-ie9 .overlay-left:after {
   top: 9px;
+  left: -34px;
   margin-top: 17px;
   border-right-color: #fff;
-  left: -34px;
 }
+
 .lt-ie9 .small.overlay-left:after,
 .lt-ie9 .small.overlay-top:after,
 .lt-ie9 .small.overlay-right:after,
 .lt-ie9 .small.overlay-bottom:after {
   border-width: 10px;
 }
+
 .lt-ie9 .small.overlay-left:before,
 .lt-ie9 .small.overlay-top:before,
 .lt-ie9 .small.overlay-right:before,
 .lt-ie9 .small.overlay-bottom:before {
   border-width: 11px;
 }
+
 .lt-ie9 .small.overlay-top:before,
 .lt-ie9 .small.overlay-top:after {
   bottom: 100%;
 }
+
 .lt-ie9 .small.overlay-top:before {
+  left: 23px;
   margin-left: -11px;
   border-bottom-color: #dddddd;
-  left: 23px;
 }
+
 .lt-ie9 .small.overlay-top:after {
+  top: -20px;
+  left: 23px;
   margin-left: -10px;
   border-bottom-color: #fff;
-  left: 23px;
-  top: -20px;
 }
+
 .lt-ie9 .small.overlay-right:before,
 .lt-ie9 .small.overlay-right:after {
   left: 100%;
 }
+
 .lt-ie9 .small.overlay-right:before {
   top: 24px;
   margin-top: -11px;
   border-left-color: #dddddd;
 }
+
 .lt-ie9 .small.overlay-right:after {
   top: 24px;
   margin-top: -10px;
   border-left-color: #fff;
 }
+
 .lt-ie9 .small.overlay-bottom:before,
 .lt-ie9 .small.overlay-bottom:after {
   top: 100%;
 }
+
 .lt-ie9 .small.overlay-bottom:before {
   left: 23px;
   margin-left: -11px;
   border-top-color: #dddddd;
 }
+
 .lt-ie9 .small.overlay-bottom:after {
   left: 23px;
   margin-left: -10px;
   border-top-color: #fff;
 }
+
 .lt-ie9 .small.overlay-left:before,
 .lt-ie9 .small.overlay-left:after {
   right: %100;
 }
+
 .lt-ie9 .small.overlay-left:before {
   top: 7px;
+  left: -22px;
   margin-top: 11px;
   border-right-color: #dddddd;
-  left: -22px;
 }
+
 .lt-ie9 .small.overlay-left:after {
   top: 9px;
+  left: -20px;
   margin-top: 10px;
   border-right-color: #fff;
-  left: -20px;
 }
+
+/**/
+
+/**/
+
 .overlay-tour {
   width: 244px;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
   padding: 23px 23px 3px 23px;
   border-bottom: none;
+  -webkit-box-shadow: none;
+     -moz-box-shadow: none;
+          box-shadow: none;
 }
+
 .overlay-tour h2 {
+  padding: 0 0 24px 0;
   font-size: 22px;
   color: #424242;
-  padding: 0 0 24px 0;
 }
+
 .overlay-tour p {
+  padding: 0 0 22px 0;
   font-size: 12px;
   font-weight: normal;
   color: #424242;
-  padding: 0 0 22px 0;
 }
+
 .overlay-tour > .overlay-incut {
   position: absolute;
-  border-left: 1px solid #ddd;
-  border-top: 1px solid #ddd;
-  border-right: 1px solid #ddd;
   bottom: 0;
   left: 124px;
   width: 40px;
   height: 20px;
+  border-top: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  border-left: 1px solid #ddd;
   -webkit-border-top-right-radius: 20px;
-  -moz-border-radius-topright: 20px;
-  border-top-right-radius: 20px;
+          border-top-right-radius: 20px;
   -webkit-border-top-left-radius: 20px;
+          border-top-left-radius: 20px;
+  -moz-border-radius-topright: 20px;
   -moz-border-radius-topleft: 20px;
-  border-top-left-radius: 20px;
   -webkit-box-shadow: inset 8px 8px 10px rgba(0, 0, 0, 0.35);
-  -moz-box-shadow: inset 8px 8px 10px rgba(0, 0, 0, 0.35);
-  box-shadow: inset 8px 8px 10px rgba(0, 0, 0, 0.35);
+     -moz-box-shadow: inset 8px 8px 10px rgba(0, 0, 0, 0.35);
+          box-shadow: inset 8px 8px 10px rgba(0, 0, 0, 0.35);
 }
+
 .overlay-tour::before {
-  content: '';
+  position: absolute;
   bottom: -1px;
   left: 0;
-  position: absolute;
   z-index: -1;
   width: 123px;
   height: 100px;
   border: 1px solid #ddd;
   -webkit-border-bottom-right-radius: 3px;
-  -moz-border-radius-bottomright: 3px;
-  border-bottom-right-radius: 3px;
+          border-bottom-right-radius: 3px;
   -webkit-border-bottom-left-radius: 3px;
+          border-bottom-left-radius: 3px;
+  -moz-border-radius-bottomright: 3px;
   -moz-border-radius-bottomleft: 3px;
-  border-bottom-left-radius: 3px;
-  -webkit-box-shadow: 10px 8px 10px rgba(0, 0, 0, 0.35);
-  -moz-box-shadow: 10px 8px 10px rgba(0, 0, 0, 0.35);
-  box-shadow: 10px 8px 10px rgba(0, 0, 0, 0.35);
-}
-.overlay-tour::after {
   content: '';
-  bottom: 0;
-  right: 0;
+  -webkit-box-shadow: 10px 8px 10px rgba(0, 0, 0, 0.35);
+     -moz-box-shadow: 10px 8px 10px rgba(0, 0, 0, 0.35);
+          box-shadow: 10px 8px 10px rgba(0, 0, 0, 0.35);
+}
+
+.overlay-tour::after {
   position: absolute;
+  right: 0;
+  bottom: 0;
   z-index: -1;
   width: 128px;
-  border: 1px solid #ddd;
   height: 99%;
-  -webkit-border-bottom-right-radius: 3px;
-  -moz-border-radius-bottomright: 3px;
-  border-bottom-right-radius: 3px;
-  -webkit-border-bottom-left-radius: 3px;
-  -moz-border-radius-bottomleft: 3px;
-  border-bottom-left-radius: 3px;
+  border: 1px solid #ddd;
   -webkit-border-top-right-radius: 3px;
+          border-top-right-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+          border-bottom-right-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+          border-bottom-left-radius: 3px;
   -moz-border-radius-topright: 3px;
-  border-top-right-radius: 3px;
+  -moz-border-radius-bottomright: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  content: '';
   -webkit-box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.35);
-  -moz-box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.35);
-  box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.35);
+     -moz-box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.35);
+          box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.35);
 }
+
 .lt-ie9 .overlay-tour > .overlay-incut:before,
 .lt-ie9 .overlay-tour > .overlay-incut:after {
   display: none;
