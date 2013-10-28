@@ -1,15 +1,15 @@
 {
-    "name": "skin",
-    "version": "0.0.1",
-    "main": "./dist/*",
-    "ignore": [
-        "**/.*",
-        "src",
-        "test",
-        "tools",
-        ".gitignore",
-        "*.md",
-        "*.json",
-        "**/*.txt"
-    ]
+  "name": "skin",
+  "version": "0.0.1",
+  "main": "./dist/*",
+  "ignore": [
+    "**/.*",
+    "src",
+    "test",
+    "tools",
+    ".gitignore",
+    "*.md",
+    "*.json",
+    "**/*.txt"
+  ]
 }
