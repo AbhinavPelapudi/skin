@@ -42,7 +42,7 @@ module.exports = function(grunt) {
 			options: {
 				csslintrc: '.csslintrc'
 			},
-			src: ['dist/**/*.css']
+			src: ['dist/skin.css']
 		},
 
 		recess: {
