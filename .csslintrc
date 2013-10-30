@@ -1,4 +1,14 @@
 {
 	"regex-selectors": false,
-	"unqualified-attributes": false
+	"unqualified-attributes": false,
+	"unique-headings": false,
+	"overqualitfied-elements": false,
+	"adjoining-classes": false,
+	"gradients": false,
+	"duplicate-background-images": false,
+	"qualified-headings": false,
+	"box-model": false,
+	"star-property-hack": false,
+	"important": false,
+	"font-sizes": false
 }
