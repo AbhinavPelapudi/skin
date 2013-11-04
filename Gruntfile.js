@@ -19,6 +19,17 @@ module.exports = function(grunt) {
 				}
 			});
 			return files;
+		},
+		getLintList = function(dir) {
+			var files = [];
+			grunt.file.recurse(dir, function(abspath, rootdir, subdir, filename) {
+				// Add only CSS files
+				// Do not add if the file is skin.css or core.css
+				if(/\.css$/i.test(filename) && !/^skin\.css$|^core\.css$/i.test(filename)) {
+					files.push(abspath);
+				}
+			});
+			return files;
 		};
 
 	// Project configuration.
@@ -40,9 +51,22 @@ module.exports = function(grunt) {
 		// CSSlint configuration
 		csslint: {
 			options: {
-				csslintrc: '.csslintrc'
+				"csslintrc": ".csslintrc"
 			},
-			src: ['dist/skin.css']
+			core: { // This has normalize.css, adding options to prevent the associated linting errors
+				options: {
+					"outline-none": false,
+					"box-sizing": false,
+					"compatible-vendor-prefixes": false
+				},
+				src: ['dist/core.css']
+			},
+			all: {
+				options: {
+					"vendor-prefix": false // To allow firefox backword compatibility https://developer.mozilla.org/en-US/docs/Web/CSS/border-top-right-radius#Gecko
+				},
+				src: getLintList('dist')
+			}
 		},
 
 		recess: {
