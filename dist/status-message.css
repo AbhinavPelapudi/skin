@@ -54,7 +54,7 @@ https://github.com/eBay/skin/blob/master/LICENSE.txt"
   height: 42px;
   padding: 0;
   margin: 0;
-  background-image: url('http://p.ebaystatic.com/aw/cmp/ds3/skin_sprite2.png;');
+  background-image: url('http://p.ebaystatic.com/aw/cmp/ds3/skin_sprite2.png');
   background-position: -97px -90px;
   content: '';
 }

@@ -11,8 +11,6 @@ https://github.com/eBay/skin/blob/master/LICENSE.txt"
   width: 98%;
   height: 1px;
   margin: 28px 0;
-  background: #777777;
-  background: #c8c8c8;
   background: -moz-linear-gradient(left, rgba(200, 200, 200, 0.1) 0, rgba(120, 120, 120, 0.5) 30%, rgba(120, 120, 120, 0.5) 65%, rgba(200, 200, 200, 0.1) 99%);
   background: -webkit-gradient(linear, left top, right top, color-stop(0, rgba(200, 200, 200, 0.1)), color-stop(45%, rgba(120, 120, 120, 0.5)), color-stop(55%, rgba(120, 120, 120, 0.5)), color-stop(99%, rgba(200, 200, 200, 0.1)));
   background: -webkit-linear-gradient(left, rgba(200, 200, 200, 0.1) 0, rgba(120, 120, 120, 0.5) 45%, rgba(120, 120, 120, 0.5) 55%, rgba(200, 200, 200, 0.1) 99%);

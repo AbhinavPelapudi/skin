@@ -476,15 +476,10 @@ a:hover {
 /*	CLEAR FIX - Mixin
 ----------------------*/
 
-.clearfix {
-  *zoom: 1;
-}
-
 .clearfix:before,
 .clearfix:after {
   display: table;
-  line-height: 0;
-  content: "";
+  content: " ";
 }
 
 .clearfix:after {
@@ -553,15 +548,10 @@ a:hover {
   clear: both;
 }
 
-.float-row {
-  *zoom: 1;
-}
-
 .float-row:before,
 .float-row:after {
   display: table;
-  line-height: 0;
-  content: "";
+  content: " ";
 }
 
 .float-row:after {

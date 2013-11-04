@@ -31,6 +31,7 @@ https://github.com/eBay/skin/blob/master/LICENSE.txt"
   content: "";
   -webkit-transform: rotate(-4deg);
      -moz-transform: rotate(-4deg);
+      -ms-transform: rotate(-4deg);
        -o-transform: rotate(-4deg);
           transform: rotate(-4deg);
   -webkit-box-shadow: 0 15px 10px rgba(0, 0, 0, 0.25);
@@ -59,6 +60,7 @@ https://github.com/eBay/skin/blob/master/LICENSE.txt"
   left: 4px;
   -webkit-transform: rotate(-9deg);
      -moz-transform: rotate(-9deg);
+      -ms-transform: rotate(-9deg);
        -o-transform: rotate(-9deg);
           transform: rotate(-9deg);
 }
@@ -69,6 +71,7 @@ https://github.com/eBay/skin/blob/master/LICENSE.txt"
   left: 4px;
   -webkit-transform: rotate(-9deg);
      -moz-transform: rotate(-9deg);
+      -ms-transform: rotate(-9deg);
        -o-transform: rotate(-9deg);
           transform: rotate(-9deg);
 }
@@ -79,6 +82,7 @@ https://github.com/eBay/skin/blob/master/LICENSE.txt"
   left: 4px;
   -webkit-transform: rotate(-9deg);
      -moz-transform: rotate(-9deg);
+      -ms-transform: rotate(-9deg);
        -o-transform: rotate(-9deg);
           transform: rotate(-9deg);
 }
@@ -89,6 +93,7 @@ https://github.com/eBay/skin/blob/master/LICENSE.txt"
   left: 4px;
   -webkit-transform: rotate(-9deg);
      -moz-transform: rotate(-9deg);
+      -ms-transform: rotate(-9deg);
        -o-transform: rotate(-9deg);
           transform: rotate(-9deg);
 }
@@ -99,6 +104,7 @@ https://github.com/eBay/skin/blob/master/LICENSE.txt"
   left: 4px;
   -webkit-transform: rotate(-9deg);
      -moz-transform: rotate(-9deg);
+      -ms-transform: rotate(-9deg);
        -o-transform: rotate(-9deg);
           transform: rotate(-9deg);
 }
@@ -109,6 +115,7 @@ https://github.com/eBay/skin/blob/master/LICENSE.txt"
   left: 4px;
   -webkit-transform: rotate(-9deg);
      -moz-transform: rotate(-9deg);
+      -ms-transform: rotate(-9deg);
        -o-transform: rotate(-9deg);
           transform: rotate(-9deg);
 }
@@ -123,6 +130,7 @@ https://github.com/eBay/skin/blob/master/LICENSE.txt"
   left: 4px;
   -webkit-transform: rotate(-9deg);
      -moz-transform: rotate(-9deg);
+      -ms-transform: rotate(-9deg);
        -o-transform: rotate(-9deg);
           transform: rotate(-9deg);
 }
@@ -133,6 +141,7 @@ https://github.com/eBay/skin/blob/master/LICENSE.txt"
   left: 4px;
   -webkit-transform: rotate(-9deg);
      -moz-transform: rotate(-9deg);
+      -ms-transform: rotate(-9deg);
        -o-transform: rotate(-9deg);
           transform: rotate(-9deg);
 }
@@ -143,6 +152,7 @@ https://github.com/eBay/skin/blob/master/LICENSE.txt"
   left: 4px;
   -webkit-transform: rotate(-9deg);
      -moz-transform: rotate(-9deg);
+      -ms-transform: rotate(-9deg);
        -o-transform: rotate(-9deg);
           transform: rotate(-9deg);
 }
@@ -153,6 +163,7 @@ https://github.com/eBay/skin/blob/master/LICENSE.txt"
   left: 4px;
   -webkit-transform: rotate(-9deg);
      -moz-transform: rotate(-9deg);
+      -ms-transform: rotate(-9deg);
        -o-transform: rotate(-9deg);
           transform: rotate(-9deg);
 }
@@ -163,6 +174,7 @@ https://github.com/eBay/skin/blob/master/LICENSE.txt"
   left: 4px;
   -webkit-transform: rotate(-9deg);
      -moz-transform: rotate(-9deg);
+      -ms-transform: rotate(-9deg);
        -o-transform: rotate(-9deg);
           transform: rotate(-9deg);
 }
@@ -173,6 +185,7 @@ https://github.com/eBay/skin/blob/master/LICENSE.txt"
   left: 4px;
   -webkit-transform: rotate(-9deg);
      -moz-transform: rotate(-9deg);
+      -ms-transform: rotate(-9deg);
        -o-transform: rotate(-9deg);
           transform: rotate(-9deg);
 }
@@ -204,6 +217,7 @@ https://github.com/eBay/skin/blob/master/LICENSE.txt"
   background-color: #111;
   -webkit-transform: rotate(-40deg);
      -moz-transform: rotate(-40deg);
+      -ms-transform: rotate(-40deg);
        -o-transform: rotate(-40deg);
           transform: rotate(-40deg);
   -webkit-box-shadow: 0 4px 0 0 rgba(0, 0, 0, 0.05);
@@ -220,7 +234,7 @@ https://github.com/eBay/skin/blob/master/LICENSE.txt"
   display: inline-block;
   padding: 0;
   margin: 0;
-  background-image: url('http://p.ebaystatic.com/aw/cmp/ds3/skin_sprite2.png;');
+  background-image: url('http://p.ebaystatic.com/aw/cmp/ds3/skin_sprite2.png');
   content: '';
 }
 
@@ -400,6 +414,7 @@ html:not(.lt-ie9) .corner-promo-orange > span {
           border-radius: 3px;
   -webkit-transform: rotate(15deg);
      -moz-transform: rotate(15deg);
+      -ms-transform: rotate(15deg);
        -o-transform: rotate(15deg);
           transform: rotate(15deg);
 }
@@ -411,6 +426,7 @@ html:not(.lt-ie9) .corner-promo-orange > span {
   background: #fff;
   -webkit-transform: rotate(-4deg);
      -moz-transform: rotate(-4deg);
+      -ms-transform: rotate(-4deg);
        -o-transform: rotate(-4deg);
           transform: rotate(-4deg);
   -webkit-box-shadow: 0 8px 15px rgba(0, 0, 0, 0.25);
@@ -427,6 +443,7 @@ html:not(.lt-ie9) .corner-promo-orange > span {
   content: "";
   -webkit-transform: rotate(4deg);
      -moz-transform: rotate(4deg);
+      -ms-transform: rotate(4deg);
        -o-transform: rotate(4deg);
           transform: rotate(4deg);
 }

@@ -6,14 +6,10 @@
 /*	CLEAR FIX - Mixin
 ----------------------*/
 .clearfix {
-  *zoom: 1;
   &:before,
   &:after {
     display: table;
-    content: "";
-    // Fixes Opera/contenteditable bug:
-    // http://nicolasgallagher.com/micro-clearfix-hack/#comment-36952
-    line-height: 0;
+    content: " ";
   }
   &:after {
     clear: both;
@@ -22,7 +18,7 @@
 
 /*	CAPITALIZE - Mixin
 ------------------*/
-.capitalize() { 
+.capitalize() {
 	text-transform: capitalize;
 }
 
@@ -110,7 +106,7 @@
 }
 
 .uppercase {
-	text-transform: uppercase;	
+	text-transform: uppercase;
 }
 
 .pointer {
@@ -196,7 +192,7 @@
 
 .medium {
     font-size: 1em;
-} 
+}
 
 .large {
     font-size: 1.43em;

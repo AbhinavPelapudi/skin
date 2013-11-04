@@ -44,7 +44,7 @@ https://github.com/eBay/skin/blob/master/LICENSE.txt"
 
 [class^="table"] > tfoot td,
 [class*=" table"] > tfoot td {
-  padding: 20px auto 10px;
+  padding: 10px;
   border-top: 1px solid #eeeeee;
 }
 

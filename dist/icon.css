@@ -11,7 +11,7 @@ https://github.com/eBay/skin/blob/master/LICENSE.txt"
   display: inline-block;
   padding: 0;
   margin: 0;
-  background-image: url('http://p.ebaystatic.com/aw/cmp/ds3/skin_sprite2.png;');
+  background-image: url('http://p.ebaystatic.com/aw/cmp/ds3/skin_sprite2.png');
 }
 
 [class*="icon-arrow-small-left"],
@@ -495,7 +495,7 @@ https://github.com/eBay/skin/blob/master/LICENSE.txt"
   display: inline-block;
   padding: 0;
   margin: 0;
-  background-image: url('http://p.ebaystatic.com/aw/cmp/ds3/skin_sprite2.png;');
+  background-image: url('http://p.ebaystatic.com/aw/cmp/ds3/skin_sprite2.png');
 }
 
 /* Member Badge Elements

@@ -1,9 +1,12 @@
-.icon(){
-	display: 			inline-block;
-	background-image:	url('@{globalSprite}');
+.icon-no-display(){
+	background-image: url('@{globalSprite}');
 	margin: 0;
 	padding: 0;
+}
 
+.icon(){
+	display: inline-block;
+	.icon-no-display();
 }
 
 .icon-radio-large-mix(){

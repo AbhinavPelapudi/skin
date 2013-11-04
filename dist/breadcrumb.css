@@ -19,8 +19,9 @@ https://github.com/eBay/skin/blob/master/LICENSE.txt"
   height: 8px;
   padding: 0;
   margin: 0;
-  margin: 0 9px;
-  background-image: url('http://p.ebaystatic.com/aw/cmp/ds3/skin_sprite2.png;');
+  margin-right: 9px;
+  margin-left: 9px;
+  background-image: url('http://p.ebaystatic.com/aw/cmp/ds3/skin_sprite2.png');
   background-position: -263px -194px;
   content: '';
 }
@@ -44,8 +45,9 @@ https://github.com/eBay/skin/blob/master/LICENSE.txt"
   height: 8px;
   padding: 0;
   margin: 0;
-  margin: 0 7px 0 11px;
-  background-image: url('http://p.ebaystatic.com/aw/cmp/ds3/skin_sprite2.png;');
+  margin-right: 7px;
+  margin-left: 11px;
+  background-image: url('http://p.ebaystatic.com/aw/cmp/ds3/skin_sprite2.png');
   background-position: -315px -171px;
   content: '';
 }
