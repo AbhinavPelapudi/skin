@@ -1,29 +1,33 @@
-{{#extend "stylesheets"}}
+<!doctype html>
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
+	<head>
         <meta charset="utf-8" />
-        <link rel="stylesheet" type="text/css" href="/css/base/core.css">
-        <link rel="stylesheet" type="text/css" href="/css/button/btn.css">
+        <link rel="stylesheet" type="text/css" href="../dist/core.css">
+        <link rel="stylesheet" type="text/css" href="../dist/button.css">
         <style type="text/css">
-        [class*="dropdown"]{
-        	margin-bottom: 300px
-        }
+	        div[class *= "dropdown"]{
+	        	margin-bottom: 300px
+	        }
 
-        ul{
-        	width: 185px;
-        	right: 1px;
-        }
+	        ul{
+	        	width: 185px;
+	        	right: 1px;
+	        }
 
-        .large ul{
-        	width: 202px;
-        }
+	        .large ul{
+	        	width: 202px;
+	        }
 
-        .small ul{
-        	width: 137px;
-        }
+	        .small ul{
+	        	width: 137px;
+	        }
         </style>
-
-{{/extend}}
-
-
+    </head>
+    <body>
+<div class="no-touch">
 <h2>Buttons (using INPUT, BUTTON or A elements)</h2>
 <h3>Primary</h3>
 
@@ -33,396 +37,393 @@
 	<button class="btn-prim large">Buy It Now</button>
 	<br/><br/>
 	<a href="#" class="btn-prim small">Buy It Now</a>
-	
+
 </div>
 <br /><br /><br />
 <h3>Secondary</h3>
 <div>
 	<input class="btn-scnd" type="button" value="Add to Cart"/>
-	
+
 	<br /><br />
 	<button class="btn-scnd large">Add to Cart</button>
-	
+
 		<br /><br />
 	<a href="#" class="btn-scnd small">Add to Cart</a>
-	
+
 </div>
 <br /><br /><br />
 <h3>Tertiary</h3>
 <div>
 	<input class="btn-green" type="button" value="Compare"/>
-	
+
 	<br /><br />
 	<button class="btn-green large">Compare</button>
-	
+
 	<br /><br />
 	<a href="#" class="btn-green small">Compare</a>
-	
+
 </div>
 <br /><br /><br />
 <div>
-	<input class="btn" type="button" value="Confirm and Pay"/> 
-	
+	<input class="btn" type="button" value="Confirm and Pay"/>
+
 	<br /><br />
 	<button class="btn large">Confirm and Pay</button>
-	
+
 	<br /><br />
 	<a href="#" class="btn small">Confirm and Pay</a>
-	
+
 </div>
 <br /><br /><br />
 <h3>Disabled</h3>
 <div>
-	<input class="btn-prim disabled" type="button" value="Continue" disabled /> 
-	
+	<input class="btn-prim disabled" type="button" value="Continue" disabled />
+
 	<br /><br />
 	<button class="btn-scnd large disabled" disabled>Continue</button>
-	
+
 	<br /><br />
 	<a href="#" class="btn-green small disabled">Checkout</a>
-	
+
 </div>
 
 <h3>Split Buttons</h3>
 
-<div class="dropdown">    
+<div class="dropdown">
 	<button >Add to Watch list</button><button></button>
 	<ul>
 		<li>Stuff</li>
 		<li>Stuff</li>
 		<li>Stuff</li>
 		<li>Stuff</li>
-	</ul>	
+	</ul>
 </div>
-<div class="dropdown large">    
+<div class="dropdown large">
 	<button>Add to Watch list</button><button></button>
 	<ul>
 		<li>Stuff</li>
 		<li>Stuff</li>
 		<li>Stuff</li>
 		<li>Stuff</li>
-	</ul>	
+	</ul>
 </div>
-<div class="dropdown small">    
+<div class="dropdown small">
 	<button>Add to Watch list</button><button></button>
 	<ul>
 		<li>Stuff</li>
 		<li>Stuff</li>
 		<li>Stuff</li>
 		<li>Stuff</li>
-	</ul>	
+	</ul>
 </div>
 <br>
-<div class="dropdown-prim">    
+<div class="dropdown-prim">
 	<button>Add to Watch list</button><button></button>
 	<ul>
 		<li>Stuff</li>
 		<li>Stuff</li>
 		<li>Stuff</li>
 		<li>Stuff</li>
-	</ul>	
+	</ul>
 </div>
-<div class="dropdown-prim large">    
+<div class="dropdown-prim large">
 	<button>Add to Watch list</button><button></button>
 	<ul>
 		<li>Stuff</li>
 		<li>Stuff</li>
 		<li>Stuff</li>
 		<li>Stuff</li>
-	</ul>	
+	</ul>
 </div>
-<div class="dropdown-prim small">    
+<div class="dropdown-prim small">
 	<button>Add to Watch list</button><button></button>
 	<ul>
 		<li>Stuff</li>
 		<li>Stuff</li>
 		<li>Stuff</li>
 		<li>Stuff</li>
-	</ul>	
-</div>
-<br>
-<div class="dropdown-scnd">    
-	<button>Add to Watch list</button><button></button>
-	<ul>
-		<li>Stuff</li>
-		<li>Stuff</li>
-		<li>Stuff</li>
-		<li>Stuff</li>
-	</ul>	
-</div>
-<div class="dropdown-scnd large">    
-	<button>Add to Watch list</button><button></button>
-	<ul>
-		<li>Stuff</li>
-		<li>Stuff</li>
-		<li>Stuff</li>
-		<li>Stuff</li>
-	</ul>	
-</div>
-<div class="dropdown-scnd small">    
-	<button>Add to Watch list</button><button></button>
-	<ul>
-		<li>Stuff</li>
-		<li>Stuff</li>
-		<li>Stuff</li>
-		<li>Stuff</li>
-	</ul>	
+	</ul>
 </div>
 <br>
-<div class="dropdown open">    
+<div class="dropdown-scnd">
+	<button>Add to Watch list</button><button></button>
+	<ul>
+		<li>Stuff</li>
+		<li>Stuff</li>
+		<li>Stuff</li>
+		<li>Stuff</li>
+	</ul>
+</div>
+<div class="dropdown-scnd large">
+	<button>Add to Watch list</button><button></button>
+	<ul>
+		<li>Stuff</li>
+		<li>Stuff</li>
+		<li>Stuff</li>
+		<li>Stuff</li>
+	</ul>
+</div>
+<div class="dropdown-scnd small">
+	<button>Add to Watch list</button><button></button>
+	<ul>
+		<li>Stuff</li>
+		<li>Stuff</li>
+		<li>Stuff</li>
+		<li>Stuff</li>
+	</ul>
+</div>
+<br>
+<div class="dropdown open">
 	<button >Add to Watch list</button><button></button>
 	<ul>
 		<li>Stuff</li>
 		<li>Stuff</li>
 		<li>Stuff</li>
 		<li>Stuff</li>
-	</ul>	
+	</ul>
 </div>
-<div class="dropdown large open">    
+<div class="dropdown large open">
 	<button>Add to Watch list</button><button></button>
 	<ul>
 		<li>Stuff</li>
 		<li>Stuff</li>
 		<li>Stuff</li>
 		<li>Stuff</li>
-	</ul>	
+	</ul>
 </div>
-<div class="dropdown small open">    
+<div class="dropdown small open">
 	<button>Add to Watch list</button><button></button>
 	<ul>
 		<li>Stuff</li>
 		<li>Stuff</li>
 		<li>Stuff</li>
 		<li>Stuff</li>
-	</ul>	
+	</ul>
 </div>
 <br>
-<div class="dropdown-prim open">    
+<div class="dropdown-prim open">
 	<button>Add to Watch list</button><button></button>
 	<ul>
 		<li>Stuff</li>
 		<li>Stuff</li>
 		<li>Stuff</li>
 		<li>Stuff</li>
-	</ul>	
+	</ul>
 </div>
-<div class="dropdown-prim large open">    
+<div class="dropdown-prim large open">
 	<button>Add to Watch list</button><button></button>
 	<ul>
 		<li>Stuff</li>
 		<li>Stuff</li>
 		<li>Stuff</li>
 		<li>Stuff</li>
-	</ul>	
+	</ul>
 </div>
-<div class="dropdown-prim small open ">    
+<div class="dropdown-prim small open ">
 	<button>Add to Watch list</button><button></button>
 	<ul>
 		<li>Stuff</li>
 		<li>Stuff</li>
 		<li>Stuff</li>
 		<li>Stuff</li>
-	</ul>	
+	</ul>
 </div>
 <br>
-<div class="dropdown-scnd open">    
+<div class="dropdown-scnd open">
 	<button>Add to Watch list</button><button></button>
 	<ul>
 		<li>Stuff</li>
 		<li>Stuff</li>
 		<li>Stuff</li>
 		<li>Stuff</li>
-	</ul>	
+	</ul>
 </div>
-<div class="dropdown-scnd large open">    
+<div class="dropdown-scnd large open">
 	<button>Add to Watch list</button><button></button>
 	<ul>
 		<li>Stuff</li>
 		<li>Stuff</li>
 		<li>Stuff</li>
 		<li>Stuff</li>
-	</ul>	
+	</ul>
 </div>
-<div class="dropdown-scnd small open">    
+<div class="dropdown-scnd small open">
 	<button>Add to Watch list</button><button></button>
 	<ul>
 		<li>Stuff</li>
 		<li>Stuff</li>
 		<li>Stuff</li>
 		<li>Stuff</li>
-	</ul>	
+	</ul>
 </div>
 <br>
-<div class="dropdown-scnd disabled">    
+<div class="dropdown-scnd disabled">
 	<button class="disabled">Add to Watch list</button><button class="disabled"></button>
 	<ul>
 		<li>Stuff</li>
 		<li>Stuff</li>
 		<li>Stuff</li>
 		<li>Stuff</li>
-	</ul>	
+	</ul>
 </div>
-<div class="dropdown-scnd large disabled">    
+<div class="dropdown-scnd large disabled">
 	<button class="disabled">Add to Watch list</button><button class="disabled"></button>
 	<ul>
 		<li>Stuff</li>
 		<li>Stuff</li>
 		<li>Stuff</li>
 		<li>Stuff</li>
-	</ul>	
+	</ul>
 </div>
-<div class="dropdown-scnd small disabled">    
+<div class="dropdown-scnd small disabled">
 	<button class="disabled">Add to Watch list</button><button class="disabled"></button>
 	<ul>
 		<li>Stuff</li>
 		<li>Stuff</li>
 		<li>Stuff</li>
 		<li>Stuff</li>
-	</ul>	
-</div>
-<br>
-<div class="dropdown-prim disabled">    
-	<button class="disabled">Add to Watch list</button><button class="disabled"></button>
-	<ul>
-		<li>Stuff</li>
-		<li>Stuff</li>
-		<li>Stuff</li>
-		<li>Stuff</li>
-	</ul>	
-</div>
-<div class="dropdown-prim large disabled">    
-	<button class="disabled">Add to Watch list</button><button class="disabled"></button>
-	<ul>
-		<li>Stuff</li>
-		<li>Stuff</li>
-		<li>Stuff</li>
-		<li>Stuff</li>
-	</ul>	
-</div>
-<div class="dropdown-prim small disabled">    
-	<button class="disabled">Add to Watch list</button><button class="disabled"></button>
-	<ul>
-		<li>Stuff</li>
-		<li>Stuff</li>
-		<li>Stuff</li>
-		<li>Stuff</li>
-	</ul>	
+	</ul>
 </div>
 <br>
-<div class="dropdown disabled">    
+<div class="dropdown-prim disabled">
+	<button class="disabled">Add to Watch list</button><button class="disabled"></button>
+	<ul>
+		<li>Stuff</li>
+		<li>Stuff</li>
+		<li>Stuff</li>
+		<li>Stuff</li>
+	</ul>
+</div>
+<div class="dropdown-prim large disabled">
+	<button class="disabled">Add to Watch list</button><button class="disabled"></button>
+	<ul>
+		<li>Stuff</li>
+		<li>Stuff</li>
+		<li>Stuff</li>
+		<li>Stuff</li>
+	</ul>
+</div>
+<div class="dropdown-prim small disabled">
+	<button class="disabled">Add to Watch list</button><button class="disabled"></button>
+	<ul>
+		<li>Stuff</li>
+		<li>Stuff</li>
+		<li>Stuff</li>
+		<li>Stuff</li>
+	</ul>
+</div>
+<br>
+<div class="dropdown disabled">
 	<button>Add to Watch list</button><button></button>
 	<ul>
 		<li>Stuff</li>
 		<li>Stuff</li>
 		<li>Stuff</li>
 		<li>Stuff</li>
-	</ul>	
+	</ul>
 </div>
-<div class="dropdown large disabled">    
+<div class="dropdown large disabled">
 	<button>Add to Watch list</button><button></button>
 	<ul>
 		<li>Stuff</li>
 		<li>Stuff</li>
 		<li>Stuff</li>
 		<li>Stuff</li>
-	</ul>	
+	</ul>
 </div>
-<div class="dropdown small disabled">    
+<div class="dropdown small disabled">
 	<button>Add to Watch list</button><button class="disabled"></button>
 	<ul>
 		<li>Stuff</li>
 		<li>Stuff</li>
 		<li>Stuff</li>
 		<li>Stuff</li>
-	</ul>	
+	</ul>
 </div>
 <br>
-<div class="dropdown-no-split open">    
+<div class="dropdown-no-split open">
 	<button>Add to Watch list</button>
 	<ul>
 		<li>Stuff</li>
 		<li>Stuff</li>
 		<li>Stuff</li>
 		<li>Stuff</li>
-	</ul>	
+	</ul>
 </div>
-<div class="dropdown-no-split large open">    
+<div class="dropdown-no-split large open">
 	<button>Add to Watch list</button>
 	<ul>
 		<li>Stuff</li>
 		<li>Stuff</li>
 		<li>Stuff</li>
 		<li>Stuff</li>
-	</ul>	
+	</ul>
 </div>
-<div class="dropdown-no-split small open">    
+<div class="dropdown-no-split small open">
 	<button>Add to Watch list</button>
 	<ul>
 		<li>Stuff</li>
 		<li>Stuff</li>
 		<li>Stuff</li>
 		<li>Stuff</li>
-	</ul>	
+	</ul>
 </div>
 <br>
-<div class="dropdown-no-split dropdown-scnd open">    
+<div class="dropdown-no-split dropdown-scnd open">
 	<button>Add to Watch list</button>
 	<ul>
 		<li>Stuff</li>
 		<li>Stuff</li>
 		<li>Stuff</li>
 		<li>Stuff</li>
-	</ul>	
+	</ul>
 </div>
-<div class="dropdown-no-split dropdown-prim large open">    
+<div class="dropdown-no-split dropdown-prim large open">
 	<button>Add to Watch list</button>
 	<ul>
 		<li>Stuff</li>
 		<li>Stuff</li>
 		<li>Stuff</li>
 		<li>Stuff</li>
-	</ul>	
+	</ul>
 </div>
-<div class="dropdown-no-split small disabled">    
+<div class="dropdown-no-split small disabled">
 	<button>Add to Watch list</button>
 	<ul>
 		<li>Stuff</li>
 		<li>Stuff</li>
 		<li>Stuff</li>
 		<li>Stuff</li>
-	</ul>	
-</div>
-
-<div class="dropdown-no-split dropdown-scnd disabled">    
-	<button>Add to Watch list</button>
-	<ul>
-		<li>Stuff</li>
-		<li>Stuff</li>
-		<li>Stuff</li>
-		<li>Stuff</li>
-	</ul>	
-</div>
-<div class="dropdown-no-split dropdown-prim large disabled">    
-	<button>Add to Watch list</button>
-	<ul>
-		<li>Stuff</li>
-		<li>Stuff</li>
-		<li>Stuff</li>
-		<li>Stuff</li>
-	</ul>	
-</div>
-<div class="dropdown-no-split small disabled">    
-	<button>Add to Watch list</button>
-	<ul>
-		<li>Stuff</li>
-		<li>Stuff</li>
-		<li>Stuff</li>
-		<li>Stuff</li>
-	</ul>	
+	</ul>
 </div>
 
-
-
-{{#extend "scripts"}}
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-{{/extend}}
+<div class="dropdown-no-split dropdown-scnd disabled">
+	<button>Add to Watch list</button>
+	<ul>
+		<li>Stuff</li>
+		<li>Stuff</li>
+		<li>Stuff</li>
+		<li>Stuff</li>
+	</ul>
+</div>
+<div class="dropdown-no-split dropdown-prim large disabled">
+	<button>Add to Watch list</button>
+	<ul>
+		<li>Stuff</li>
+		<li>Stuff</li>
+		<li>Stuff</li>
+		<li>Stuff</li>
+	</ul>
+</div>
+<div class="dropdown-no-split small disabled">
+	<button>Add to Watch list</button>
+	<ul>
+		<li>Stuff</li>
+		<li>Stuff</li>
+		<li>Stuff</li>
+		<li>Stuff</li>
+	</ul>
+</div>
+</div>
+</body>
+</html>

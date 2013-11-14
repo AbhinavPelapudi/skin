@@ -1,11 +1,17 @@
-{{#extend "stylesheets"}}
+<!doctype html>
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
+	<head>
         <meta charset="utf-8" />
-        <link rel="stylesheet" type="text/css" href="/css/core/core.css">
-        <link rel="stylesheet" type="text/css" href="/css/left-nav/left-nav.css">
-        <link rel="stylesheet" type="text/css" href="/css/container/container.css">
-{{/extend}}
+        <link rel="stylesheet" type="text/css" href="../dist/core.css">
+        <link rel="stylesheet" type="text/css" href="../dist/left-nav.css">
+        <link rel="stylesheet" type="text/css" href="../dist/container.css">
+    </head>
+    <body>
 
-
+<div class="no-touch">
 <div class="container">
 	<nav class="left-nav-arrow">
 		<h3>categories</h3>
@@ -20,6 +26,7 @@
 		<li><a href="#">Tickets</a></li>
 		<li><a href="#">Classifieds</a></li>
 		<li><a href="#">Tickets</a></li>
+		</ul>
 	</nav>
 </div>
 
@@ -105,8 +112,9 @@
 				<li><a href="#"><em>Classifieds</em></a></li>
 				<li><a href="#">Tickets</a></li>
 			</ul>
-		</div>			
+		</div>
 	</nav>
+</div>
 
 <div class= "container nav-flyout">
 	<div>
@@ -134,6 +142,6 @@
 		</ul>
 	</div>
 </div>
-{{#extend "scripts"}}
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-{{/extend}}
+</div>
+</body>
+</html>

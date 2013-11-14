@@ -1,8 +1,13 @@
-{{#extend "stylesheets"}}
+<!doctype html>
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
+    <head>
         <meta charset="utf-8" />
-        <link rel="stylesheet" type="text/css" href="/css/core/core.css">
-        <link rel="stylesheet" type="text/css" href="/css/container/container.css">
-        <link rel="stylesheet" type="text/css" href="/css/overlay/overlay.css">
+        <link rel="stylesheet" type="text/css" href="../dist/core.css">
+        <link rel="stylesheet" type="text/css" href="../dist/container.css">
+        <link rel="stylesheet" type="text/css" href="../dist/overlay.css">
         <style type="text/css">
             [class*="overlay"]{
                 width: 460px;
@@ -16,9 +21,10 @@
                 width: 244px;
             }
         </style>
-{{/extend}}
+    </head>
+    <body>
 
-<body>
+<div class="no-touch">
         <div class="container">
         	<div class="overlay">
         		<h2>Place bid</h2>
@@ -110,10 +116,10 @@
             </div>
         </div>
 
-    <div class="container ltie9">
+    <div class="container lt-ie9">
             <h2>Below are overlays optimized for Internet Explorer</h2>
             <p> Internet explorer lacks support for box shadow stylings, and transformations. The following arrows are rendered not by CSS transformations as the ones above, but rather by expanding the borders of a box. Notice that these arrows do not cast a shadow.</p>
-        
+
 
         <div class="container">
             <div class="overlay-top">
@@ -197,8 +203,6 @@
             <i class="overlay-incut"></i>
         </div>
     </div>
-
-
-{{#extend "scripts"}}
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-{{/extend}}
+</div>
+</body>
+</html>

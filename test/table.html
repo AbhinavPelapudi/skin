@@ -1,6 +1,13 @@
-{{#extend "stylesheets"}}
+<!doctype html>
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
+  <head>
         <meta charset="utf-8" />
-        <link rel="stylesheet" type="text/css" href="/css/table/table.css">
+        <link rel="stylesheet" type="text/css" href="../dist/core.css">
+        <link rel="stylesheet" type="text/css" href="../dist/container.css">
+        <link rel="stylesheet" type="text/css" href="../dist/table.css">
         <style type="text/css">
           .container{
             width: 900px;
@@ -20,8 +27,8 @@
             font-size: 16px;
           }
         </style>
-{{/extend}}
-
+        </head>
+        <body>
 <div class="intro">
     <h2>
       Simple CSS for HTML Tables
@@ -248,11 +255,8 @@
           <td>$29.00</td>
         </tr>
       </tfoot>
-      
+
       </table>
   </div>
-
-
-{{#extend "scripts"}}
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-{{/extend}}
+  </body>
+</html>

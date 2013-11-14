@@ -1,25 +1,29 @@
-{{#extend "stylesheets"}}
+<!doctype html>
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
+	<head>
         <meta charset="utf-8" />
-        <link rel="stylesheet" type="text/css" href="/css/core/core.css">
-        <link rel="stylesheet" type="text/css" href="/css/pagination/pagination.css">
-        <link rel="stylesheet" type="text/css" href="/css/container/container.css">
-{{/extend}}
+        <link rel="stylesheet" type="text/css" href="../dist/core.css">
+        <link rel="stylesheet" type="text/css" href="../dist/pagination.css">
+        <link rel="stylesheet" type="text/css" href="../dist/container.css">
+    </head>
+    <body>
+<div class = "no-touch">
+	<nav class="pagination">
+		<a rel="prev" hrev="#"></a>
+		<a href="#">1</a href="#">
+		<a class="current" href="#">2</a>
+		<a href="#">3</a>
+		<a rel="next" href="#" class="pagination-forward"></a>
+	</nav>
 
-<nav class="pagination">
-	<a rel="prev" hrev="#"></a>
-	<a href="#">1</a href="#">
-	<a class="current" href="#">2</a>
-	<a href="#">3</a>
-	<a rel="next" href="#" class="pagination-forward"></a>
-</nav>
-
-<nav class="pagination-alternate container">
-	<a href="#" class="current">10</a>
-	<a href="#">25</a>
-	<a href="#">100</a>
-</nav>
-
-
-{{#extend "scripts"}}
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-{{/extend}}
+	<nav class="pagination-alternate container">
+		<a href="#" class="current">10</a>
+		<a href="#">25</a>
+		<a href="#">100</a>
+	</nav>
+</div>
+</body>
+</html>

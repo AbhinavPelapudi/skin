@@ -1,6 +1,12 @@
-{{#extend "stylesheets"}}
+<!doctype html>
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
+  <head>
         <meta charset="utf-8" />
-        <link rel="stylesheet" type="text/css" href="/css/form/form.css">
+        <link rel="stylesheet" type="text/css" href="../dist/form.css">
+        <link rel="stylesheet" type="text/css" href="../dist/core.css">
         <style type="text/css">
         .form > input{
           margin: 0 0 20px 0;
@@ -30,13 +36,14 @@
           top:-1px;
         }
 
-      
-        </style>
-{{/extend}}
 
+        </style>
+</head>
+<body>
+<div class="no-touch">
 <div class="form large">
   <label>User ID</label>
-  <input type="password">   
+  <input type="password">
 </div>
 
 <div class="form">
@@ -52,8 +59,8 @@
 <div class="form disabled">
   <label>User ID</label>
   <input type="text" DISABLED>
-</div>          
-	
+</div>
+
 <div class="form large">
   <label>User ID</label>
   <input type="text" placeholder="YESSIR">
@@ -190,7 +197,6 @@
       <label> Check it D00D</label>
     </span>
 </div>
-
-{{#extend "scripts"}}
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-{{/extend}}
+</div>
+</body>
+</html>

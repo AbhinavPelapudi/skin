@@ -1,8 +1,14 @@
-{{#extend "stylesheets"}}
+<!doctype html>
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
+    <head>
         <meta charset="utf-8" />
-        <link rel="stylesheet" type="text/css" href="/css/core/core.css">
+        <link rel="stylesheet" type="text/css" href="../dist/core.css">
 
-{{/extend}}
+    </head>
+    <body>
 
     <h1>Heading 1</h1>
     <h2>Heading 2</h2>
@@ -75,7 +81,7 @@
         </p>
 
         <h1>Embedded content</h1>
-        
+
         <h3>audio</h3>
 
         <audio controls></audio>
@@ -117,7 +123,7 @@
 
         <pre>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et me.</pre>
 
-        
+
 
         <h3>blockquote</h3>
 
@@ -321,8 +327,5 @@
                 <div><button type="submit">Submit (button)</button></div>
             </fieldset>
         </form>
-
-
-    {{#extend "scripts"}}
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-	{{/extend}}
+    </body>
+</html>

@@ -1,23 +1,31 @@
-{{#extend "stylesheets"}}
+<!doctype html>
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
+	<head>
         <meta charset="utf-8" />
-        <link rel="stylesheet" type="text/css" href="/css/core/core.css">
-        <link rel="stylesheet" type="text/css" href="/css/filmstrip/filmstrip.css">
-        <link rel="stylesheet" type="text/css" href="/css/item-box/item-box.css">
+        <link rel="stylesheet" type="text/css" href="../dist/core.css">
+        <link rel="stylesheet" type="text/css" href="../dist/filmstrip.css">
+        <link rel="stylesheet" type="text/css" href="../dist/item-box.css">
         <style type="text/css">
 
         .filmstrip.small{
-        	width: 1300px;
+        	width: 1000px;
         }
 
         .filmstrip{
-        	width: 2000px;
+        	width: 1000px;
         	margin:20px;
         }
 
-        .filmstrip.small > ul > li{
+        .filmstrip ul{
+        	width: 20000px;
+        }
+        .filmstrip.small ul > li{
 		padding: 	0px 22px;
 		width: 	152px;
-		margin: 	0px 22px;
+		margin: 	0;
 		}
 
 		.filmstrip ul > li{
@@ -83,12 +91,23 @@
 			top: 145px;
 		}
 
-        </style>
-{{/extend}}
+		.filmstrip > div {
+			width: 795px;
+			height: 350px;
+			display: inline-block;
+		}
 
+		.filmstrip > ul{
+			width: 2200px;
+		}
+
+        </style>
+    </head>
+<body>
 <div class="container">
 	<div class="filmstrip small">
 		<button></button>
+		<div>
 		<ul>
 			<li>
 				<figure class="item-box small">
@@ -101,12 +120,37 @@
 			<li>
 				<figure class="item-box small">
 					<img src="http://thumbs1.ebaystatic.com/m/meb51zV3MrJ2N1oh7N30UrQ/140.jpg" border="0" alt="Item..." />
-				</figure>	
+				</figure>
+				<a>Star Wars 1 Poster Weeeeeoll for you</a>
+				<p>$199.99</p>
+				<a>See Suggestions</a>
+			</li>
+			<li>
+				<figure class="item-box small">
+					<img src="http://thumbs1.ebaystatic.com/m/meb51zV3MrJ2N1oh7N30UrQ/140.jpg" border="0" alt="Item..." />
+				</figure>
+				<a>Star Wars 1 Poster Weeeeeoll for you</a>
+				<p>$199.99</p>
+				<a>See Suggestions</a>
+			</li>
+			<li>
+				<figure class="item-box small">
+					<img src="http://thumbs1.ebaystatic.com/m/meb51zV3MrJ2N1oh7N30UrQ/140.jpg" border="0" alt="Item..." />
+				</figure>
+				<a>Star Wars 1 Poster Weeeeeoll for you</a>
+				<p>$199.99</p>
+				<a>See Suggestions</a>
+			</li>
+			<li>
+				<figure class="item-box small">
+					<img src="http://thumbs1.ebaystatic.com/m/meb51zV3MrJ2N1oh7N30UrQ/140.jpg" border="0" alt="Item..." />
+				</figure>
 				<a>Star Wars 1 Poster Weeeeeoll for you</a>
 				<p>$199.99</p>
 				<a>See Suggestions</a>
 			</li>
 		</ul>
+		</div>
 		<button></button>
 	</div>
 </div>
@@ -115,11 +159,12 @@
 <div class="container">
 <div class="filmstrip">
 	<button disabled></button>
+	<div>
 	<ul>
 		<li class="show">
 			<figure class="item-box">
 				<img src="http://thumbs1.ebaystatic.com/m/meb51zV3MrJ2N1oh7N30UrQ/140.jpg" border="0" alt="Item..." />
-			</figure>	
+			</figure>
 			<a>Star Wars 1 Poster Weeeeeoll for you</a>
 			<p>$199.99</p>
 			<a>See Suggestions</a>
@@ -127,17 +172,55 @@
 		<li class="show">
 			<figure class="item-box">
 				<img src="http://thumbs1.ebaystatic.com/m/meb51zV3MrJ2N1oh7N30UrQ/140.jpg" border="0" alt="Item..." />
-			</figure>	
+			</figure>
+			<a>Star Wars 1 Poster Weeeeeoll for you</a>
+			<p>$199.99</p>
+			<a>See Suggestions</a>
+		</li>
+		<li class="show">
+			<figure class="item-box">
+				<img src="http://thumbs1.ebaystatic.com/m/meb51zV3MrJ2N1oh7N30UrQ/140.jpg" border="0" alt="Item..." />
+			</figure>
+			<a>Star Wars 1 Poster Weeeeeoll for you</a>
+			<p>$199.99</p>
+			<a>See Suggestions</a>
+		</li>
+		<li class="show">
+			<figure class="item-box">
+				<img src="http://thumbs1.ebaystatic.com/m/meb51zV3MrJ2N1oh7N30UrQ/140.jpg" border="0" alt="Item..." />
+			</figure>
+			<a>Star Wars 1 Poster Weeeeeoll for you</a>
+			<p>$199.99</p>
+			<a>See Suggestions</a>
+		</li>
+		<li class="show">
+			<figure class="item-box">
+				<img src="http://thumbs1.ebaystatic.com/m/meb51zV3MrJ2N1oh7N30UrQ/140.jpg" border="0" alt="Item..." />
+			</figure>
+			<a>Star Wars 1 Poster Weeeeeoll for you</a>
+			<p>$199.99</p>
+			<a>See Suggestions</a>
+		</li>
+		<li class="show">
+			<figure class="item-box">
+				<img src="http://thumbs1.ebaystatic.com/m/meb51zV3MrJ2N1oh7N30UrQ/140.jpg" border="0" alt="Item..." />
+			</figure>
+			<a>Star Wars 1 Poster Weeeeeoll for you</a>
+			<p>$199.99</p>
+			<a>See Suggestions</a>
+		</li>
+		<li class="show">
+			<figure class="item-box">
+				<img src="http://thumbs1.ebaystatic.com/m/meb51zV3MrJ2N1oh7N30UrQ/140.jpg" border="0" alt="Item..." />
+			</figure>
 			<a>Star Wars 1 Poster Weeeeeoll for you</a>
 			<p>$199.99</p>
 			<a>See Suggestions</a>
 		</li>
 	</ul>
+	</div>
 	<button></button>
-</ul>
 </div>
-
-
-{{#extend "scripts"}}
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-{{/extend}}
+</div>
+</body>
+</html>

@@ -1,6 +1,13 @@
-{{#extend "stylesheets"}}
+<!doctype html>
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
+	<head>
         <meta charset="utf-8" />
-        <link rel="stylesheet" type="text/css" href="/css/tab/tab.css">
+        <meta charset="utf-8" />
+        <link rel="stylesheet" type="text/css" href="../dist/core.css">
+        <link rel="stylesheet" type="text/css" href="../dist/tab.css">
         <style type="text/css">
         div.classthing{
         	width: 80%;
@@ -18,11 +25,13 @@
         .tab-vertical li a{
         		height: 35px;
 				line-height:35px;
-				
-        }  
-        
+
+        }
+
         </style>
-{{/extend}}
+    </head>
+    <body>
+<div class="no-touch">
 <div class="classthing">
 	<div class="tab-4">
 		<ul>
@@ -112,9 +121,6 @@
 		<div></div>
 	</div>
 </div>
-
-
-
-{{#extend "scripts"}}
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-{{/extend}}
+</div>
+</body>
+</html>

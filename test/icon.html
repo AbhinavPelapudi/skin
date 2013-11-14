@@ -1,13 +1,20 @@
-{{#extend "stylesheets"}}
+<!doctype html>
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
+	<head>
         <meta charset="utf-8" />
-        <link rel="stylesheet" type="text/css" href="/css/icon/icon.css">
+        <meta charset="utf-8" />
+        <link rel="stylesheet" type="text/css" href="../dist/icon.css">
         <style type="text/css">
         i{
         	margin: 5px;
         	display: inline-block;
         }
         </style>
-{{/extend}}
+        </head>
+        <body>
 <div style="background-color:#111">
 <i class="icon-carat-down-blue-dark"></i>
 <i class="icon-carat-down-blue"></i>
@@ -186,7 +193,5 @@
 <i class="icon-round-bottom-left"></i>
 <i class="icon-round-bottom-right"></i>
 </div>
-
-{{#extend "scripts"}}
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-{{/extend}}
+</body>
+</html>

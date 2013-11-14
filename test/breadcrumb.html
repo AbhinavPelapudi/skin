@@ -1,16 +1,23 @@
-{{#extend "stylesheets"}}
-        <meta charset="utf-8" />
-        <link rel="stylesheet" type="text/css" href="/css/breadcrumb/breadcrumb.css">
-        <link rel="stylesheet" type="text/css" href="/css/container/container.css">
-{{/extend}}
-
-<div class="container breadcrumb">
-	<a href="#" class="breadcrumb-reverse">Stuff Here</a>
-	<a href="#">Stuff Here</a>
-	<a href="#">Stuff Here</a>
-	<a href="#">Stuff Here</a>
-	<span>Stuff Here</span>
-</div>
-{{#extend "scripts"}}
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-{{/extend}}
+<!doctype html>
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
+	<head>
+		<meta charset="utf-8" />
+        <link rel="stylesheet" type="text/css" href="../dist/core.css">
+        <link rel="stylesheet" type="text/css" href="../dist/breadcrumb.css">
+        <link rel="stylesheet" type="text/css" href="../dist/container.css">
+    </head>
+  	<body>
+		<div class="no-touch">
+			<div class="container breadcrumb">
+				<a href="#" class="breadcrumb-reverse">Stuff Here</a>
+				<a href="#">Stuff Here</a>
+				<a href="#">Stuff Here</a>
+				<a href="#">Stuff Here</a>
+				<span>Stuff Here</span>
+			</div>
+		</div>
+	</body>
+</html>
