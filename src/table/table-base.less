@@ -1,11 +1,11 @@
 @import "../core/variables.less";
 @import "../core/mixins.less";
 
-[class^="table"],
-[class*=" table"]{
-    width:              100%;
-    border-collapse:    collapse;
-    text-align:         left;
+.table,
+[class *= "table-"]{
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
     
     a{
         text-decoration: none;
@@ -13,9 +13,9 @@
     
     th,
     td{
-        line-height:    40px;
-        padding-left:20px;
-        padding-right:20px;
+        line-height: 40px;
+        padding-left: 20px;
+        padding-right: 20px;
         
     }
 
@@ -32,13 +32,13 @@
 
     & > tfoot  td{
         padding: 10px;
-        border-top:     @borderTable;
+        border-top: @borderTable;
     }
 
     .table-sort{
-        width:              auto; /*needed to override width from the "table-sort" inheritance*/       
-        color:              @greyDark;
-        background-color:   @tableStripe;
+        width: auto; /*needed to override width from the "table-sort" inheritance*/       
+        color: @greyDark;
+        background-color: @tableStripe;
     }
 
     & > thead > tr{ /*styling for non striped tables */

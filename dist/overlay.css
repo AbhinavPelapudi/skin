@@ -152,59 +152,59 @@ https://github.com/eBay/skin/blob/master/LICENSE.txt"
   background-position: -338px -213px;
 }
 
-.overlay > .overlay-close:hover,
-.overlay-left > .overlay-close:hover,
-.overlay-top > .overlay-close:hover,
-.overlay-right > .overlay-close:hover,
-.overlay-bottom > .overlay-close:hover {
+.no-touch .overlay > .overlay-close:hover,
+.no-touch .overlay-left > .overlay-close:hover,
+.no-touch .overlay-top > .overlay-close:hover,
+.no-touch .overlay-right > .overlay-close:hover,
+.no-touch .overlay-bottom > .overlay-close:hover {
   background-position: -354px -213px;
 }
 
-.overlay > .overlay-close:hover,
-.overlay-left > .overlay-close:hover,
-.overlay-top > .overlay-close:hover,
-.overlay-right > .overlay-close:hover,
-.overlay-bottom > .overlay-close:hover {
+.no-touch .overlay > .overlay-close:hover,
+.no-touch .overlay-left > .overlay-close:hover,
+.no-touch .overlay-top > .overlay-close:hover,
+.no-touch .overlay-right > .overlay-close:hover,
+.no-touch .overlay-bottom > .overlay-close:hover {
   background-position: -354px -213px;
 }
 
-.overlay > .overlay-close:hover,
-.overlay-left > .overlay-close:hover,
-.overlay-top > .overlay-close:hover,
-.overlay-right > .overlay-close:hover,
-.overlay-bottom > .overlay-close:hover {
+.no-touch .overlay > .overlay-close:hover,
+.no-touch .overlay-left > .overlay-close:hover,
+.no-touch .overlay-top > .overlay-close:hover,
+.no-touch .overlay-right > .overlay-close:hover,
+.no-touch .overlay-bottom > .overlay-close:hover {
   background-position: -354px -213px;
 }
 
-.overlay > .overlay-close:hover,
-.overlay-left > .overlay-close:hover,
-.overlay-top > .overlay-close:hover,
-.overlay-right > .overlay-close:hover,
-.overlay-bottom > .overlay-close:hover {
+.no-touch .overlay > .overlay-close:hover,
+.no-touch .overlay-left > .overlay-close:hover,
+.no-touch .overlay-top > .overlay-close:hover,
+.no-touch .overlay-right > .overlay-close:hover,
+.no-touch .overlay-bottom > .overlay-close:hover {
   background-position: -354px -213px;
 }
 
-.overlay > .overlay-close:hover,
-.overlay-left > .overlay-close:hover,
-.overlay-top > .overlay-close:hover,
-.overlay-right > .overlay-close:hover,
-.overlay-bottom > .overlay-close:hover {
+.no-touch .overlay > .overlay-close:hover,
+.no-touch .overlay-left > .overlay-close:hover,
+.no-touch .overlay-top > .overlay-close:hover,
+.no-touch .overlay-right > .overlay-close:hover,
+.no-touch .overlay-bottom > .overlay-close:hover {
   background-position: -354px -213px;
 }
 
-.overlay > .overlay-close:hover,
-.overlay-left > .overlay-close:hover,
-.overlay-top > .overlay-close:hover,
-.overlay-right > .overlay-close:hover,
-.overlay-bottom > .overlay-close:hover {
+.no-touch .overlay > .overlay-close:hover,
+.no-touch .overlay-left > .overlay-close:hover,
+.no-touch .overlay-top > .overlay-close:hover,
+.no-touch .overlay-right > .overlay-close:hover,
+.no-touch .overlay-bottom > .overlay-close:hover {
   background-position: -354px -213px;
 }
 
-.overlay > .overlay-close:hover,
-.overlay-left > .overlay-close:hover,
-.overlay-top > .overlay-close:hover,
-.overlay-right > .overlay-close:hover,
-.overlay-bottom > .overlay-close:hover {
+.no-touch .overlay > .overlay-close:hover,
+.no-touch .overlay-left > .overlay-close:hover,
+.no-touch .overlay-top > .overlay-close:hover,
+.no-touch .overlay-right > .overlay-close:hover,
+.no-touch .overlay-bottom > .overlay-close:hover {
   background-position: -354px -213px;
 }
 
@@ -319,8 +319,8 @@ https://github.com/eBay/skin/blob/master/LICENSE.txt"
 
 /**/
 
-[class*=" overlay"].small > .overlay-close,
-[class^="overlay-"].small > .overlay-close {
+.overlay.small > .overlay-close,
+[class*="overlay-"].small > .overlay-close {
   position: absolute;
   top: 15px;
   right: 15px;
@@ -334,8 +334,8 @@ https://github.com/eBay/skin/blob/master/LICENSE.txt"
   background-position: -338px -213px;
 }
 
-[class*=" overlay"].small > .overlay-close,
-[class^="overlay-"].small > .overlay-close {
+.overlay.small > .overlay-close,
+[class*="overlay-"].small > .overlay-close {
   position: absolute;
   top: 15px;
   right: 15px;
@@ -349,8 +349,8 @@ https://github.com/eBay/skin/blob/master/LICENSE.txt"
   background-position: -338px -213px;
 }
 
-[class*=" overlay"].small > .overlay-close,
-[class^="overlay-"].small > .overlay-close {
+.overlay.small > .overlay-close,
+[class*="overlay-"].small > .overlay-close {
   position: absolute;
   top: 15px;
   right: 15px;
@@ -364,8 +364,8 @@ https://github.com/eBay/skin/blob/master/LICENSE.txt"
   background-position: -338px -213px;
 }
 
-[class*=" overlay"].small > .overlay-close,
-[class^="overlay-"].small > .overlay-close {
+.overlay.small > .overlay-close,
+[class*="overlay-"].small > .overlay-close {
   position: absolute;
   top: 15px;
   right: 15px;
@@ -379,8 +379,8 @@ https://github.com/eBay/skin/blob/master/LICENSE.txt"
   background-position: -338px -213px;
 }
 
-[class*=" overlay"].small > .overlay-close,
-[class^="overlay-"].small > .overlay-close {
+.overlay.small > .overlay-close,
+[class*="overlay-"].small > .overlay-close {
   position: absolute;
   top: 15px;
   right: 15px;
@@ -394,8 +394,8 @@ https://github.com/eBay/skin/blob/master/LICENSE.txt"
   background-position: -338px -213px;
 }
 
-[class*=" overlay"].small > .overlay-close,
-[class^="overlay-"].small > .overlay-close {
+.overlay.small > .overlay-close,
+[class*="overlay-"].small > .overlay-close {
   position: absolute;
   top: 15px;
   right: 15px;
@@ -409,8 +409,8 @@ https://github.com/eBay/skin/blob/master/LICENSE.txt"
   background-position: -338px -213px;
 }
 
-[class*=" overlay"].small > .overlay-close,
-[class^="overlay-"].small > .overlay-close {
+.overlay.small > .overlay-close,
+[class*="overlay-"].small > .overlay-close {
   position: absolute;
   top: 15px;
   right: 15px;
@@ -424,38 +424,38 @@ https://github.com/eBay/skin/blob/master/LICENSE.txt"
   background-position: -338px -213px;
 }
 
-[class*=" overlay"].small > .overlay-close:hover,
-[class^="overlay-"].small > .overlay-close:hover {
+.no-touch .overlay.small > .overlay-close:hover,
+.no-touch [class^="overlay-"].small > .overlay-close:hover {
   background-position: -354px -213px;
 }
 
-[class*=" overlay"].small > .overlay-close:hover,
-[class^="overlay-"].small > .overlay-close:hover {
+.no-touch .overlay.small > .overlay-close:hover,
+.no-touch [class^="overlay-"].small > .overlay-close:hover {
   background-position: -354px -213px;
 }
 
-[class*=" overlay"].small > .overlay-close:hover,
-[class^="overlay-"].small > .overlay-close:hover {
+.no-touch .overlay.small > .overlay-close:hover,
+.no-touch [class^="overlay-"].small > .overlay-close:hover {
   background-position: -354px -213px;
 }
 
-[class*=" overlay"].small > .overlay-close:hover,
-[class^="overlay-"].small > .overlay-close:hover {
+.no-touch .overlay.small > .overlay-close:hover,
+.no-touch [class^="overlay-"].small > .overlay-close:hover {
   background-position: -354px -213px;
 }
 
-[class*=" overlay"].small > .overlay-close:hover,
-[class^="overlay-"].small > .overlay-close:hover {
+.no-touch .overlay.small > .overlay-close:hover,
+.no-touch [class^="overlay-"].small > .overlay-close:hover {
   background-position: -354px -213px;
 }
 
-[class*=" overlay"].small > .overlay-close:hover,
-[class^="overlay-"].small > .overlay-close:hover {
+.no-touch .overlay.small > .overlay-close:hover,
+.no-touch [class^="overlay-"].small > .overlay-close:hover {
   background-position: -354px -213px;
 }
 
-[class*=" overlay"].small > .overlay-close:hover,
-[class^="overlay-"].small > .overlay-close:hover {
+.no-touch .overlay.small > .overlay-close:hover,
+.no-touch [class^="overlay-"].small > .overlay-close:hover {
   background-position: -354px -213px;
 }
 
@@ -580,7 +580,7 @@ https://github.com/eBay/skin/blob/master/LICENSE.txt"
   border-left: none;
   border-color: transparent;
   border-style: solid;
-  content: "";
+  content: '';
   -webkit-transform: rotate(0);
      -moz-transform: rotate(0);
       -ms-transform: rotate(0);

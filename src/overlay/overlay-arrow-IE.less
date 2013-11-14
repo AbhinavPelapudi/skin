@@ -6,6 +6,7 @@
  @outerWidth: 18px;
  @outerWidthSmall: 11px;
  @innerWidthSmall: 10px;
+
 .lt-ie9{ 
 	.overlay-left,
 	.overlay-top,
@@ -13,18 +14,17 @@
 	.overlay-bottom{
 		&:after, 
   		&:before{
-		    border-left: none;
-		    border-right: none;
-		    border-top:none;
-		    border-bottom:none;
+		    border-left:	none;
+		    border-right: 	none;
+		    border-top:		none;
+		    border-bottom:	none;
 		    border-style:   solid; 
 		    border-color:   transparent;
 		    .rotate(0);
-		    background:none;
-		    content:        "";
+		    .before-after-abs();
+		    background:		none;
 		    height:         0;
 		    width:          0;
-		    position:       absolute;
 		    pointer-events: none;  
 		}
 

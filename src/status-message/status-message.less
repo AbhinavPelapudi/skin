@@ -1,28 +1,32 @@
 
 @import "../core/variables.less";
 @import "../core/mixins.less";
-@import "../container/container-mixins.less";
+@import "../container/container.less";
 @import "../icon/icon-mixins.less";
 
-[class^="msg"],
-[class*=" msg"]{
-	.container(#fff; 17px 15px; 4px 4px 1px 0 rgba(0,0,0,.05));
+.msg,
+[class *= "msg-"]{
+	.stacking-context();
+	padding: 17px 15px;
+	border: @containerBorder;
+	background: #fff;
+	.box-shadow(4px 4px 1px 0 rgba(0,0,0,.05));
+	.border-radius(2px);
 
 	&:before,
-	& > span {
-		content:'';
-		position:absolute;
-		top:0;
-		left:0;
+	&:after{
+		.before-after-abs();
+	}
+
+	&:before {
+		top: 0;
+		left: 0;
 		width: 100%;
 		height: 3px;
 		.gradient(#df263a, #df263a, #d91a2b);
 	}
 
-	&:after,
-	& > i{
-		content:'';
-		position:absolute;
+	&:after{
 		top: 17px;
 		left: 17px;
 		.icon();
@@ -33,14 +37,13 @@
 	& > h2{
 		color: #d11421;
 		font-size: 20px;
-		font-weight:normal;
+		font-weight: normal;
 		padding: 10px 0 10px 82px;
 		margin: 0;
 	}
 
 	&.small{
-		&:after,
-		& > i{
+		&:after{
 			.icon-msg-medium();
 			.icon-msg-medium-error-mix();			
 		}
@@ -52,13 +55,11 @@
 	}
 
 	&.msg-success{
-		&:before,
-		& > span{
+		&:before{
 			.gradient(#64ad23, #64ad23, #539f18);
 		}
 
-		&:after,
-		& > i{
+		&:after{
 			.icon-msg-large-success-mix();
 		}
 
@@ -66,20 +67,17 @@
 			color: #5ba71b;
 		}
 
-		&.small:after,
-		& > i{
+		&.small:after{
 				.icon-msg-medium-success-mix();
 		}
 	}
 
 	&.msg-warning{
-		&:before,
-		& > span{
+		&:before{
 			.gradient(#f29500, #f29500, #ef8500);
 		}
 
-		&:after,
-		& > i{
+		&:after{
 			.icon-msg-large-warning-mix();
 		}
 
@@ -87,20 +85,17 @@
 			color: #f18e00;
 		}
 
-		&.small:after,
-		& > i{
+		&.small:after{
 				.icon-msg-medium-warning-mix();
 		}
 	}
 
 	&.msg-info{
-		&:before,
-		& > span{
+		&:before{
 			.gradient(#714db8; #714db8; #714db8);
 		}
 
-		&:after,
-		& > i{
+		&:after{
 			.icon-msg-large-info-mix();
 		}
 
@@ -108,26 +103,13 @@
 			color: #714db8;
 		}
 
-		&.small:after,
-		& > i{
+		&.small:after{
 				.icon-msg-medium-info-mix();
 		}
 
 	}
 }
 
-html:not(.lt-ie8){
-	[class*=" msg"],
-	[class^="msg"]{
-		span{
-			display:none;
-		};
-
-		i{
-			display:none;
-		}
-	}
-}
 
 
 

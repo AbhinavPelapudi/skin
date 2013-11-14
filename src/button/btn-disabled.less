@@ -11,36 +11,39 @@
 .dropdown-prim.disabled > a,
 .dropdown-prim.disabled > button{
 	border: none;
-	color: 	#fff;
+	color: #fff;
 	.box-shadow(none);
 
 }
 
-.btn-green[disabled],
-.btn-scnd[disabled],
-.btn-prim[disabled],
-.btn-green.disabled,
-.btn-scnd.disabled,
-.btn-prim.disabled,
-.dropdown-scnd.disabled > a,
-.dropdown-scnd.disabled > button,
-.dropdown-prim.disabled > a,
-.dropdown-prim.disabled > button{
-	&:hover{
-		border: none;
-		.box-shadow(none);
+
+.no-touch{
+	.btn-green[disabled],
+	.btn-scnd[disabled],
+	.btn-prim[disabled],
+	.btn-green.disabled,
+	.btn-scnd.disabled,
+	.btn-prim.disabled,
+	.dropdown-scnd.disabled > a,
+	.dropdown-scnd.disabled > button,
+	.dropdown-prim.disabled > a,
+	.dropdown-prim.disabled > button{
+		&:hover{
+			border: none;
+			.box-shadow(none);
+		}
 	}
-}
 
-.dropdown-prim,
-.dropdown-scnd{
-	&.dropdown-no-split.disabled{
-	    & > button:hover:first-child,
-	    & > a:hover:first-child{
-	        border-right:none;
-	        border:none;
-	        border-left:0;
+	.dropdown-prim,
+	.dropdown-scnd{
+		&.dropdown-no-split.disabled{
+		    & > button:hover:first-child,
+		    & > a:hover:first-child{
+		        border-right: 	none;
+		        border:			none;
+		        border-left:	0;
 
-	    }
+		    }
+		}
 	}
 }

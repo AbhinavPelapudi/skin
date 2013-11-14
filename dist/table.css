@@ -8,48 +8,48 @@ https://github.com/eBay/skin/blob/master/LICENSE.txt"
 
 /**/
 
-[class^="table"],
-[class*=" table"] {
+.table,
+[class*="table-"] {
   width: 100%;
   text-align: left;
   border-collapse: collapse;
 }
 
-[class^="table"] a,
-[class*=" table"] a {
+.table a,
+[class*="table-"] a {
   text-decoration: none;
 }
 
-[class^="table"] th,
-[class*=" table"] th,
-[class^="table"] td,
-[class*=" table"] td {
+.table th,
+[class*="table-"] th,
+.table td,
+[class*="table-"] td {
   padding-right: 20px;
   padding-left: 20px;
   line-height: 40px;
 }
 
-[class^="table"] th,
-[class*=" table"] th {
+.table th,
+[class*="table-"] th {
   font-weight: bold;
   color: #777777;
   background-color: #f7f7f7;
   border-bottom: 1px solid #eeeeee;
 }
 
-[class^="table"] th.table-sort,
-[class*=" table"] th.table-sort {
+.table th.table-sort,
+[class*="table-"] th.table-sort {
   background-color: #ececec;
 }
 
-[class^="table"] > tfoot td,
-[class*=" table"] > tfoot td {
+.table > tfoot td,
+[class*="table-"] > tfoot td {
   padding: 10px;
   border-top: 1px solid #eeeeee;
 }
 
-[class^="table"] .table-sort,
-[class*=" table"] .table-sort {
+.table .table-sort,
+[class*="table-"] .table-sort {
   width: auto;
   /*needed to override width from the "table-sort" inheritance*/
 
@@ -57,8 +57,8 @@ https://github.com/eBay/skin/blob/master/LICENSE.txt"
   background-color: #f4f4f4;
 }
 
-[class^="table"] > thead > tr,
-[class*=" table"] > thead > tr {
+.table > thead > tr,
+[class*="table-"] > thead > tr {
   /*styling for non striped tables */
 
   background-color: #f7f7f7;

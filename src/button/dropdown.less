@@ -5,22 +5,22 @@
 //@import "btn-base.less";
 //@import "btn-disabled.less";
 
-[class*=" dropdown"],
-[class^="dropdown"]{
-    position: relative;    /*needed for the z index stacking context and absolute positioning on menu*/
+.dropdown,
+[class*="dropdown-"]{
+    .stacking-context();
     display: inline-block;
+    
     & > a,
     & > button{
-        padding:        10px 15px;
-        margin:         0;
+        padding: 10px 15px;
+        margin: 0;
         .border-radius(0 3px 3px 0);
-        .box-shadow(0 2px 0 0 rgba(0, 0, 0, .06));
+        .box-shadow(@dropdownShadow);
 
         & + a:before,
         & + button:before{
-        content:'';
-        position:   relative;
-        top:        -3px;
+        .before-after();
+        top: -3px;
         .icon();
         .icon-carat-up-down();
         .icon-carat-down-blue-mix();
@@ -29,29 +29,29 @@
 
     & > a:first-child,
     & > button:first-child{
-        padding-left:   20px;
-        padding-right:  20px;
+        padding-left: 20px;
+        padding-right: 20px;
         .border-radius(3px 0 0 3px);
-        border-right:none;
+        border-right: none;
     }
 
     &.dropdown-prim > a,
     &.dropdown-prim > button{
-        .box-shadow(0 3px 0 0 rgba(0, 0, 0, .1));
+        .box-shadow(@dropdownShadowPS);
         border-left: @btnPrimSplitBorder;
 
         &:first-child{
-            border-left:0;
+            border-left: 0;
         }
     }
 
     &.dropdown-scnd > a,
     &.dropdown-scnd > button{
-        .box-shadow(0 3px 0 0 rgba(0, 0, 0, .1));
+        .box-shadow(@dropdownShadowPS);
         border-left: @btnInfoSplitBorder;
 
         &:first-child{
-            border-left:0;
+            border-left: 0;
         }
     }
 
@@ -68,7 +68,7 @@
 
     & > ul{
         display: none;
-        position:absolute;
+        position: absolute;
         padding: 7px 5px 5px 5px;
         right: 1px;
         top: 22px;
@@ -76,7 +76,7 @@
         border: @btnMenuBorder;
         .border-radius(2px);
         .gradient(@btnBkg, @btnBkg, @btnBkgEnd);
-        .box-shadow( 0 2px 0 0 rgba(0,0,0,.06));
+        .box-shadow( @dropdownShadow);
 
         & > li{
             margin: 0;
@@ -91,10 +91,8 @@
     }
 }
 
-[class*=" dropdown"].large,
-[class^="dropdown"].large,
-[class*=" dropdown"].large,
-[class^="dropdown"].large{
+.dropdown.large,
+[class*="dropdown-"].large{
     & > a,
     & > button{
         & + button,
@@ -112,10 +110,8 @@
     }
 }
 
-[class*=" dropdown"].small,
-[class^="dropdown"].small,
-[class*=" dropdown"].small,
-[class^="dropdown"].small{
+.dropdown.small,
+[class*="dropdown-"].small{
     & > a,
     & > button{
         & + button,
@@ -147,9 +143,9 @@
 
     & > button:after,
     & > a:after{
-        content:'';
-        position:   relative;
-        top:        -3px;
+        content: '';
+        position: relative;
+        top: -3px;
         .icon();
         .icon-carat-up-down();
         .icon-carat-down-blue-mix();
@@ -158,101 +154,137 @@
 
     &.dropdown-prim,
     &.dropdown-scnd{
-        & > button:after,
-        & > a:after{
-            .icon-carat-down-white-mix();
+        & > button,
+        & > a{
+            border-right: 0;
+            
+            &:after{
+                    .icon-carat-down-white-mix();
+            }
         }
     }
 }
 
 
-[class*=" dropdown"],
-[class^="dropdown"]{
-    & > a,
-    & > button{
-        &:hover{
-            .box-shadow(0 2px 0 0 rgba(0, 0, 0, .06));
 
-            & + a,
-            & + button{
-                border-left:@btnBorderHover;
+.no-touch{
+    .dropdown,
+    [class*="dropdown-"]{
+        & > a,
+        & > button{
+             &:first-child:hover{ 
+                border-right: 0;
+             }
+
+            &:hover{
+                .box-shadow(@dropdownShadow);
+               
+                & + a,
+                & + button{
+                    border-left: @btnBorderHover;
+                }
             }
         }
-    }
 
-    &.dropdown-prim > a,
-    &.dropdown-prim > button{
-        &:hover{
-            .box-shadow(0 3px 0 0 rgba(0, 0, 0, .1));
+        &.dropdown-prim > a,
+        &.dropdown-prim > button{
+            &:hover{
+                .box-shadow(@dropdownShadowPS);
 
-            & + a,
-            & + button{
-                border-left: @btnPrimSplitBorder;
+                & + a,
+                & + button{
+                    border-left: @btnPrimSplitBorder;
+                }
             }
+
+            & + a:hover,
+            & + button:hover{
+                    border-left: @btnPrimSplitBorder;
+            }
+
+
         }
-    }
 
-    &.dropdown-scnd > a,
-    &.dropdown-scnd > button{
-        &:hover{
-            .box-shadow(0 3px 0 0 rgba(0, 0, 0, .1));
+        &.dropdown-scnd > a,
+        &.dropdown-scnd > button{
+            &:hover{
+                .box-shadow(@dropdownShadowPS);
 
-            & + a,
-            & + button{
+                & + a,
+                & + button{
+                    border-left: @btnInfoSplitBorder;
+                }
+            }
+
+            & + a:hover,
+            & + button:hover{
                 border-left: @btnInfoSplitBorder;
             }
         }
+
+        & > ul > li:hover{
+            color: @btnMenuLinkHoverColor;
+            background-color: @btnMenuBkg;
+            text-decoration: none;
+            .transition(background-color .08s linear);
+        }
+
+        & > ul > a:hover{
+            text-decoration: none;
+        }
     }
 
-    & > ul > li:hover{
-        color: @btnMenuLinkHoverColor;
-        background-color: @btnMenuBkg;
-        text-decoration: none;
-        .transition(background-color .08s linear);
-    }
-}
+    .dropdown-no-split{
+        & > button:first-child,
+        & > a:first-child{
+            &:hover{
+                border-right: @btnBorderHover;
+            }
+        }
 
-.dropdown-no-split{
-    & > button:first-child,
-    & > a:first-child{
-        &:hover{
-            .transition(box-shadow 1s ease);
+        &.dropdown-prim,
+        &.dropdown-scnd{
+            & > button:hover:first-child,
+            & > a:hover:first-child{
+                border-right: 0;
+            }
+        }
+    }
+
+    .dropdown{
+        &.disabled{
+            a:first-child:hover,
+            button:first-child:hover{
+                border-right:none;
+            }
+
+            a:hover + a,
+            button:hover + button{
+                border-left:@btnBorder;
+            }
+        }
+    }
+
+
+    .dropdown-no-split.disabled{
+        & > button:hover:first-child,
+        & > a:hover:first-child{
+            border-right:@btnBorder;
+            border:@btnBorder;
+            .box-shadow(@dropdownShadow);
+        }
+
+        &.dropdown-prim,
+        &.dropdown-scnd{
+            & > button:hover:first-child,
+            & > a:hover:first-child{
+                border-right: 0;
+            }
         }
     }
 }
 
-.dropdown{
-    &.disabled{
-        a:first-child:hover,
-        button:first-child:hover{
-            border-right:none;
-        }
 
-        a:hover + a,
-        button:hover + button{
-            border-left:@btnBorder;
-        }
-    }
-}
-
-
-.dropdown-no-split{
-    & > button:hover:first-child,
-    & > a:hover:first-child{
-        border-right:@btnBorderHover;
-
-    }
-}
-
-.dropdown-no-split.disabled{
-    & > button:hover:first-child,
-    & > a:hover:first-child{
-        border-right:@btnBorder;
-        border:@btnBorder;
-        .box-shadow(0 2px 0 0 rgba(0, 0, 0, 0.06));
-
-    }
-}
 
 
 

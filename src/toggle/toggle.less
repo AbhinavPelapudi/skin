@@ -8,7 +8,7 @@
 		margin:0 -2px;
 		.font-define(12px, bold, @linkBlue, none);
 		.border-radius(3px);
-		border:@borderGrey;
+		border: @borderGrey;
 		.gradient(#fefefe, #fefefe, #fafafa);
 		.box-shadow(0 1px 0 rgba(0,0,0,.05));
 
@@ -21,17 +21,20 @@
 	}
 }
 
-.toggle{
-	& > button,
-	& > a{
-		&:hover{
-			border:1px solid #aaa;
-			.box-shadow(none)		
-		}
 
-		&.active:hover{
-				border: 1px solid #ddd;
-				.box-shadow(0 1px 0 rgba(255,255,255,.65));
+.no-touch{
+	.toggle{
+		& > button,
+		& > a{
+			&:hover{
+				border: @borderGreyDark;
+				.box-shadow(none);	
+			}
+
+			&.active:hover{
+					border: @borderGrey;
+					.box-shadow(0 1px 0 rgba(255,255,255,.65));
+			}
 		}
 	}
 }

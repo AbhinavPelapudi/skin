@@ -12,8 +12,6 @@
 .btn-scnd,
 .dropdown-scnd > a,
 .dropdown-scnd > button{
-	border: 		none;
-	color: 			#fff;
 	.border-radius(3px);
 	.btn-color(@btnInfoBkg, @btnInfoStart);
 
@@ -23,44 +21,46 @@
 	}
 }
 
-.btn-scnd,
-.dropdown-scnd > a,
-.dropdown-scnd > button{
-	.btn-color-hover(@btnInfoStart);
-}
-
-.btn-scnd.disabled:hover,
-.dropdown-scnd.disabled > a:hover,
-.dropdown-scnd.disabled > button:hover{
-	.gradient(@btnInfoStart, @btnInfoStart, @btnInfoBkg);
-}
-
-.dropdown-scnd.disabled > a + a,
-.dropdown-scnd.disabled > button + button{
-	border-left: 1px solid @btnInfoSplitColorRGBA;    // split border color to 
-}
-
-.dropdown-scnd.disabled > a + a:hover,
-.dropdown-scnd.disabled > button + button:hover{
-	border-left: 1px solid @btnInfoSplitColorRGBA;    // split border color to 
-}
-
-.lt-ie9{
-	.btn-scnd.disabled:hover,
-	.dropdown-scnd.disabled > a:hover,
-	.dropdown-scnd.disabled > button:hover{
-		border: 1px solid @btnInfoStart;
-	}
-	
-	.dropdown-scnd.disabled > a + a:hover,
-	.dropdown-scnd.disabled > button + button:hover{
-		border-left: 1px solid @btnInfoSplitColorRGBA;    // split border color to 
-	}
-
+.no-touch{
 	.btn-scnd,
 	.dropdown-scnd > a,
 	.dropdown-scnd > button{
-		.btn-ie-hover(@btnInfoStart);
+		.btn-color-hover(@btnInfoStart);
+	}
+
+	.btn-scnd.disabled:hover,
+	.dropdown-scnd.disabled > a:hover,
+	.dropdown-scnd.disabled > button:hover{
+		.gradient(@btnInfoStart, @btnInfoStart, @btnInfoBkg);
+	}
+
+	.dropdown-scnd.disabled > a + a,
+	.dropdown-scnd.disabled > button + button{
+		border-left: 1px solid @btnInfoSplitColorRGBA;    // split border color
+	}
+
+	.dropdown-scnd.disabled > a + a:hover,
+	.dropdown-scnd.disabled > button + button:hover{
+		border-left: 1px solid @btnInfoSplitColorRGBA;    // split border color  
+	}
+
+	.lt-ie9{
+		.btn-scnd.disabled:hover,
+		.dropdown-scnd.disabled > a:hover,
+		.dropdown-scnd.disabled > button:hover{
+			border: 1px solid @btnInfoStart;
+		}
+		
+		.dropdown-scnd.disabled > a + a:hover,
+		.dropdown-scnd.disabled > button + button:hover{
+			border-left: 1px solid @btnInfoSplitColorRGBA;    // split border color
+		}
+
+		.btn-scnd,
+		.dropdown-scnd > a,
+		.dropdown-scnd > button{
+			.btn-ie-hover(@btnInfoStart);
+		}
 	}
 }
 

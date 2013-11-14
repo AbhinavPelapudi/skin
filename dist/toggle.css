@@ -45,17 +45,17 @@ https://github.com/eBay/skin/blob/master/LICENSE.txt"
           box-shadow: 0 1px 0 rgba(255, 255, 255, 0.65);
 }
 
-.toggle > button:hover,
-.toggle > a:hover {
-  border: 1px solid #aaa;
+.no-touch .toggle > button:hover,
+.no-touch .toggle > a:hover {
+  border: 1px solid #aaaaaa;
   -webkit-box-shadow: none;
      -moz-box-shadow: none;
           box-shadow: none;
 }
 
-.toggle > button.active:hover,
-.toggle > a.active:hover {
-  border: 1px solid #ddd;
+.no-touch .toggle > button.active:hover,
+.no-touch .toggle > a.active:hover {
+  border: 1px solid #dddddd;
   -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.65);
      -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.65);
           box-shadow: 0 1px 0 rgba(255, 255, 255, 0.65);

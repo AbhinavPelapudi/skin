@@ -11,8 +11,7 @@
 
 		& > li{
 			display: block;
-			margin: 0;
-			padding:0;
+			.m-p-collapse();
 			width: 100%;
 			text-align: left;
 			.box-shadow(none);
@@ -38,10 +37,10 @@
 	}
 
 	& > div{
-		display:none;
+		display: none;
 		border: @borderGrey;
 		width: 70%;
-		vertical-align:top;
+		vertical-align: top;
 		margin-left: -3px;
 		height: 400px;
 		.border-right-radius(3px);
@@ -49,28 +48,30 @@
 	}
 
 	& > div.active{
-		display:inline-block;
+		display: inline-block;
 	}
 }
 
-.tab-vertical{
-	& > ul{
-		& > li{
-			&:hover{
-				border-top:1px solid #aaa;
-				border-left:1px solid #aaa;
-				border-bottom:1px solid #aaa;
-			}
+.no-touch{
+	.tab-vertical{
+		& > ul{
+			& > li{
+				&:hover{
+					border-top: @borderGreyDark;
+					border-left: @borderGreyDark;
+					border-bottom: @borderGreyDark;
+				}
 
-			&.active:hover{
-				border:@borderGrey;
-				border-right: 1px solid #fff;
-				.box-shadow(none);
+				&.active:hover{
+					border: @borderGrey;
+					border-right: 1px solid #fff;
+					.box-shadow(none);
+					
+				}
 				
-			}
-			
-			&:hover{
-				background:#fff;
+				&:hover{
+					background: #fff;
+				}
 			}
 		}
 	}

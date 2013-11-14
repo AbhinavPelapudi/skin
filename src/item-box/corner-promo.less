@@ -84,16 +84,16 @@ html:not(.lt-ie9){
 }
 
 .lt-ie9{
-	.corner-promo-green > span{
+	& .corner-promo-green > span{
 		background:@itemBoxPromoGreenStart;
 	}
 
-	.corner-promo-orange > span{
+	& .corner-promo-orange > span{
 		background:@itemBoxPromoOrangeStart;
 	}
 
-	.corner-promo-green > span,
-	.corner-promo-orange > span{
+	& .corner-promo-green > span,
+	& .corner-promo-orange > span{
 		/* IE8+ - must be on one line, unfortunately */ 
    -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.7660444431189781, M12=0.6427876096865391, M21=-0.6427876096865391, M22=0.7660444431189781, SizingMethod='auto expand')";
 		margin-left: 11px; 

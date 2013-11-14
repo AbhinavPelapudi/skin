@@ -7,31 +7,34 @@
 
 
 .btn-green{
-	border: none;
-	color: 	#fff;
 	.border-radius(3px);
 	.btn-color(@btnGreenBkg, @btnGreenStart);
 
 	&:visited{
 		color: #fff;
-		text-decoration:none;
+		text-decoration: none;
 	}
 }
 
-.btn-green{
-	.btn-color-hover(@btnGreenEnd);
 
-	&[disabled]:hover,
-	&.disabled:hover{
-		.gradient(@btnGreenStart, @btnGreenStart, @btnGreenBkg);
+
+
+.no-touch{
+	.btn-green{
+		.btn-color-hover(@btnGreenEnd);
+
+		&[disabled]:hover,
+		&.disabled:hover{
+			.gradient(@btnGreenStart, @btnGreenStart, @btnGreenBkg);
+		}
 	}
-}
 
-.lt-ie9 .btn-green{
-	.btn-ie-hover(@btnGreenStart);
+	.lt-ie9 .btn-green{
+		.btn-ie-hover(@btnGreenStart);
 
-	&[disabled]:hover,
-	&.disabled:hover{
-		border: 1px solid @btnGreenStart;
+		&[disabled]:hover,
+		&.disabled:hover{
+			border: 1px solid @btnGreenStart;
+		}
 	}
 }

@@ -3,16 +3,16 @@
 @import "left-nav-mixins.less";
 @import "../icon/icon-mixins.less";
 
-[class *= " left-nav"],
-[class ^= "left-nav"]{
-	margin-left:	0;
-	width:			210px;
+.left-nav,
+[class *= "left-nav-"]{
+	margin-left: 0;
+	width: 210px;
 	.left-nav();
 
 	&.left-nav-arrow{
 		& a:after{
-			content:	'';
-			float:		right;
+			content: '';
+			float: right;
 			margin-top: 2px;
 			.icon-no-display();
 			.icon-arrow-tiny-right-left();
@@ -26,20 +26,22 @@
 
 	& ul{
 
-		padding:0;
-		margin:0;
+		padding: 0;
+		margin: 0;
 
 	 	& > li{
-			list-style-type:none
+			list-style-type: none;
 		}
 	}
 }
 
 
-[class *= " left-nav"],
-[class ^= "left-nav"]{
-	ul > li:hover a{
-		color:@linkBlue;
-		text-decoration:underline;
+.no-touch{
+	.left-nav,
+	[class *= "left-nav-"]{
+		ul > li:hover a{
+			color: @linkBlue;
+			text-decoration: underline;
+		}
 	}
 }

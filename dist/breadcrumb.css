@@ -6,14 +6,14 @@ https://github.com/eBay/skin/blob/master/LICENSE.txt"
 */
 /**/
 
-.breadcrumb > a {
+.breadcrumb a {
   font-size: 12px;
   font-weight: normal;
   color: #777777;
   text-decoration: none;
 }
 
-.breadcrumb > a:after {
+.breadcrumb a:after {
   display: inline-block;
   width: 5px;
   height: 8px;
@@ -26,20 +26,20 @@ https://github.com/eBay/skin/blob/master/LICENSE.txt"
   content: '';
 }
 
-.breadcrumb > a:visited {
+.breadcrumb a:visited {
   color: #777;
 }
 
-.breadcrumb > a.breadcrumb-reverse {
+.breadcrumb a.breadcrumb-reverse {
   margin: 0 25px 0 0;
   color: #0654ba;
 }
 
-.breadcrumb > a.breadcrumb-reverse:after {
+.breadcrumb a.breadcrumb-reverse:after {
   display: none;
 }
 
-.breadcrumb > a.breadcrumb-reverse:before {
+.breadcrumb a.breadcrumb-reverse:before {
   display: inline-block;
   width: 5px;
   height: 8px;
@@ -52,15 +52,7 @@ https://github.com/eBay/skin/blob/master/LICENSE.txt"
   content: '';
 }
 
-.breadcrumb > i {
-  display: none;
-}
-
-.breadcrumb > i.breadcrumb-reverse {
-  display: none;
-}
-
-.breadcrumb > span {
+.breadcrumb span {
   padding: 0;
   margin: 0;
   font-size: 12px;
@@ -69,11 +61,11 @@ https://github.com/eBay/skin/blob/master/LICENSE.txt"
   text-decoration: none;
 }
 
-.breadcrumb a:hover {
+.no-touch .breadcrumb a:hover {
   font-size: 1000!important;
   color: #777777;
 }
 
-.breadcrumb .breadcrumb-reverse:hover {
+.no-touch .breadcrumb .breadcrumb-reverse:hover {
   color: #0654ba;
 }

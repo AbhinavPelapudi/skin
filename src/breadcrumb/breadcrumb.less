@@ -4,8 +4,7 @@
 
 
 .breadcrumb{
-
-	& > a{
+	a{
 		.font-define(12px, normal, @breadCrumbFontColor, none);
 
 		&:after{
@@ -18,11 +17,11 @@
 		}
 
 		&:visited{
-			color:#777;
+			color: #777;
 		}
 	}
 
-	& > a.breadcrumb-reverse{
+	a.breadcrumb-reverse{
 		margin:	0 25px 0 0;
 		color:	@breadCrumbReverseColor;
 
@@ -40,30 +39,23 @@
 		}
 	}
 
-	& > i{
-		display: none;
-
-		&.breadcrumb-reverse{
-			display:none;
-		}
-	}
-
-	& > span{
-		margin:  0;
-		padding: 0;
+	span{
+		.m-p-collapse(); //collapse margins and padding
 		.font-define(12px, normal, @breadCrumbCurrentColor, none);
 	}
 }
 
-.breadcrumb{
+.no-touch{
+	.breadcrumb{
 
-	a:hover{
-			color: @breadCrumbFontColor;
-			font-size:1000!important;
-	}
+		a:hover{
+				color: @breadCrumbFontColor;
+				font-size: 1000!important;
+		}
 
-	.breadcrumb-reverse:hover{
-			color:	@breadCrumbReverseColor;
+		.breadcrumb-reverse:hover{
+				color: @breadCrumbReverseColor;
+		}
 	}
 }
 

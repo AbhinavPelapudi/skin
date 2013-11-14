@@ -6,14 +6,14 @@ https://github.com/eBay/skin/blob/master/LICENSE.txt"
 */
 /**/
 
-[class*=" tab"],
-[class^="tab"] {
+.tab,
+[class*="tab-"] {
   position: relative;
   z-index: 0;
 }
 
-[class*=" tab"] > ul,
-[class^="tab"] > ul {
+.tab > ul,
+[class*="tab-"] > ul {
   position: relative;
   z-index: 0;
   width: 100%;
@@ -21,8 +21,8 @@ https://github.com/eBay/skin/blob/master/LICENSE.txt"
   margin: 0;
 }
 
-[class*=" tab"] > ul > li,
-[class^="tab"] > ul > li {
+.tab > ul > li,
+[class*="tab-"] > ul > li {
   display: inline-block;
   padding: 15px 0;
   margin: 0 -3px;
@@ -40,16 +40,16 @@ https://github.com/eBay/skin/blob/master/LICENSE.txt"
           box-shadow: 4px 4px 1px 0 rgba(0, 0, 0, 0.05);
 }
 
-[class*=" tab"] > ul > li > a,
-[class^="tab"] > ul > li > a {
+.tab > ul > li > a,
+[class*="tab-"] > ul > li > a {
   font-size: 12px;
   font-weight: bold;
   color: #777777;
   text-decoration: none;
 }
 
-[class*=" tab"] > ul > li.active,
-[class^="tab"] > ul > li.active {
+.tab > ul > li.active,
+[class*="tab-"] > ul > li.active {
   position: relative;
   z-index: 1;
   padding: 15px 0;
@@ -57,18 +57,18 @@ https://github.com/eBay/skin/blob/master/LICENSE.txt"
   border-bottom: 1px solid #fff;
 }
 
-[class*=" tab"] > ul > li.active > a,
-[class^="tab"] > ul > li.active > a {
+.tab > ul > li.active > a,
+[class*="tab-"] > ul > li.active > a {
   color: #333333;
 }
 
-[class*=" tab"] > ul > li:first-child,
-[class^="tab"] > ul > li:first-child {
+.tab > ul > li:first-child,
+[class*="tab-"] > ul > li:first-child {
   margin: 0 -3px 0 0;
 }
 
-[class*=" tab"] > div,
-[class^="tab"] > div {
+.tab > div,
+[class*="tab-"] > div {
   position: relative;
   z-index: 1;
   display: none;
@@ -89,37 +89,37 @@ https://github.com/eBay/skin/blob/master/LICENSE.txt"
           box-shadow: 4px 4px 1px 0 rgba(0, 0, 0, 0.05);
 }
 
-[class*=" tab"] > div.active,
-[class^="tab"] > div.active {
+.tab > div.active,
+[class*="tab-"] > div.active {
   display: block;
 }
 
-[class*=" tab"] > ul > li:hover,
-[class^="tab"] > ul > li:hover {
+.no-touch .tab > ul > li:hover,
+.no-touch [class*="tab-"] > ul > li:hover {
   cursor: pointer;
   background-color: #fff;
 }
 
-[class*=" tab"] > ul > li:hover > a,
-[class^="tab"] > ul > li:hover > a {
+.no-touch .tab > ul > li:hover > a,
+.no-touch [class*="tab-"] > ul > li:hover > a {
   color: #0654ba;
 }
 
-[class*=" tab"] > ul > li:hover.active,
-[class^="tab"] > ul > li:hover.active {
+.no-touch .tab > ul > li:hover.active,
+.no-touch [class*="tab-"] > ul > li:hover.active {
   cursor: default;
   -webkit-box-shadow: 4px 4px 1px 0 rgba(0, 0, 0, 0.05);
      -moz-box-shadow: 4px 4px 1px 0 rgba(0, 0, 0, 0.05);
           box-shadow: 4px 4px 1px 0 rgba(0, 0, 0, 0.05);
 }
 
-[class*=" tab"] > ul > li:hover.active > a,
-[class^="tab"] > ul > li:hover.active > a {
+.no-touch .tab > ul > li:hover.active > a,
+.no-touch [class*="tab-"] > ul > li:hover.active > a {
   color: #333333;
 }
 
-[class*=" tab"] > ul > li:hover.active > a:hover,
-[class^="tab"] > ul > li:hover.active > a:hover {
+.no-touch .tab > ul > li:hover.active > a:hover,
+.no-touch [class*="tab-"] > ul > li:hover.active > a:hover {
   color: #333333;
   cursor: default;
 }
@@ -208,13 +208,13 @@ https://github.com/eBay/skin/blob/master/LICENSE.txt"
   display: inline-block;
 }
 
-.tab-vertical > ul > li:hover {
-  border-top: 1px solid #aaa;
-  border-bottom: 1px solid #aaa;
-  border-left: 1px solid #aaa;
+.no-touch .tab-vertical > ul > li:hover {
+  border-top: 1px solid #aaaaaa;
+  border-bottom: 1px solid #aaaaaa;
+  border-left: 1px solid #aaaaaa;
 }
 
-.tab-vertical > ul > li.active:hover {
+.no-touch .tab-vertical > ul > li.active:hover {
   border: 1px solid #dddddd;
   border-right: 1px solid #fff;
   -webkit-box-shadow: none;
@@ -222,7 +222,7 @@ https://github.com/eBay/skin/blob/master/LICENSE.txt"
           box-shadow: none;
 }
 
-.tab-vertical > ul > li:hover {
+.no-touch .tab-vertical > ul > li:hover {
   background: #fff;
 }
 
@@ -274,25 +274,25 @@ https://github.com/eBay/skin/blob/master/LICENSE.txt"
   border-top: 1px solid #dddddd;
 }
 
-.tab-pad > ul > li:hover {
+.no-touch .tab-pad > ul > li:hover {
   border: 1px solid #dddddd;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #dddddd;
   -webkit-box-shadow: none;
      -moz-box-shadow: none;
           box-shadow: none;
 }
 
-.tab-pad > ul > li.active:hover {
+.no-touch .tab-pad > ul > li.active:hover {
   border-bottom: 1px solid #fff;
   -webkit-box-shadow: none;
      -moz-box-shadow: none;
           box-shadow: none;
 }
 
-.tab-pad > ul > li.active:hover a {
+.no-touch .tab-pad > ul > li.active:hover a {
   color: #333;
 }
 
-.tab-pad > ul > li.active:hover a a:hover {
+.no-touch .tab-pad > ul > li.active:hover a a:hover {
   color: #333;
 }

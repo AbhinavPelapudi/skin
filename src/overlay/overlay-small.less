@@ -4,12 +4,15 @@
 //Dependent Modules
 //@import "overlay-base.less";
 
-[class *= " overlay"].small,
-[class ^= "overlay-"].small{
+.overlay.small,
+[class *= "overlay-"].small{
   .overlay-close(15px, 15px);
 }
 
-[class*=" overlay"].small,
-[class^="overlay-"].small{
-  .overlay-close-hover();
+
+.no-touch{
+	.overlay.small,
+	[class ^= "overlay-"].small{
+	  .overlay-close-hover();
+	}
 }

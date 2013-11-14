@@ -408,6 +408,7 @@
   background-repeat: no-repeat;
   filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",argb(@startColor),argb(@endColor))); // IE9 and down, gets no color-stop at all for proper fallback
 }
+
 .radial(@innerColor: #555, @outerColor: #333) {
   background-color: @outerColor;
   background-image: -webkit-gradient(radial, center center, 0, center center, 460, from(@innerColor), to(@outerColor));
@@ -416,6 +417,7 @@
   background-image: -o-radial-gradient(circle, @innerColor, @outerColor);
   background-repeat: no-repeat;
 }
+
 .striped(@color: #555, @angle: 45deg) {
   background-color: @color;
   background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(.25, rgba(255,255,255,.15)), color-stop(.25, transparent), color-stop(.5, transparent), color-stop(.5, rgba(255,255,255,.15)), color-stop(.75, rgba(255,255,255,.15)), color-stop(.75, transparent), to(transparent));
@@ -432,14 +434,57 @@
 
 
 //font alterations
-
 .font-define(@size: 12px; @weight: normal; @color: #ddd; @textDecoration: none){
-  font-size:    @size;
-  font-weight:  @weight;
-  color:        @color;
+  font-size: @size;
+  font-weight: @weight;
+  color: @color;
   text-decoration: @textDecoration;
 }
 
+
+//collapse margins and padding
+.m-p-collapse(){
+  margin: 0;
+  padding: 0;
+}
+
+//create stacking context
+.stacking-context(){
+  position: relative;
+  z-index: 1;
+}
+
+.stacking-context-0(){
+  position:relative;
+  z-index: 0;
+}
+
+
+//boilerplate for before-after pseudo elements
+.before-after(){
+  content: '';
+  position: relative;
+}
+
+//boilerplate for before-after absolutely positioned pseudo elements
+.before-after-abs(){
+  content: '';
+  position: absolute;
+}
+
+
+//mixin for clearfix
+.clearfix(){
+  &:before,
+  &:after {
+    display: table;
+    content: " ";
+  }
+
+  &:after {
+    clear: both;
+  }
+}
 
 
 

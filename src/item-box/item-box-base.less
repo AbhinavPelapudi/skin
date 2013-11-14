@@ -2,8 +2,8 @@
 @import "../core/mixins.less";
 @import "item-box-mixins.less";
 
-[class *= " item-box"],
-[class ^= "item-box"]{
+.item-box,
+[class *= "item-box-"]{
 	position: 		relative;
 	display: 		table-cell;
 	vertical-align:	middle;
@@ -24,15 +24,18 @@
 	}
 
 	& > img{
-		display: 		inline-block;
+		display: inline-block;
 		vertical-align:	middle;
 	}
 }
 
-[class *= " item-box"],
-[class ^= "item-box"]{
-	&:hover{
-		border: @itemBoxBorderHover;
+
+.no-touch{
+	.item-box,
+	[class ^= "item-box-"]{
+		&:hover{
+			border: @itemBoxBorderHover;
+		}
 	}
 }
 

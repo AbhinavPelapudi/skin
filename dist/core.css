@@ -415,7 +415,6 @@ html > body {
 }
 
 h1 {
-  margin-bottom: 0.5em;
   font-size: 2em;
   line-height: 1.95em;
 }
@@ -469,12 +468,24 @@ a:hover {
   text-decoration: underline;
 }
 
+/**/
+
 /* ========================================
    Utility Classes & Mixins
    ======================================= */
 
 /*	CLEAR FIX - Mixin
 ----------------------*/
+
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: " ";
+}
+
+.clearfix:after {
+  clear: both;
+}
 
 .clearfix:before,
 .clearfix:after {
@@ -519,6 +530,10 @@ a:hover {
   display: block !important;
 }
 
+.white-bkg {
+  background: #fff;
+}
+
 .left {
   float: left;
 }
@@ -558,10 +573,57 @@ a:hover {
   clear: both;
 }
 
+.float-row:before,
+.float-row:after {
+  display: table;
+  content: " ";
+}
+
+.float-row:after {
+  clear: both;
+}
+
+.float-row:before,
+.float-row:after {
+  display: table;
+  content: " ";
+}
+
+.float-row:after {
+  clear: both;
+}
+
+.float-row:before,
+.float-row:after {
+  display: table;
+  content: " ";
+}
+
+.float-row:after {
+  clear: both;
+}
+
 .float-row > div,
-.float-row > li {
+.float-row > li,
+.float-row > section,
+.float-row > aside {
   display: block;
   float: left;
+}
+
+/* don't use this for images */
+
+.fluid {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.fluid-image {
+  display: block;
+  height: auto;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .invisible {
@@ -653,11 +715,11 @@ a:hover {
 }
 
 .z-index {
+  position: relative;
   z-index: 1;
 }
 
 .x-small {
-  font-family: Verdana, Geneva, sans-serif;
   font-size: .71em;
 }
 

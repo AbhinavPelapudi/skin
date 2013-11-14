@@ -12,14 +12,29 @@ https://github.com/eBay/skin/blob/master/LICENSE.txt"
   display: block;
 }
 
-.filmstrip ul {
+.filmstrip > div {
   display: inline-block;
+  overflow: hidden;
+}
+
+.filmstrip > div > ul {
+  display: block;
   padding: 0;
   margin: 0;
 }
 
-.filmstrip > ul > li {
-  display: inline-block;
+.filmstrip > div > ul:before,
+.filmstrip > div > ul:after {
+  display: table;
+  content: " ";
+}
+
+.filmstrip > div > ul:after {
+  clear: both;
+}
+
+.filmstrip > div > ul > li {
+  float: left;
   list-style-type: none;
 }
 
@@ -51,19 +66,19 @@ https://github.com/eBay/skin/blob/master/LICENSE.txt"
   background-position: -67px -138px;
 }
 
-.filmstrip > button:hover {
+.no-touch .filmstrip > button:hover {
   background-position: -51px -138px;
   border: 1px solid transparent;
 }
 
-.filmstrip > button:first-child:hover {
+.no-touch .filmstrip > button:first-child:hover {
   background-position: -17px -138px;
 }
 
-.filmstrip > button[disabled]:hover {
+.no-touch .filmstrip > button[disabled]:hover {
   background-position: -84px -138px;
 }
 
-.filmstrip > button[disabled]:first-child:hover {
+.no-touch .filmstrip > button[disabled]:first-child:hover {
   background-position: -67px -138px;
 }

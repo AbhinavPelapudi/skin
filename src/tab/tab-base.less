@@ -2,17 +2,14 @@
 @import "../core/mixins.less";
 
 
-[class*=" tab"],
-[class^="tab"]{
-	position: relative;
-	z-index:0;
+.tab,
+[class *= "tab-"]{
+	.stacking-context-0();
 
 	& > ul{
-		margin: 0;
-		padding: 0;
+		.m-p-collapse();
 		width: 100%;
-		position:relative;
-		z-index:0;
+		.stacking-context-0();
 
 		& > li{
 		display: inline-block; 
@@ -30,11 +27,10 @@
 			}
 
 			&.active{
-				position:relative;
 				padding: 15px 0;
 				background-color: #fff;
 				border-bottom: 1px solid #fff;
-				z-index: 1;
+				.stacking-context();
 
 				& > a{
 					color: @greyDark;
@@ -49,7 +45,7 @@
 	}
 
 	& > div{
-		display:none;
+		display: none;
 		background-color: #fff;
 		border: @borderGrey;
 		border-top: 1px solid #fff;
@@ -58,42 +54,38 @@
 		.box-shadow(4px 4px 1px 0 rgba(0,0,0,.05));
 		padding: 5px 0;
 		margin: 0;
-		position:relative;
-		z-index:1;
+		.stacking-context();
 	}
 	& > div.active{
-		display:block;
+		display: block;
 	}
 }
 
-[class*=" tab"],
-[class^="tab"]{
-	& > ul > li:hover{
-		background-color: #fff;
-		cursor:pointer;
+.no-touch{
+	.tab,
+	[class *= "tab-"]{
+		& > ul > li:hover{
+			background-color: #fff;
+			cursor: pointer;
 
-		& > a{
-			color: @linkBlue;
-		}
-
-		&.active{
-			.box-shadow(4px 4px 1px 0 rgba(0,0,0,.05));
-			cursor:default;
 			& > a{
-				color: @greyDark;
-
-				&:hover{
-					color: @greyDark;
-					cursor:default;
-				}
+				color: @linkBlue;
 			}
-		}	
+
+			&.active{
+				.box-shadow(4px 4px 1px 0 rgba(0,0,0,.05));
+				cursor: default;
+				& > a{
+					color: @greyDark;
+
+					&:hover{
+						color: @greyDark;
+						cursor: default;
+					}
+				}
+			}	
+		}
 	}
-}
-
-[class*=" tab"],
-[class^="tab"]{
-
 }
 
 .tab-2{

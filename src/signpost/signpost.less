@@ -19,7 +19,7 @@
 		line-height:		41px;
 		text-align:			center;
 		border:				@borderGrey;
-		border-left: 		1px solid transparent;
+		border-left: 		@borderInvisible;
 		background-color:	#fff;
 		
 		a{
@@ -32,10 +32,9 @@ html:not(.lt-ie9) .signpost > li{
 	.gradient(#fff, #fff, #f1f1f1);
 
 	&:after{
-		content:			'';
+		.before-after-abs();
 		top: 				9px;
 		left: 				-13px;
-		position: 			absolute;
 		z-index:			2;
 		width: 				23px;
 		height: 			23px;
@@ -54,7 +53,7 @@ html:not(.lt-ie9) .signpost > li{
 		border-left: @borderGrey;
 		
 		&:after{
-			display:	none;
+			display: none;
 		}
 	}
 
@@ -63,13 +62,13 @@ html:not(.lt-ie9) .signpost > li{
 	}
 
 	&.active{
-		background: 	#5ba71b;
-		border-top: 	1px solid #5ba71b;
-		border-bottom: 	1px solid #5ba71b;
+		background: @signPostActiveBkg;
+		border-top: @signPostActiveBorder;
+		border-bottom: @signPostActiveBorder;
 
 		&:after{
-		  	border-top:		1px solid #5ba71b;
-		  	border-right: 	1px solid #5ba71b;
+		  	border-top: @signPostActiveBorder;
+		  	border-right: @signPostActiveBorder;
 		}
 
 		& > a{
@@ -77,8 +76,7 @@ html:not(.lt-ie9) .signpost > li{
 		}
 
 		&:before{
-			content:		'';
-			position: 		absolute;
+			.before-after-abs();
 			height: 		42px;
 			border-bottom: 	@borderGrey;
 			border-top: 	@borderGrey;
@@ -92,9 +90,9 @@ html:not(.lt-ie9) .signpost > li{
 		& + li,
 		& + li + li,
 		& + li + li + li{
-			background:		transparent;
-			border-right:	none;
-			border-left:	none;
+			background: transparent;
+			border-right: none;
+			border-left: none;
 			 & > a{
 			 	color: #999;
 			 }
@@ -104,8 +102,8 @@ html:not(.lt-ie9) .signpost > li{
 			 }
 			
 			&:after{
-				border-top: 	@borderGrey;
-				border-right: 	@borderGrey;
+				border-top: @borderGrey;
+				border-right: @borderGrey;
 			}
 
 			& > a{
@@ -114,9 +112,9 @@ html:not(.lt-ie9) .signpost > li{
 			}
 
 			& + li:after{
-				border-top: 	@borderGrey;
-				border-right: 	@borderGrey;
-				background:		transparent;
+				border-top: @borderGrey;
+				border-right: @borderGrey;
+				background: transparent;
 			}
 
 			&:last-child{
@@ -127,18 +125,18 @@ html:not(.lt-ie9) .signpost > li{
 		& + li{
 
 			&:after{
-		  	border-top:		1px solid #5ba71b;
-		  	border-right: 	1px solid #5ba71b;
-		  	background: 	#5ba71b;
+		  	border-top: @signPostActiveBorder;
+		  	border-right: @signPostActiveBorder;
+		  	background: @signPostActiveBkg;
 			}
 		}
 	}
 } 
 
-div:not(.lt-ie9) .signpost > li{
+html:not(.lt-ie9) .no-touch .signpost > li{
 	&:hover{
-		border-top:		@borderGreyDark;
-		border-bottom:	@borderGreyDark;
+		border-top: @borderGreyDark;
+		border-bottom: @borderGreyDark;
 
 
 		& > a{
@@ -146,13 +144,13 @@ div:not(.lt-ie9) .signpost > li{
 		}
 
 		&:after{
-			border-top: 	@borderGreyDark;
-			border-right: 	@borderGreyDark;
+			border-top: @borderGreyDark;
+			border-right: @borderGreyDark;
 		}
 
 		& + li:after{
-			border-top: 	@borderGreyDark;
-			border-right: 	@borderGreyDark;
+			border-top: @borderGreyDark;
+			border-right: @borderGreyDark;
 		}
 	}
 
@@ -164,15 +162,15 @@ div:not(.lt-ie9) .signpost > li{
 
 	&.active{
 		&:hover{
-			border-top: 	1px solid #5ba71b;
-			border-bottom: 	1px solid #5ba71b;
+			border-top: @signPostActiveBorder;
+			border-bottom: @signPostActiveBorder;
 			& > a{
 				color: #fff;
 			}
 
 			&:after{
-				border-top: 	1px solid #5ba71b;
-				border-right: 	1px solid #5ba71b;
+				border-top: @signPostActiveBorder;
+				border-right: @signPostActiveBorder;
 			}
 
 		}
@@ -181,13 +179,13 @@ div:not(.lt-ie9) .signpost > li{
 		& + li + li,
 		& + li + li + li{
 			&:hover{
-			border-top: 	@borderGrey;
-			border-bottom: 	@borderGrey;
-			border-right:	none;
+			border-top: @borderGrey;
+			border-bottom: @borderGrey;
+			border-right: none;
 
 				&:after{
-					border-top: 	@borderGrey;
-					border-right: 	@borderGrey;
+					border-top: @borderGrey;
+					border-right: @borderGrey;
 				}
 
 				& > a{
@@ -196,34 +194,34 @@ div:not(.lt-ie9) .signpost > li{
 				}
 
 				& + li:after{
-					border-top: 	@borderGrey;
-					border-right: 	@borderGrey;
-					background:		transparent;
+					border-top: @borderGrey;
+					border-right: @borderGrey;
+					background: transparent;
 				}
 
 				&:last-child{
-				border-right:@borderGrey;
+				border-right: @borderGrey;
 				} 
 			}
 		}
 
 		& + li{
 			&:hover:after{
-				border-top:		1px solid #5ba71b;
-		  		border-right: 	1px solid #5ba71b;
+				border-top: @signPostActiveBorder;
+		  		border-right: @signPostActiveBorder;
 			}
 		}
 	}
 
 	&:hover + .active{
 		&:before{
-			border-top: 	@borderGreyDark;
-			border-bottom: 	@borderGreyDark;
+			border-top: @borderGreyDark;
+			border-bottom: @borderGreyDark;
 		}
 
 		&:after{
-			border-top: 	1px solid #5ba71b;
-			border-right: 	1px solid #5ba71b;
+			border-top: @signPostActiveBorder;
+			border-right: @signPostActiveBorder;
 		}
 	}
 } 
@@ -234,53 +232,37 @@ div:not(.lt-ie9) .signpost > li{
 			.border-left-radius(3px);
 	}
 
+
+	&:before,
+	&:after{
+		.before-after-abs();
+		height: 0;
+		width: 0;
+	}
+
 	&:before{
-		content:		'';
-		position:		absolute;
 		border-left:	12px solid #ddd;
 		border-bottom: 	22px solid transparent;
 		border-top: 	22px solid transparent;
-		height: 		0;
-		width: 			0;
 		left: 			-1px;
 		top: 			-1px;
 		z-index:		1;
 	}
 
 	&:after{
-		content:		'';
-		position:		absolute;
 		border-left:	11px solid #fff;
 		border-bottom: 	21px solid transparent;
 		border-top: 	21px solid transparent;
-		height: 		0;
-		width: 			0;
 		left: 			-1px;
 		top: 			0;
 		z-index:		2;
-	}
-
-	&:hover{
-		border:			@borderGreyDark;
-
-		& > a{
-			color:		@linkBlue;
-		}
-
-		&:before{
-			border-left: 12px solid #aaa;
-		}
-
-		& + li:before{
-			border-left: 12px solid #aaa;
-		}
 	}
 
 	&:first-child{
 		.border-left-radius(3px);
 		&:before,
 		&:after{
-			display:	none;
+			display: none;
 		}
 	}
 
@@ -289,10 +271,10 @@ div:not(.lt-ie9) .signpost > li{
 	}
 
 	&.active{
-		background-color: 	#5ba71b;
+		background-color: @signPostActiveBkg;
 
 		& > a{
-			color: 			#fff;
+			color: #fff;
 		}
 
 		& + li:after{
@@ -301,75 +283,19 @@ div:not(.lt-ie9) .signpost > li{
 		  	border-top:		21px solid transparent;
 		  	top:			0;
 		}
-
-		&:hover{
-			border: @borderGrey;
-
-			& > a{
-				color: #fff;
-			}
-
-			&:before{
-				border-left: 12px solid #ddd;
-			}
-
-		}
 	}
 }
 
-.lt-ie9 .signpost > li{
+
+
+
+.lt-ie9 .no-touch .signpost > li{
 
 	&:hover{
-		border:			@borderGreyDark;
+		border: @borderGreyDark;
 
 		& > a{
-			color:		@linkBlue;
-		}
-
-		&:before{
-			border-left: 12px solid #aaa;
-		}
-
-		& + li:before{
-			border-left: 12px solid #aaa;
-		}
-	}.lt-ie9 .signpost > li{
-	&:first-child{
-			border-left: @borderGrey;
-			.border-left-radius(3px);
-	}
-
-	&:before{
-		content:		'';
-		position:		absolute;
-		border-left:	12px solid #ddd;
-		border-bottom: 	22px solid transparent;
-		border-top: 	22px solid transparent;
-		height: 		0;
-		width: 			0;
-		left: 			-1px;
-		top: 			-1px;
-		z-index:		1;
-	}
-
-	&:after{
-		content:		'';
-		position:		absolute;
-		border-left:	11px solid #fff;
-		border-bottom: 	21px solid transparent;
-		border-top: 	21px solid transparent;
-		height: 		0;
-		width: 			0;
-		left: 			-1px;
-		top: 			0;
-		z-index:		2;
-	}
-
-	&:hover{
-		border:			@borderGreyDark;
-
-		& > a{
-			color:		@linkBlue;
+			color: @linkBlue;
 		}
 
 		&:before{
@@ -380,47 +306,6 @@ div:not(.lt-ie9) .signpost > li{
 			border-left: 12px solid #aaa;
 		}
 	}
-
-	&:first-child{
-		.border-left-radius(3px);
-		&:before,
-		&:after{
-			display:	none;
-		}
-	}
-
-	&:last-child{
-		.border-right-radius(3px);
-	}
-
-	&.active{
-		background-color: 	#5ba71b;
-
-		& > a{
-			color: 			#fff;
-		}
-
-		& + li:after{
-		  	border-left:	11px solid #5ba71b;
-		  	border-bottom:	21px solid transparent;
-		  	border-top:		21px solid transparent;
-		  	top:			0;
-		}
-
-		&:hover{
-			border: @borderGrey;
-
-			& > a{
-				color: #fff;
-			}
-
-			&:before{
-				border-left: 12px solid #ddd;
-			}
-
-		}
-	}
-}
 
 	&.active:hover{
 		border: @borderGrey;

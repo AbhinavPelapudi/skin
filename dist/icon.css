@@ -6,8 +6,7 @@ https://github.com/eBay/skin/blob/master/LICENSE.txt"
 */
 /**/
 
-[class*=" icon"],
-[class^="icon"] {
+[class*="icon-"] {
   display: inline-block;
   padding: 0;
   margin: 0;
@@ -381,8 +380,7 @@ https://github.com/eBay/skin/blob/master/LICENSE.txt"
   background-position: -138px -206px;
 }
 
-[class^="icon-block-carat-small"],
-[class*=" icon-block-carat-small"] {
+[class*="icon-block-carat-small"] {
   width: 21px;
   height: 20px;
 }
@@ -490,8 +488,7 @@ https://github.com/eBay/skin/blob/master/LICENSE.txt"
 
 /**/
 
-[class*=" icon"],
-[class^="icon"] {
+[class*="icon-"] {
   display: inline-block;
   padding: 0;
   margin: 0;
@@ -501,7 +498,6 @@ https://github.com/eBay/skin/blob/master/LICENSE.txt"
 /* Member Badge Elements
 -------------------------*/
 
-[class*=" icon-star"],
 [class^="icon-star"] {
   width: 12px;
   height: 12px;
@@ -691,8 +687,7 @@ https://github.com/eBay/skin/blob/master/LICENSE.txt"
 /* Radio Buttons
 ------------------------*/
 
-[class^="icon-radio-large"],
-[class*=" icon-radio-large"] {
+[class*="icon-radio-large"] {
   width: 27px;
   height: 27px;
   background-position: -2px -265px;
@@ -736,8 +731,7 @@ https://github.com/eBay/skin/blob/master/LICENSE.txt"
   background-position: -316px -267px;
 }
 
-[class*=" icon-radio-small"],
-[class^="icon-radio-small"] {
+[class*="icon-radio-small"] {
   width: 14px;
   height: 14px;
   background-position: -186px -271px;

@@ -21,6 +21,14 @@
 //  Buttons
 //----------------------------------
 
+@btnPadding: 10px 20px;
+@btnLargePadding: 12px 20px;
+@btnSmallPadding: 7px 15px;
+
+@btnFontSize: 14px;
+@btnLargeFontSize: 16px;
+@btnSmallFontSize: 12px;
+
 @btnBkg:	#fefefe;
 @btnBkgEnd:	#fafafa;
 
@@ -50,6 +58,11 @@
 @btnMenuBorder: 		@borderGreyDark;
 @btnMenuLinkColor:		@greyMediumDark;
 @btnMenuLinkHoverColor: @linkBlue;
+
+@btnShadow:	0 2px 0 0 rgba(0, 0, 0, .06);
+@btnShadowPSG: 0 3px 0 0 rgba(0, 0, 0, .1);
+@dropdownShadow: @btnShadow;
+@dropdownShadowPS: @btnShadowPSG;
 
 //  Containers
 //-------------------------------------
@@ -113,6 +126,7 @@
 //  Member Badge
 //-------------------------------------
 @badgeFontColor:		@greyMedium;
+@badgeIconMargin:       0 5px 0 0;
 
 
 //  Bread crumb
@@ -120,3 +134,25 @@
 @breadCrumbFontColor:		@greyMedium;
 @breadCrumbReverseColor:	@linkBlue;
 @breadCrumbCurrentColor:	@greyDark;
+
+// Sign Post
+//-------------------------------------
+@signPostActiveBkg: 		#5ba71b;
+@signPostActiveBorder:		1px solid @signPostActiveBkg;
+
+
+// Tabs
+//-------------------------------------
+@tabShadow: 4px 4px 1px 0 rgba(0,0,0,.05);
+
+
+//  grids
+//-------------------------------------
+@grid-gutter-size:				15px;
+@grid-max-columns:				6;
+@grid-tablet-query:				~"(min-width: 768px)";
+@grid-desktop-query:			~"(min-width: 992px)";
+@grid-large-desktop-query:		~"(min-width: 1200px)";
+@grid-tablet-max-width:			750px;
+@grid-desktop-max-width:		970px;
+@grid-large-desktop-max-width:	1170px;
