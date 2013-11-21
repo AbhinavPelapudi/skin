@@ -7,13 +7,16 @@
 	.stacking-context-0();
 
 	& > ul{
+		box-sizing: border-box;
 		.m-p-collapse();
 		width: 100%;
 		.stacking-context-0();
+		.clearfix();
 
 		& > li{
-		display: inline-block; 
-		margin: 0 -3px;
+		box-sizing: border-box;
+		display: block; 
+		float: left;
 		padding: 15px 0;
 		border: @borderGrey;
 		text-align: center;
@@ -39,12 +42,13 @@
 			}
 
 			&:first-child{
-				margin: 0 -3px 0 0;
+
 			}
 		}
 	}
 
 	& > div{
+		box-sizing: border-box;
 		display: none;
 		background-color: #fff;
 		border: @borderGrey;
@@ -84,6 +88,19 @@
 					}
 				}
 			}	
+		}
+	}
+}
+
+.tab-2,
+.tab-3,
+.tab-4,
+.tab-5{
+	& > ul > li{
+	border-left:0;
+
+		&:first-child{
+			border-left:@borderGrey;
 		}
 	}
 }

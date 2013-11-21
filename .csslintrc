@@ -10,5 +10,6 @@
 	"box-model": false,
 	"star-property-hack": false,
 	"important": false,
-	"font-sizes": false
+	"font-sizes": false,
+	"box-sizing": false
 }

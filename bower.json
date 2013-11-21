@@ -1,6 +1,6 @@
 {
   "name": "skin",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "main": "./dist/*",
   "ignore": [
     "**/.*",

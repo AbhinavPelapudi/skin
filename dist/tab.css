@@ -1,5 +1,5 @@
 /*!
-Skin v0.0.1
+Skin v0.0.3
 Copyright 2013 eBay! Inc. All rights reserved.
 Licensed under the BSD License.
 https://github.com/eBay/skin/blob/master/LICENSE.txt"
@@ -19,13 +19,53 @@ https://github.com/eBay/skin/blob/master/LICENSE.txt"
   width: 100%;
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
 }
 
 .tab > ul > li,
 [class*="tab-"] > ul > li {
-  display: inline-block;
+  display: block;
+  float: left;
   padding: 15px 0;
-  margin: 0 -3px;
   text-align: center;
   background-color: #fafafa;
   border: 1px solid #dddddd;
@@ -38,6 +78,7 @@ https://github.com/eBay/skin/blob/master/LICENSE.txt"
   -webkit-box-shadow: 4px 4px 1px 0 rgba(0, 0, 0, 0.05);
      -moz-box-shadow: 4px 4px 1px 0 rgba(0, 0, 0, 0.05);
           box-shadow: 4px 4px 1px 0 rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
 }
 
 .tab > ul > li > a,
@@ -62,11 +103,6 @@ https://github.com/eBay/skin/blob/master/LICENSE.txt"
   color: #333333;
 }
 
-.tab > ul > li:first-child,
-[class*="tab-"] > ul > li:first-child {
-  margin: 0 -3px 0 0;
-}
-
 .tab > div,
 [class*="tab-"] > div {
   position: relative;
@@ -87,6 +123,7 @@ https://github.com/eBay/skin/blob/master/LICENSE.txt"
   -webkit-box-shadow: 4px 4px 1px 0 rgba(0, 0, 0, 0.05);
      -moz-box-shadow: 4px 4px 1px 0 rgba(0, 0, 0, 0.05);
           box-shadow: 4px 4px 1px 0 rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
 }
 
 .tab > div.active,
@@ -124,6 +161,20 @@ https://github.com/eBay/skin/blob/master/LICENSE.txt"
   cursor: default;
 }
 
+.tab-2 > ul > li,
+.tab-3 > ul > li,
+.tab-4 > ul > li,
+.tab-5 > ul > li {
+  border-left: 0;
+}
+
+.tab-2 > ul > li:first-child,
+.tab-3 > ul > li:first-child,
+.tab-4 > ul > li:first-child,
+.tab-5 > ul > li:first-child {
+  border-left: 1px solid #dddddd;
+}
+
 .tab-2 > ul > li {
   width: 50%;
 }
@@ -142,9 +193,40 @@ https://github.com/eBay/skin/blob/master/LICENSE.txt"
 
 /**/
 
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
 .tab-vertical > ul {
   z-index: 1;
-  display: inline-block;
+  float: left;
+  max-width: 500px;
 }
 
 .tab-vertical > ul > li {
@@ -193,7 +275,7 @@ https://github.com/eBay/skin/blob/master/LICENSE.txt"
   display: none;
   width: 70%;
   height: 400px;
-  margin-left: -3px;
+  margin-left: -1px;
   vertical-align: top;
   border: 1px solid #dddddd;
   -webkit-border-top-right-radius: 3px;
@@ -205,7 +287,7 @@ https://github.com/eBay/skin/blob/master/LICENSE.txt"
 }
 
 .tab-vertical > div.active {
-  display: inline-block;
+  float: left;
 }
 
 .no-touch .tab-vertical > ul > li:hover {
@@ -242,7 +324,7 @@ https://github.com/eBay/skin/blob/master/LICENSE.txt"
 
 .tab-pad > ul > li {
   padding: 15px 30px;
-  margin: 0;
+  margin: 0 6px;
   background: transparent;
   border: 1px solid transparent;
   -webkit-box-shadow: none;

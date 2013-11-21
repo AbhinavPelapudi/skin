@@ -1,5 +1,5 @@
 /*!
-Skin v0.0.1
+Skin v0.0.3
 Copyright 2013 eBay! Inc. All rights reserved.
 Licensed under the BSD License.
 https://github.com/eBay/skin/blob/master/LICENSE.txt"
@@ -23,7 +23,8 @@ https://github.com/eBay/skin/blob/master/LICENSE.txt"
 }
 
 .msg,
-[class*="msg-"] {
+[class*=" msg-"],
+[class^="msg-"] {
   position: relative;
   z-index: 1;
   padding: 17px 15px;
@@ -38,15 +39,18 @@ https://github.com/eBay/skin/blob/master/LICENSE.txt"
 }
 
 .msg:before,
-[class*="msg-"]:before,
+[class*=" msg-"]:before,
+[class^="msg-"]:before,
 .msg:after,
-[class*="msg-"]:after {
+[class*=" msg-"]:after,
+[class^="msg-"]:after {
   position: absolute;
   content: '';
 }
 
 .msg:before,
-[class*="msg-"]:before {
+[class*=" msg-"]:before,
+[class^="msg-"]:before {
   top: 0;
   left: 0;
   width: 100%;
@@ -61,7 +65,8 @@ https://github.com/eBay/skin/blob/master/LICENSE.txt"
 }
 
 .msg:after,
-[class*="msg-"]:after {
+[class*=" msg-"]:after,
+[class^="msg-"]:after {
   top: 17px;
   left: 17px;
   display: inline-block;
@@ -74,7 +79,8 @@ https://github.com/eBay/skin/blob/master/LICENSE.txt"
 }
 
 .msg > h2,
-[class*="msg-"] > h2 {
+[class*=" msg-"] > h2,
+[class^="msg-"] > h2 {
   padding: 10px 0 10px 82px;
   margin: 0;
   font-size: 20px;
@@ -83,20 +89,21 @@ https://github.com/eBay/skin/blob/master/LICENSE.txt"
 }
 
 .msg.small:after,
-[class*="msg-"].small:after {
+[class*=" msg-"].small:after,
+[class^="msg-"].small:after {
   width: 25px;
   height: 24px;
   background-position: -144px -100px;
 }
 
 .msg.small > h2,
-[class*="msg-"].small > h2 {
+[class*=" msg-"].small > h2,
+[class^="msg-"].small > h2 {
   padding: 3px 0 3px 50px;
   font-size: 14px;
 }
 
-.msg.msg-success:before,
-[class*="msg-"].msg-success:before {
+.msg-success:before {
   background-color: #64ad23;
   background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #64ad23), color-stop(1, #539f18));
   background-image: -ms-linear-gradient(bottom, #64ad23, #539f18);
@@ -106,23 +113,19 @@ https://github.com/eBay/skin/blob/master/LICENSE.txt"
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#539f18', endColorstr='#64ad23', GradientType=0);
 }
 
-.msg.msg-success:after,
-[class*="msg-"].msg-success:after {
+.msg-success:after {
   background-position: -299px -90px;
 }
 
-.msg.msg-success > h2,
-[class*="msg-"].msg-success > h2 {
+.msg-success > h2 {
   color: #5ba71b;
 }
 
-.msg.msg-success.small:after,
-[class*="msg-"].msg-success.small:after {
+.msg-success.small:after {
   background-position: -345px -100px;
 }
 
-.msg.msg-warning:before,
-[class*="msg-"].msg-warning:before {
+.msg-warning:before {
   background-color: #f29500;
   background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #f29500), color-stop(1, #ef8500));
   background-image: -ms-linear-gradient(bottom, #f29500, #ef8500);
@@ -132,23 +135,19 @@ https://github.com/eBay/skin/blob/master/LICENSE.txt"
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ef8500', endColorstr='#f29500', GradientType=0);
 }
 
-.msg.msg-warning:after,
-[class*="msg-"].msg-warning:after {
+.msg-warning:after {
   background-position: -197px -90px;
 }
 
-.msg.msg-warning > h2,
-[class*="msg-"].msg-warning > h2 {
+.msg-warning > h2 {
   color: #f18e00;
 }
 
-.msg.msg-warning.small:after,
-[class*="msg-"].msg-warning.small:after {
+.msg-warning.small:after {
   background-position: -244px -100px;
 }
 
-.msg.msg-info:before,
-[class*="msg-"].msg-info:before {
+.msg-info:before {
   background-color: #714db8;
   background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #714db8), color-stop(1, #714db8));
   background-image: -ms-linear-gradient(bottom, #714db8, #714db8);
@@ -158,17 +157,14 @@ https://github.com/eBay/skin/blob/master/LICENSE.txt"
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#714db8', endColorstr='#714db8', GradientType=0);
 }
 
-.msg.msg-info:after,
-[class*="msg-"].msg-info:after {
+.msg-info:after {
   background-position: -1px -89px;
 }
 
-.msg.msg-info > h2,
-[class*="msg-"].msg-info > h2 {
+.msg-info > h2 {
   color: #714db8;
 }
 
-.msg.msg-info.small:after,
-[class*="msg-"].msg-info.small:after {
+.msg-info.small:after {
   background-position: -47px -100px;
 }

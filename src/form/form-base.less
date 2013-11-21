@@ -3,10 +3,10 @@
 @import "form-mixins.less";
 
 .form{
-    & > .form-input-text,
-    & > input[type=text],
-    & > input[type=password],
-    & > textarea{
+    .form-input-text,
+    input[type=text],
+    input[type=password],
+    textarea{
         .form-size(9px 11px 6px 11px, 14px);
 
         min-width:      100px;
@@ -16,10 +16,10 @@
         .border-radius(3px);
     }
 
-    & > .form-input-text:focus,
-    & > input[type=text]:focus,
-    & > input[type=password]:focus,
-    & > textarea:focus{
+    .form-input-text:focus,
+    input[type=text]:focus,
+    input[type=password]:focus,
+    textarea:focus{
         border:         @formBorderFocus;
         border-radius:  2px;
         outline:        none;
@@ -27,27 +27,27 @@
         .gradient(@formGradientStart, @formGradientStart, @formGradientEnd);
     }
 
-    & > input.form-error,
-    & > input.form-error:focus,
-    & > textarea.form-error,
-    & > textarea.form-error:focus{
+    input.form-error,
+    input.form-error:focus,
+    textarea.form-error,
+    textarea.form-error:focus{
         border: @formBorderError;
     }
 
     &.large{
-        & > .form-input-text,
-        & > input[type=text],
-        & > input[type=password],
-        & > textarea{
+        .form-input-text,
+        input[type=text],
+        input[type=password],
+        textarea{
             .form-size(13px 15px 8px 15px, 18px);
         }
     }
 
     &.small{
-        & > .form-input-text,
-        & > input[type=text],
-        & > input[type=password],
-        & > textarea{
+        .form-input-text,
+        input[type=text],
+        input[type=password],
+        textarea{
             .form-size(5px 8px 4px 8px, 12px);
         }
     }

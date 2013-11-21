@@ -1,5 +1,5 @@
 /*!
-Skin v0.0.1
+Skin v0.0.3
 Copyright 2013 eBay! Inc. All rights reserved.
 Licensed under the BSD License.
 https://github.com/eBay/skin/blob/master/LICENSE.txt"
@@ -1127,6 +1127,10 @@ a:hover {
 
 .inline-block {
   display: inline-block;
+}
+
+.border-box {
+  box-sizing: border-box;
 }
 
 .clear {
@@ -3805,10 +3809,10 @@ a[class^="btn-"],
 
 /**/
 
-.form > .form-input-text,
-.form > input[type=text],
-.form > input[type=password],
-.form > textarea {
+.form .form-input-text,
+.form input[type=text],
+.form input[type=password],
+.form textarea {
   min-width: 100px;
   padding: 9px 11px 6px 11px;
   font-size: 14px;
@@ -3820,10 +3824,10 @@ a[class^="btn-"],
   box-shadow: inset 0 1px 2px 0 rgba(0, 0, 0, 0.15);
 }
 
-.form > .form-input-text:focus,
-.form > input[type=text]:focus,
-.form > input[type=password]:focus,
-.form > textarea:focus {
+.form .form-input-text:focus,
+.form input[type=text]:focus,
+.form input[type=password]:focus,
+.form textarea:focus {
   background-color: #fefefe;
   background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #fefefe), color-stop(1, #fafafa));
   background-image: -ms-linear-gradient(bottom, #fefefe, #fafafa);
@@ -3837,25 +3841,25 @@ a[class^="btn-"],
   transition: border 0.1s linear 0s, box-shadow 0.2s linear 0s;
 }
 
-.form > input.form-error,
-.form > input.form-error:focus,
-.form > textarea.form-error,
-.form > textarea.form-error:focus {
+.form input.form-error,
+.form input.form-error:focus,
+.form textarea.form-error,
+.form textarea.form-error:focus {
   border: 1px solid #dd1e31;
 }
 
-.form.large > .form-input-text,
-.form.large > input[type=text],
-.form.large > input[type=password],
-.form.large > textarea {
+.form.large .form-input-text,
+.form.large input[type=text],
+.form.large input[type=password],
+.form.large textarea {
   padding: 13px 15px 8px 15px;
   font-size: 18px;
 }
 
-.form.small > .form-input-text,
-.form.small > input[type=text],
-.form.small > input[type=password],
-.form.small > textarea {
+.form.small .form-input-text,
+.form.small input[type=text],
+.form.small input[type=password],
+.form.small textarea {
   padding: 5px 8px 4px 8px;
   font-size: 12px;
 }
@@ -7297,7 +7301,8 @@ html:not(.lt-ie9) .no-touch .signpost > li:hover + .active:after {
 }
 
 .msg,
-[class*="msg-"] {
+[class*=" msg-"],
+[class^="msg-"] {
   position: relative;
   z-index: 1;
   padding: 17px 15px;
@@ -7312,15 +7317,18 @@ html:not(.lt-ie9) .no-touch .signpost > li:hover + .active:after {
 }
 
 .msg:before,
-[class*="msg-"]:before,
+[class*=" msg-"]:before,
+[class^="msg-"]:before,
 .msg:after,
-[class*="msg-"]:after {
+[class*=" msg-"]:after,
+[class^="msg-"]:after {
   position: absolute;
   content: '';
 }
 
 .msg:before,
-[class*="msg-"]:before {
+[class*=" msg-"]:before,
+[class^="msg-"]:before {
   top: 0;
   left: 0;
   width: 100%;
@@ -7335,7 +7343,8 @@ html:not(.lt-ie9) .no-touch .signpost > li:hover + .active:after {
 }
 
 .msg:after,
-[class*="msg-"]:after {
+[class*=" msg-"]:after,
+[class^="msg-"]:after {
   top: 17px;
   left: 17px;
   display: inline-block;
@@ -7348,7 +7357,8 @@ html:not(.lt-ie9) .no-touch .signpost > li:hover + .active:after {
 }
 
 .msg > h2,
-[class*="msg-"] > h2 {
+[class*=" msg-"] > h2,
+[class^="msg-"] > h2 {
   padding: 10px 0 10px 82px;
   margin: 0;
   font-size: 20px;
@@ -7357,20 +7367,21 @@ html:not(.lt-ie9) .no-touch .signpost > li:hover + .active:after {
 }
 
 .msg.small:after,
-[class*="msg-"].small:after {
+[class*=" msg-"].small:after,
+[class^="msg-"].small:after {
   width: 25px;
   height: 24px;
   background-position: -144px -100px;
 }
 
 .msg.small > h2,
-[class*="msg-"].small > h2 {
+[class*=" msg-"].small > h2,
+[class^="msg-"].small > h2 {
   padding: 3px 0 3px 50px;
   font-size: 14px;
 }
 
-.msg.msg-success:before,
-[class*="msg-"].msg-success:before {
+.msg-success:before {
   background-color: #64ad23;
   background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #64ad23), color-stop(1, #539f18));
   background-image: -ms-linear-gradient(bottom, #64ad23, #539f18);
@@ -7380,23 +7391,19 @@ html:not(.lt-ie9) .no-touch .signpost > li:hover + .active:after {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#539f18', endColorstr='#64ad23', GradientType=0);
 }
 
-.msg.msg-success:after,
-[class*="msg-"].msg-success:after {
+.msg-success:after {
   background-position: -299px -90px;
 }
 
-.msg.msg-success > h2,
-[class*="msg-"].msg-success > h2 {
+.msg-success > h2 {
   color: #5ba71b;
 }
 
-.msg.msg-success.small:after,
-[class*="msg-"].msg-success.small:after {
+.msg-success.small:after {
   background-position: -345px -100px;
 }
 
-.msg.msg-warning:before,
-[class*="msg-"].msg-warning:before {
+.msg-warning:before {
   background-color: #f29500;
   background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #f29500), color-stop(1, #ef8500));
   background-image: -ms-linear-gradient(bottom, #f29500, #ef8500);
@@ -7406,23 +7413,19 @@ html:not(.lt-ie9) .no-touch .signpost > li:hover + .active:after {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ef8500', endColorstr='#f29500', GradientType=0);
 }
 
-.msg.msg-warning:after,
-[class*="msg-"].msg-warning:after {
+.msg-warning:after {
   background-position: -197px -90px;
 }
 
-.msg.msg-warning > h2,
-[class*="msg-"].msg-warning > h2 {
+.msg-warning > h2 {
   color: #f18e00;
 }
 
-.msg.msg-warning.small:after,
-[class*="msg-"].msg-warning.small:after {
+.msg-warning.small:after {
   background-position: -244px -100px;
 }
 
-.msg.msg-info:before,
-[class*="msg-"].msg-info:before {
+.msg-info:before {
   background-color: #714db8;
   background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #714db8), color-stop(1, #714db8));
   background-image: -ms-linear-gradient(bottom, #714db8, #714db8);
@@ -7432,18 +7435,15 @@ html:not(.lt-ie9) .no-touch .signpost > li:hover + .active:after {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#714db8', endColorstr='#714db8', GradientType=0);
 }
 
-.msg.msg-info:after,
-[class*="msg-"].msg-info:after {
+.msg-info:after {
   background-position: -1px -89px;
 }
 
-.msg.msg-info > h2,
-[class*="msg-"].msg-info > h2 {
+.msg-info > h2 {
   color: #714db8;
 }
 
-.msg.msg-info.small:after,
-[class*="msg-"].msg-info.small:after {
+.msg-info.small:after {
   background-position: -47px -100px;
 }
 
@@ -7462,13 +7462,1548 @@ html:not(.lt-ie9) .no-touch .signpost > li:hover + .active:after {
   width: 100%;
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
+}
+
+.tab > ul:before,
+[class*="tab-"] > ul:before,
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  display: table;
+  content: " ";
+}
+
+.tab > ul:after,
+[class*="tab-"] > ul:after {
+  clear: both;
 }
 
 .tab > ul > li,
 [class*="tab-"] > ul > li {
-  display: inline-block;
+  display: block;
+  float: left;
   padding: 15px 0;
-  margin: 0 -3px;
   text-align: center;
   background-color: #fafafa;
   border: 1px solid #dddddd;
@@ -7481,6 +9016,7 @@ html:not(.lt-ie9) .no-touch .signpost > li:hover + .active:after {
   -webkit-box-shadow: 4px 4px 1px 0 rgba(0, 0, 0, 0.05);
      -moz-box-shadow: 4px 4px 1px 0 rgba(0, 0, 0, 0.05);
           box-shadow: 4px 4px 1px 0 rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
 }
 
 .tab > ul > li > a,
@@ -7505,11 +9041,6 @@ html:not(.lt-ie9) .no-touch .signpost > li:hover + .active:after {
   color: #333333;
 }
 
-.tab > ul > li:first-child,
-[class*="tab-"] > ul > li:first-child {
-  margin: 0 -3px 0 0;
-}
-
 .tab > div,
 [class*="tab-"] > div {
   position: relative;
@@ -7530,6 +9061,7 @@ html:not(.lt-ie9) .no-touch .signpost > li:hover + .active:after {
   -webkit-box-shadow: 4px 4px 1px 0 rgba(0, 0, 0, 0.05);
      -moz-box-shadow: 4px 4px 1px 0 rgba(0, 0, 0, 0.05);
           box-shadow: 4px 4px 1px 0 rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
 }
 
 .tab > div.active,
@@ -7567,6 +9099,20 @@ html:not(.lt-ie9) .no-touch .signpost > li:hover + .active:after {
   cursor: default;
 }
 
+.tab-2 > ul > li,
+.tab-3 > ul > li,
+.tab-4 > ul > li,
+.tab-5 > ul > li {
+  border-left: 0;
+}
+
+.tab-2 > ul > li:first-child,
+.tab-3 > ul > li:first-child,
+.tab-4 > ul > li:first-child,
+.tab-5 > ul > li:first-child {
+  border-left: 1px solid #dddddd;
+}
+
 .tab-2 > ul > li {
   width: 50%;
 }
@@ -7585,9 +9131,1190 @@ html:not(.lt-ie9) .no-touch .signpost > li:hover + .active:after {
 
 /**/
 
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
+.tab-vertical:before,
+.tab-vertical:after {
+  display: table;
+  content: " ";
+}
+
+.tab-vertical:after {
+  clear: both;
+}
+
 .tab-vertical > ul {
   z-index: 1;
-  display: inline-block;
+  float: left;
+  max-width: 500px;
 }
 
 .tab-vertical > ul > li {
@@ -7636,7 +10363,7 @@ html:not(.lt-ie9) .no-touch .signpost > li:hover + .active:after {
   display: none;
   width: 70%;
   height: 400px;
-  margin-left: -3px;
+  margin-left: -1px;
   vertical-align: top;
   border: 1px solid #dddddd;
   -webkit-border-top-right-radius: 3px;
@@ -7648,7 +10375,7 @@ html:not(.lt-ie9) .no-touch .signpost > li:hover + .active:after {
 }
 
 .tab-vertical > div.active {
-  display: inline-block;
+  float: left;
 }
 
 .no-touch .tab-vertical > ul > li:hover {
@@ -7685,7 +10412,7 @@ html:not(.lt-ie9) .no-touch .signpost > li:hover + .active:after {
 
 .tab-pad > ul > li {
   padding: 15px 30px;
-  margin: 0;
+  margin: 0 6px;
   background: transparent;
   border: 1px solid transparent;
   -webkit-box-shadow: none;

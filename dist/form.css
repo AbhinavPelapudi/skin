@@ -1,15 +1,15 @@
 /*!
-Skin v0.0.1
+Skin v0.0.3
 Copyright 2013 eBay! Inc. All rights reserved.
 Licensed under the BSD License.
 https://github.com/eBay/skin/blob/master/LICENSE.txt"
 */
 /**/
 
-.form > .form-input-text,
-.form > input[type=text],
-.form > input[type=password],
-.form > textarea {
+.form .form-input-text,
+.form input[type=text],
+.form input[type=password],
+.form textarea {
   min-width: 100px;
   padding: 9px 11px 6px 11px;
   font-size: 14px;
@@ -21,10 +21,10 @@ https://github.com/eBay/skin/blob/master/LICENSE.txt"
   box-shadow: inset 0 1px 2px 0 rgba(0, 0, 0, 0.15);
 }
 
-.form > .form-input-text:focus,
-.form > input[type=text]:focus,
-.form > input[type=password]:focus,
-.form > textarea:focus {
+.form .form-input-text:focus,
+.form input[type=text]:focus,
+.form input[type=password]:focus,
+.form textarea:focus {
   background-color: #fefefe;
   background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #fefefe), color-stop(1, #fafafa));
   background-image: -ms-linear-gradient(bottom, #fefefe, #fafafa);
@@ -38,25 +38,25 @@ https://github.com/eBay/skin/blob/master/LICENSE.txt"
   transition: border 0.1s linear 0s, box-shadow 0.2s linear 0s;
 }
 
-.form > input.form-error,
-.form > input.form-error:focus,
-.form > textarea.form-error,
-.form > textarea.form-error:focus {
+.form input.form-error,
+.form input.form-error:focus,
+.form textarea.form-error,
+.form textarea.form-error:focus {
   border: 1px solid #dd1e31;
 }
 
-.form.large > .form-input-text,
-.form.large > input[type=text],
-.form.large > input[type=password],
-.form.large > textarea {
+.form.large .form-input-text,
+.form.large input[type=text],
+.form.large input[type=password],
+.form.large textarea {
   padding: 13px 15px 8px 15px;
   font-size: 18px;
 }
 
-.form.small > .form-input-text,
-.form.small > input[type=text],
-.form.small > input[type=password],
-.form.small > textarea {
+.form.small .form-input-text,
+.form.small input[type=text],
+.form.small input[type=password],
+.form.small textarea {
   padding: 5px 8px 4px 8px;
   font-size: 12px;
 }

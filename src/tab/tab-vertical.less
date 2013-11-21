@@ -5,9 +5,12 @@
 //@import "tab-base.less";
 
 .tab-vertical{
+	.clearfix();
+
 	& > ul{
-		display: inline-block;
+		float: left;
 		z-index:1;
+		max-width: 500px;
 
 		& > li{
 			display: block;
@@ -41,14 +44,14 @@
 		border: @borderGrey;
 		width: 70%;
 		vertical-align: top;
-		margin-left: -3px;
+		margin-left: -1px;
 		height: 400px;
 		.border-right-radius(3px);
 		z-index:0;
 	}
 
 	& > div.active{
-		display: inline-block;
+		float: left;
 	}
 }
 
