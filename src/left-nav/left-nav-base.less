@@ -4,13 +4,16 @@
 @import "../icon/icon-mixins.less";
 
 .left-nav,
-[class *= "left-nav-"]{
+.left-nav-arrow,
+.left-nav-expand,
+.left-nav-small,
+.left-nav-flyout-container{
 	margin-left: 0;
 	width: 210px;
 	.left-nav();
 
 	&.left-nav-arrow{
-		& a:after{
+		a:after{
 			content: '';
 			float: right;
 			margin-top: 2px;
@@ -19,12 +22,18 @@
 			.icon-arrow-tiny-right-disabled-mix();
 		}
 
-		& i{
+		a.left-nav-no-arrow:after{
 			display: none;
 		}
+
+		i{
+			display: none;
+		}
+
+
 	}
 
-	& ul{
+	ul{
 
 		padding: 0;
 		margin: 0;
@@ -38,7 +47,10 @@
 
 .no-touch{
 	.left-nav,
-	[class *= "left-nav-"]{
+	.left-nav-arrow,
+	.left-nav-expand,
+	.left-nav-small,
+	.left-nav-flyout-container{
 		ul > li:hover a{
 			color: @linkBlue;
 			text-decoration: underline;

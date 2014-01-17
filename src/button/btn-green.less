@@ -7,7 +7,6 @@
 
 
 .btn-green{
-	.border-radius(3px);
 	.btn-color(@btnGreenBkg, @btnGreenStart);
 
 	&:visited{
@@ -28,13 +27,13 @@
 			.gradient(@btnGreenStart, @btnGreenStart, @btnGreenBkg);
 		}
 	}
+}
 
-	.lt-ie9 .btn-green{
-		.btn-ie-hover(@btnGreenStart);
+.lt-ie9 .btn-green{
+	.btn-ie-hover(@btnGreenStart);
 
-		&[disabled]:hover,
-		&.disabled:hover{
-			border: 1px solid @btnGreenStart;
-		}
+	&[disabled]:hover,
+	&.disabled:hover{
+		border: 1px solid @btnGreenStart;
 	}
 }

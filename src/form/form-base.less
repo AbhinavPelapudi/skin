@@ -34,15 +34,6 @@
         border: @formBorderError;
     }
 
-    &.large{
-        .form-input-text,
-        input[type=text],
-        input[type=password],
-        textarea{
-            .form-size(13px 15px 8px 15px, 18px);
-        }
-    }
-
     &.small{
         .form-input-text,
         input[type=text],
@@ -57,6 +48,16 @@
         opacity: 0.4;
         cursor: default;
         .user-select(none);
+    }
+}
+
+.touch .form,
+.form.large{
+    .form-input-text,
+    input[type=text],
+    input[type=password],
+    textarea{
+        .form-size(13px 15px 8px 15px, 18px);
     }
 }
 

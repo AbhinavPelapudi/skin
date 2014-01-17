@@ -1,5 +1,5 @@
 /*!
-Skin v0.0.3
+Skin v0.0.5
 Copyright 2013 eBay! Inc. All rights reserved.
 Licensed under the BSD License.
 https://github.com/eBay/skin/blob/master/LICENSE.txt"
@@ -11,7 +11,10 @@ https://github.com/eBay/skin/blob/master/LICENSE.txt"
 /**/
 
 .left-nav,
-[class*="left-nav-"] {
+.left-nav-arrow,
+.left-nav-expand,
+.left-nav-small,
+.left-nav-flyout-container {
   width: 210px;
   padding-left: 0;
   margin-bottom: 50px;
@@ -19,7 +22,10 @@ https://github.com/eBay/skin/blob/master/LICENSE.txt"
 }
 
 .left-nav a,
-[class*="left-nav-"] a {
+.left-nav-arrow a,
+.left-nav-expand a,
+.left-nav-small a,
+.left-nav-flyout-container a {
   display: block;
   padding: 14px 0 14px 11px;
   font-size: 14px;
@@ -30,12 +36,18 @@ https://github.com/eBay/skin/blob/master/LICENSE.txt"
 }
 
 .left-nav a:visited,
-[class*="left-nav-"] a:visited {
+.left-nav-arrow a:visited,
+.left-nav-expand a:visited,
+.left-nav-small a:visited,
+.left-nav-flyout-container a:visited {
   color: #333333;
 }
 
 .left-nav > h3,
-[class*="left-nav-"] > h3 {
+.left-nav-arrow > h3,
+.left-nav-expand > h3,
+.left-nav-small > h3,
+.left-nav-flyout-container > h3 {
   padding-left: 0;
   margin-bottom: 10px;
   font-size: 18px;
@@ -45,7 +57,10 @@ https://github.com/eBay/skin/blob/master/LICENSE.txt"
 }
 
 .left-nav a,
-[class*="left-nav-"] a {
+.left-nav-arrow a,
+.left-nav-expand a,
+.left-nav-small a,
+.left-nav-flyout-container a {
   display: block;
   padding: 14px 0 14px 11px;
   font-size: 14px;
@@ -56,12 +71,18 @@ https://github.com/eBay/skin/blob/master/LICENSE.txt"
 }
 
 .left-nav a:visited,
-[class*="left-nav-"] a:visited {
+.left-nav-arrow a:visited,
+.left-nav-expand a:visited,
+.left-nav-small a:visited,
+.left-nav-flyout-container a:visited {
   color: #333333;
 }
 
 .left-nav > h3,
-[class*="left-nav-"] > h3 {
+.left-nav-arrow > h3,
+.left-nav-expand > h3,
+.left-nav-small > h3,
+.left-nav-flyout-container > h3 {
   padding-left: 0;
   margin-bottom: 10px;
   font-size: 18px;
@@ -71,7 +92,10 @@ https://github.com/eBay/skin/blob/master/LICENSE.txt"
 }
 
 .left-nav a,
-[class*="left-nav-"] a {
+.left-nav-arrow a,
+.left-nav-expand a,
+.left-nav-small a,
+.left-nav-flyout-container a {
   display: block;
   padding: 14px 0 14px 11px;
   font-size: 14px;
@@ -82,12 +106,18 @@ https://github.com/eBay/skin/blob/master/LICENSE.txt"
 }
 
 .left-nav a:visited,
-[class*="left-nav-"] a:visited {
+.left-nav-arrow a:visited,
+.left-nav-expand a:visited,
+.left-nav-small a:visited,
+.left-nav-flyout-container a:visited {
   color: #333333;
 }
 
 .left-nav > h3,
-[class*="left-nav-"] > h3 {
+.left-nav-arrow > h3,
+.left-nav-expand > h3,
+.left-nav-small > h3,
+.left-nav-flyout-container > h3 {
   padding-left: 0;
   margin-bottom: 10px;
   font-size: 18px;
@@ -97,7 +127,10 @@ https://github.com/eBay/skin/blob/master/LICENSE.txt"
 }
 
 .left-nav a,
-[class*="left-nav-"] a {
+.left-nav-arrow a,
+.left-nav-expand a,
+.left-nav-small a,
+.left-nav-flyout-container a {
   display: block;
   padding: 14px 0 14px 11px;
   font-size: 14px;
@@ -108,12 +141,18 @@ https://github.com/eBay/skin/blob/master/LICENSE.txt"
 }
 
 .left-nav a:visited,
-[class*="left-nav-"] a:visited {
+.left-nav-arrow a:visited,
+.left-nav-expand a:visited,
+.left-nav-small a:visited,
+.left-nav-flyout-container a:visited {
   color: #333333;
 }
 
 .left-nav > h3,
-[class*="left-nav-"] > h3 {
+.left-nav-arrow > h3,
+.left-nav-expand > h3,
+.left-nav-small > h3,
+.left-nav-flyout-container > h3 {
   padding-left: 0;
   margin-bottom: 10px;
   font-size: 18px;
@@ -123,7 +162,10 @@ https://github.com/eBay/skin/blob/master/LICENSE.txt"
 }
 
 .left-nav.left-nav-arrow a:after,
-[class*="left-nav-"].left-nav-arrow a:after {
+.left-nav-arrow.left-nav-arrow a:after,
+.left-nav-expand.left-nav-arrow a:after,
+.left-nav-small.left-nav-arrow a:after,
+.left-nav-flyout-container.left-nav-arrow a:after {
   float: right;
   width: 6px;
   height: 10px;
@@ -135,24 +177,44 @@ https://github.com/eBay/skin/blob/master/LICENSE.txt"
   content: '';
 }
 
+.left-nav.left-nav-arrow a.left-nav-no-arrow:after,
+.left-nav-arrow.left-nav-arrow a.left-nav-no-arrow:after,
+.left-nav-expand.left-nav-arrow a.left-nav-no-arrow:after,
+.left-nav-small.left-nav-arrow a.left-nav-no-arrow:after,
+.left-nav-flyout-container.left-nav-arrow a.left-nav-no-arrow:after {
+  display: none;
+}
+
 .left-nav.left-nav-arrow i,
-[class*="left-nav-"].left-nav-arrow i {
+.left-nav-arrow.left-nav-arrow i,
+.left-nav-expand.left-nav-arrow i,
+.left-nav-small.left-nav-arrow i,
+.left-nav-flyout-container.left-nav-arrow i {
   display: none;
 }
 
 .left-nav ul,
-[class*="left-nav-"] ul {
+.left-nav-arrow ul,
+.left-nav-expand ul,
+.left-nav-small ul,
+.left-nav-flyout-container ul {
   padding: 0;
   margin: 0;
 }
 
 .left-nav ul > li,
-[class*="left-nav-"] ul > li {
+.left-nav-arrow ul > li,
+.left-nav-expand ul > li,
+.left-nav-small ul > li,
+.left-nav-flyout-container ul > li {
   list-style-type: none;
 }
 
 .no-touch .left-nav ul > li:hover a,
-.no-touch [class*="left-nav-"] ul > li:hover a {
+.no-touch .left-nav-arrow ul > li:hover a,
+.no-touch .left-nav-expand ul > li:hover a,
+.no-touch .left-nav-small ul > li:hover a,
+.no-touch .left-nav-flyout-container ul > li:hover a {
   color: #0654ba;
   text-decoration: underline;
 }

@@ -7,12 +7,15 @@
 .filmstrip{
 	display: block;
 	.stacking-context-0();
+	white-space: nowrap;
 
 	& > div{
 		overflow: hidden;
 		display: inline-block;
 		& > ul{
 			display: block;
+			position: relative;
+			word-spacing: -4px;
 			.m-p-collapse();
 			
 			&:before,
@@ -28,7 +31,9 @@
 
 		& > ul > li{
 			list-style-type: none;
-			float: left;
+			display: inline-block;
+			word-spacing: normal;
+			white-space: normal;
 		}
 	}
 

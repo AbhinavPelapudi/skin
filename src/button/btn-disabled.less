@@ -1,49 +1,21 @@
 @import "btn-mixins.less";
 
-.btn-green[disabled],
-.btn-scnd[disabled],
-.btn-prim[disabled],
-.btn-green.disabled,
-.btn-scnd.disabled,
-.btn-prim.disabled,
-.dropdown-scnd.disabled > a,
-.dropdown-scnd.disabled > button,
-.dropdown-prim.disabled > a,
-.dropdown-prim.disabled > button{
+[class *= "btn-"].disabled,
+[disabled][class *= "btn-"],
+[class *= "dropdown-"] > a,
+[class *= "dropdown-"]> button{
 	border: none;
 	color: #fff;
-	.box-shadow(none);
-
 }
 
 
 .no-touch{
-	.btn-green[disabled],
-	.btn-scnd[disabled],
-	.btn-prim[disabled],
-	.btn-green.disabled,
-	.btn-scnd.disabled,
-	.btn-prim.disabled,
-	.dropdown-scnd.disabled > a,
-	.dropdown-scnd.disabled > button,
-	.dropdown-prim.disabled > a,
-	.dropdown-prim.disabled > button{
+	[class *= "btn-"].disabled,
+	[disabled][class *= "btn-"],
+	[class *= "dropdown-"] > a,
+	[class *= "dropdown-"]> button{
 		&:hover{
 			border: none;
-			.box-shadow(none);
-		}
-	}
-
-	.dropdown-prim,
-	.dropdown-scnd{
-		&.dropdown-no-split.disabled{
-		    & > button:hover:first-child,
-		    & > a:hover:first-child{
-		        border-right: 	none;
-		        border:			none;
-		        border-left:	0;
-
-		    }
 		}
 	}
 }

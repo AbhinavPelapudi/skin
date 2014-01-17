@@ -1,5 +1,5 @@
 /*!
-Skin v0.0.3
+Skin v0.0.5
 Copyright 2013 eBay! Inc. All rights reserved.
 Licensed under the BSD License.
 https://github.com/eBay/skin/blob/master/LICENSE.txt"
@@ -19,6 +19,7 @@ https://github.com/eBay/skin/blob/master/LICENSE.txt"
   width: 100%;
   padding: 0;
   margin: 0;
+  *zoom: 1;
   box-sizing: border-box;
 }
 
@@ -192,6 +193,10 @@ https://github.com/eBay/skin/blob/master/LICENSE.txt"
 }
 
 /**/
+
+.tab-vertical {
+  *zoom: 1;
+}
 
 .tab-vertical:before,
 .tab-vertical:after {

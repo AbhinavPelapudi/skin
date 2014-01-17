@@ -2,125 +2,142 @@
 @import "../core/mixins.less";
 
 // button default size is medium.
+
 .btn,
+[class *= "btn-"],
 .dropdown > a,
 .dropdown > button,
-[class*="dropdown-"] > a,
-[class*="dropdown-"] > button,
-[class*="btn-"]{
+[class *= "dropdown-"] > a,
+[class *= "dropdown-"] > button{
 	display: 			inline-block;
 	padding: 			@btnPadding;
-	border: 			@btnBorder;
 	background-repeat:	no-repeat;
-	text-align:			center;	
-	.stacking-context();
+	text-align:			center;
+	text-decoration:	none;	
 	.font-define(@btnFontSize; bold; @btnDefaultTextColor; none);
-	.gradient(@btnBkg, @btnBkg, @btnBkgEnd);
+	.gradient(@btnBkg, @btnBkgEnd, @btnBkg);
 	.box-shadow(@btnShadow);
 	.border-radius(2px);
 
 	&:visited{
 		color: @btnDefaultTextColor;
-		text-decoration:none;
+		text-decoration: none;
 	}
-
 }
 
-[disabled].btn,
+
+.btn,
+.dropdown > a,
+.dropdown > button,
+.dropdown-no-split > a,
+.dropdown-no-split > button{
+	border: @btnBorder;
+}
+
+[disabled],
+.disabled{
+	&.btn,
+	&[class *= "btn-"],
+	&.dropdown > a,
+	&.dropdown > button,
+	&[class *= "dropdown-"] > a,
+	&[class *= "dropdown-"] > button{
+		user-select: none;
+		cursor: default;
+		.box-shadow(@btnShadowHover);
+		.opacity();
+	}
+}
+
+.btn[disabled],
 .disabled.btn,
-[disabled][class*="btn-"],
-.disabled[class*="btn-"],
 .disabled.dropdown > a,
-.disabled.dropdown > button,
-.disabled[class*="dropdown-"] > a,
-.disabled[class*="dropdown-"] > button{
+.disabled.dropdown > button{
 	border: @btnBorderDisabled;
-	color: 	#7fa6c4;
-	cursor: default;
-	.box-shadow(none);
-	.opacity();
+	color: 	#7fa6c4;	
 }
 
 .lt-ie9{
-	[disabled].btn,
 	.disabled.btn,
-	[disabled][class*="btn-"],
-	.disabled[class*="btn-"],
+	[disabled].btn,
+	.disabled[class *= "btn-"],
+	[disabled][class *= "btn-"],
 	.disabled.dropdown > a,
 	.disabled.dropdown > button,
-	.disabled[class*="dropdown-"] > a,
-	.disabled[class*="dropdown-"] > button{
+	.disabled[class *= "dropdown-"] > a,
+	.disabled[class *= "dropdown-"] > button{
 
 		&:hover{
 			border: @btnBorderDisabled;
-			.box-shadow(none);
+			.box-shadow(@btnShadowHover);
 			background-position: 0 0;
-		}		
-
-		&:hover{
-			border: @btnBorderDisabled;
 			.opacity();
 		}
 	}
 }
 
 .btn.large,
+[class *= "btn-"].large,
 .dropdown.large > a:first-child,
 .dropdown.large > button:first-child,
-[class*="dropdown-"].large > a:first-child,
-[class*="dropdown-"].large > button:first-child,
-[class*="btn-"].large{
+[class *= "dropdown-"].large > a:first-child,
+[class *= "dropdown-"].large > button:first-child{
 	padding: @btnLargePadding;
 	font-size: @btnLargeFontSize;
 }
 
 .btn.small,
+[class *= "btn-"].small,
 .dropdown.small > a:first-child,
 .dropdown.small > button:first-child,
-[class*="btn-"].small,
-[class*="dropdown-"].small > a:first-child,
-[class*="dropdown-"].small > button:first-child{
+[class *= "dropdown-"].small > a:first-child,
+[class *= "dropdown-"].small > button:first-child{
 	padding: 	@btnSmallPadding;
 	font-size: 	@btnSmallFontSize;
 }
 
-a.btn,
-a[class^="btn-"],
-.dropdown > a,
-[class*="drowpdown-"] > a{
-	text-decoration: none;
-}
-
-
 .no-touch{
 	.btn,
+	[class *= "btn-"],
 	.dropdown > a,
 	.dropdown > button,
-	[class*="dropdown-"] > a,
-	[class*="dropdown-"] > button,
-	[class*="btn-"]{	
+	[class *= "dropdown-"] > a,
+	[class *= "dropdown-"] > button{	
 		&:hover{
-			border: @btnBorderHover;
 			text-decoration: none;
 			background-position: 0 -45px;
 			.transition(background-position .09s linear);
-			.box-shadow(none);
+			.box-shadow(@btnShadowHover);
+		}
+	}
+
+	.btn,
+	.dropdown > a,
+	.dropdown > button{
+		&:hover{
+			border: @btnBorderHover;
+		}
+	}
+
+	.btn[disabled],
+	.disabled.btn,
+	[class *= "btn-"][disabled],
+	.disabled[class *= "btn-"],
+	.disabled.dropdown > a,
+	.disabled.dropdown > button,
+	.disabled[class *= "dropdown-"] > a,
+	.disabled[class *= "dropdown-"] > button{
+		&:hover{
+			background-position: 0 0;
 		}
 	}
 
 	[disabled].btn,
 	.disabled.btn,
-	[disabled][class*="btn-"],
-	.disabled[class*="btn-"],
 	.disabled.dropdown > a,
-	.disabled.dropdown > button,
-	.disabled[class*="dropdown-"] > a,
-	.disabled[class*="dropdown-"] > button{
-
+	.disabled.dropdown > button{
 		&:hover{
 			border: @btnBorderDisabled;
-			.box-shadow(none);
-			background-position: 0 0;
 		}
 	}
 }

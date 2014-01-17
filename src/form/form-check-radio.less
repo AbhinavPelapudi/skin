@@ -32,29 +32,6 @@
         .icon-radio-medium-checked-mix();
     }
 
-    &.large{
-
-        input[type=checkbox] + i{
-        .icon-check-large();
-        .icon-check-large-mix();
-        }
-
-        input[type=checkbox].checked + i,
-        input[type=checkbox]:checked + i{
-            .icon-check-large-checked-mix();
-        }
-
-        input[type=radio] + i{
-            .icon-radio-large();
-            .icon-radio-large-mix();
-        }
-
-        input[type=radio].checked + i,
-        input[type=radio]:checked + i{
-            .icon-radio-large-checked-mix();
-        }
-    }
-
     &.small{
         input[type=checkbox] + i{
             .icon-check-small();
@@ -79,128 +56,151 @@
 
 }
 
+.touch .form,
+.form.large{
+    input[type=checkbox] + i{
+    .icon-check-large();
+    .icon-check-large-mix();
+    }
+
+    input[type=checkbox].checked + i,
+    input[type=checkbox]:checked + i{
+        .icon-check-large-checked-mix();
+    }
+
+    input[type=radio] + i{
+        .icon-radio-large();
+        .icon-radio-large-mix();
+    }
+
+    input[type=radio].checked + i,
+    input[type=radio]:checked + i{
+        .icon-radio-large-checked-mix();
+    } 
+}
+
 
 .no-touch{
-    .form{
-        input[type=checkbox] + i:hover{
+    .form label:hover{
+        input[type=checkbox] + i{
             .icon-check-medium-hover-mix();
         }
 
-        input[type=checkbox].checked + i:hover,
-        input[type=checkbox]:checked + i:hover{
+        input[type=checkbox].checked + i,
+        input[type=checkbox]:checked + i{
             .icon-check-medium-checked-hover-mix();
         }
 
-        input[type=radio] + i:hover{
+        input[type=radio] + i{
             .icon-radio-medium-hover-mix();
         }
 
-        input[type=radio].checked + i:hover,
-        input[type=radio]:checked + i:hover{
+        input[type=radio].checked + i,
+        input[type=radio]:checked + i{
             .icon-radio-medium-checked-hover-mix();
         }
 
         &.disabled,
         .disabled{
-            input[type=checkbox] + i:hover{
+            input[type=checkbox] + i{
                     .icon-check-medium-mix();
             }
 
-            input[type=checkbox].checked + i:hover,
-            input[type=checkbox]:checked + i:hover{
+            input[type=checkbox].checked + i,
+            input[type=checkbox]:checked + i{
                     .icon-check-medium-checked-mix();
             }
 
-            input[type=radio] + i:hover{
+            input[type=radio] + i{
                     .icon-radio-medium-mix();
             }
 
-            input[type=radio].checked + i:hover,
-            input[type=radio]:checked + i:hover{
+            input[type=radio].checked + i,
+            input[type=radio]:checked + i{
                     .icon-radio-medium-checked-mix();
             }
         }
+    }
 
-        &.large{
+    .form.large label:hover{
 
-            input[type=checkbox] + i:hover{
-            .icon-check-large-hover-mix();
-            }
-
-            input[type=checkbox].checked + i:hover,
-            input[type=checkbox]:checked + i:hover{
-                .icon-check-large-checked-hover-mix();
-            }
-
-            input[type=radio] + i:hover{
-                .icon-radio-large-hover-mix();
-            }
-
-            input[type=radio].checked + i:hover,
-            input[type=radio]:checked + i:hover{
-                .icon-radio-large-checked-hover-mix();
-            }
-
-            &.disabled,
-            .disabled{
-                input[type=checkbox] + i:hover{
-                .icon-check-large-mix();
-                }
-
-                input[type=checkbox].checked + i:hover,
-                input[type=checkbox]:checked + i:hover{
-                    .icon-check-large-checked-mix();
-                }
-
-                input[type=radio] + i:hover{
-                    .icon-radio-large-mix();
-                }
-
-                input[type=radio].checked + i:hover,
-                input[type=radio]:checked + i:hover{
-                    .icon-radio-large-checked-mix();
-                }
-            }
+        input[type=checkbox] + i{
+        .icon-check-large-hover-mix();
         }
 
-        &.small{
-            input[type=checkbox] + i:hover{
-            .icon-check-small-hover-mix();
+        input[type=checkbox].checked + i,
+        input[type=checkbox]:checked + i{
+            .icon-check-large-checked-hover-mix();
+        }
+
+        input[type=radio] + i{
+            .icon-radio-large-hover-mix();
+        }
+
+        input[type=radio].checked + i,
+        input[type=radio]:checked + i{
+            .icon-radio-large-checked-hover-mix();
+        }
+
+        &.disabled,
+        & .disabled{
+            input[type=checkbox] + i{
+            .icon-check-large-mix();
             }
 
-            input[type=checkbox].checked + i:hover,
-            input[type=checkbox]:checked + i:hover{
-                .icon-check-small-checked-hover-mix();
+            input[type=checkbox].checked + i,
+            input[type=checkbox]:checked + i{
+                .icon-check-large-checked-mix();
             }
 
-            input[type=radio] + i:hover{
-                .icon-radio-small-hover-mix();
+            input[type=radio] + i{
+                .icon-radio-large-mix();
             }
 
-            input[type=radio].checked + i:hover,
-            input[type=radio]:checked + i:hover{
-                .icon-radio-small-checked-hover-mix();
+            input[type=radio].checked + i,
+            input[type=radio]:checked + i{
+                .icon-radio-large-checked-mix();
+            }
+        }
+    }
+
+    .form.small label:hover{
+        input[type=checkbox] + i{
+        .icon-check-small-hover-mix();
+        }
+
+        input[type=checkbox].checked + i,
+        input[type=checkbox]:checked + i{
+            .icon-check-small-checked-hover-mix();
+        }
+
+        input[type=radio] + i{
+            .icon-radio-small-hover-mix();
+        }
+
+        input[type=radio].checked + i,
+        input[type=radio]:checked + i{
+            .icon-radio-small-checked-hover-mix();
+        }
+
+        &.disabled,
+        .disabled{
+            input[type=checkbox] + i{
+            .icon-check-small-mix();
             }
 
-            &.disabled,
-            .disabled{
-                input[type=checkbox] + i:hover{
-                .icon-check-small-mix();
-                }
+            input[type=checkbox].checked + i,
+            input[type=checkbox]:checked + i{
+                .icon-check-small-checked-mix();
+            }
 
-                input[type=checkbox].checked + i:hover,
-                input[type=checkbox]:checked + i:hover{
-                    .icon-check-small-checked-mix();
-                }
+            input[type=radio] + i{
+                .icon-radio-small-mix();
+            }
 
-                input[type=radio] + i:hover{
-                    .icon-radio-small-mix();
-                }
-
-                input[type=radio].checked + i:hover,
-                input[type=radio]:checked + i:hover{
-                    .icon-radio-small-checked-mix();
-                }
+            input[type=radio].checked + i,
+            input[type=radio]:checked + i{
+                .icon-radio-small-checked-mix();
             }
         }
     }

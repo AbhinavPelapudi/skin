@@ -1,5 +1,5 @@
 /*!
-Skin v0.0.3
+Skin v0.0.5
 Copyright 2013 eBay! Inc. All rights reserved.
 Licensed under the BSD License.
 https://github.com/eBay/skin/blob/master/LICENSE.txt"
@@ -10,6 +10,7 @@ https://github.com/eBay/skin/blob/master/LICENSE.txt"
   position: relative;
   z-index: 0;
   display: block;
+  white-space: nowrap;
 }
 
 .filmstrip > div {
@@ -18,9 +19,11 @@ https://github.com/eBay/skin/blob/master/LICENSE.txt"
 }
 
 .filmstrip > div > ul {
+  position: relative;
   display: block;
   padding: 0;
   margin: 0;
+  word-spacing: -4px;
 }
 
 .filmstrip > div > ul:before,
@@ -34,7 +37,9 @@ https://github.com/eBay/skin/blob/master/LICENSE.txt"
 }
 
 .filmstrip > div > ul > li {
-  float: left;
+  display: inline-block;
+  word-spacing: normal;
+  white-space: normal;
   list-style-type: none;
 }
 
