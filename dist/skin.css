@@ -1,5 +1,5 @@
 /*!
-Skin v0.0.5
+Skin v0.0.9
 Copyright 2013 eBay! Inc. All rights reserved.
 Licensed under the BSD License.
 https://github.com/eBay/skin/blob/master/LICENSE.txt"
@@ -2660,6 +2660,11 @@ a:hover {
 
 /**/
 
+.breadcrumb li {
+  display: inline;
+  padding: 0;
+}
+
 .breadcrumb a {
   font-size: 12px;
   font-weight: normal;
@@ -2713,6 +2718,12 @@ a:hover {
   font-weight: normal;
   color: #333333;
   text-decoration: none;
+}
+
+ul.breadcrumb {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
 }
 
 .no-touch .breadcrumb a:hover {
@@ -3634,19 +3645,25 @@ a:hover {
 
 /**/
 
-.filmstrip {
+[class*="filmstrip-"] {
   position: relative;
   z-index: 0;
   display: block;
+  margin: 0 20px;
   white-space: nowrap;
 }
 
-.filmstrip > div {
+[class*="filmstrip-"].filmstrip-centered li > div {
+  margin: 0 auto;
+}
+
+[class*="filmstrip-"] > div {
   display: inline-block;
+  width: 100%;
   overflow: hidden;
 }
 
-.filmstrip > div > ul {
+[class*="filmstrip-"] > div > ul {
   position: relative;
   display: block;
   padding: 0;
@@ -3654,24 +3671,17 @@ a:hover {
   word-spacing: -4px;
 }
 
-.filmstrip > div > ul:before,
-.filmstrip > div > ul:after {
-  display: table;
-  content: " ";
-}
-
-.filmstrip > div > ul:after {
-  clear: both;
-}
-
-.filmstrip > div > ul > li {
+[class*="filmstrip-"] > div > ul > li {
   display: inline-block;
+  width: 99%;
+  margin: 0 .5%;
   word-spacing: normal;
   white-space: normal;
   list-style-type: none;
 }
 
-.filmstrip > button {
+[class*="filmstrip-"] > button {
+  position: absolute;
   display: inline-block;
   width: 13px;
   height: 20px;
@@ -3687,32 +3697,65 @@ a:hover {
           border-radius: 3px;
 }
 
-.filmstrip > button:first-child {
+[class*="filmstrip-"] > button:first-child {
+  left: -18px;
   background-position: -1px -138px;
 }
 
-.filmstrip > button[disabled] {
+[class*="filmstrip-"] > button[disabled] {
   background-position: -84px -138px;
 }
 
-.filmstrip > button[disabled]:first-child {
+[class*="filmstrip-"] > button[disabled]:first-child {
   background-position: -67px -138px;
 }
 
-.no-touch .filmstrip > button:hover {
+.filmstrip-2 > div > ul > li {
+  width: 49%;
+}
+
+.filmstrip-3 > div > ul > li {
+  width: 32.333333333333%;
+}
+
+.filmstrip-4 > div > ul > li {
+  width: 24%;
+}
+
+.filmstrip-5 > div > ul > li {
+  width: 19%;
+}
+
+.filmstrip-6 > div > ul > li {
+  width: 15.6666666666666666%;
+}
+
+.filmstrip-7 > div > ul > li {
+  width: 13.2857143%;
+}
+
+.filmstrip-8 > div > ul > li {
+  width: 11.5%;
+}
+
+.no-touch .filmstrip > button:hover,
+.no-touch [class*="filmstrip-"] > button:hover {
   background-position: -51px -138px;
   border: 1px solid transparent;
 }
 
-.no-touch .filmstrip > button:first-child:hover {
+.no-touch .filmstrip > button:first-child:hover,
+.no-touch [class*="filmstrip-"] > button:first-child:hover {
   background-position: -17px -138px;
 }
 
-.no-touch .filmstrip > button[disabled]:hover {
+.no-touch .filmstrip > button[disabled]:hover,
+.no-touch [class*="filmstrip-"] > button[disabled]:hover {
   background-position: -84px -138px;
 }
 
-.no-touch .filmstrip > button[disabled]:first-child:hover {
+.no-touch .filmstrip > button[disabled]:first-child:hover,
+.no-touch [class*="filmstrip-"] > button[disabled]:first-child:hover {
   background-position: -67px -138px;
 }
 
@@ -4913,14 +4956,21 @@ a:hover {
 .item-box,
 [class*="item-box-"] {
   position: relative;
-  display: table-cell;
+  display: inline-block;
   text-align: center;
-  vertical-align: middle;
   background: #fff;
   border: 1px solid #dddddd;
   -webkit-border-radius: 3px;
      -moz-border-radius: 3px;
           border-radius: 3px;
+}
+
+.item-box > div:first-child,
+[class*="item-box-"] > div:first-child {
+  display: inline-block;
+  width: 0;
+  height: 100%;
+  vertical-align: middle;
 }
 
 .item-box:before,
@@ -4958,8 +5008,8 @@ a:hover {
 
 /*defines a lifted corner shadow for elements between 260 and 160 px */
 
-.item-box.small::before,
-[class*="item-box-"].small::before {
+.item-box.small:before,
+[class*="item-box-"].small:before {
   bottom: 13px;
   left: 4px;
   -webkit-transform: rotate(-9deg);
@@ -4969,8 +5019,8 @@ a:hover {
           transform: rotate(-9deg);
 }
 
-.item-box.small::before,
-[class*="item-box-"].small::before {
+.item-box.small:before,
+[class*="item-box-"].small:before {
   bottom: 13px;
   left: 4px;
   -webkit-transform: rotate(-9deg);
@@ -4980,8 +5030,8 @@ a:hover {
           transform: rotate(-9deg);
 }
 
-.item-box.small::before,
-[class*="item-box-"].small::before {
+.item-box.small:before,
+[class*="item-box-"].small:before {
   bottom: 13px;
   left: 4px;
   -webkit-transform: rotate(-9deg);
@@ -4991,8 +5041,8 @@ a:hover {
           transform: rotate(-9deg);
 }
 
-.item-box.small::before,
-[class*="item-box-"].small::before {
+.item-box.small:before,
+[class*="item-box-"].small:before {
   bottom: 13px;
   left: 4px;
   -webkit-transform: rotate(-9deg);
@@ -5002,8 +5052,8 @@ a:hover {
           transform: rotate(-9deg);
 }
 
-.item-box.small::before,
-[class*="item-box-"].small::before {
+.item-box.small:before,
+[class*="item-box-"].small:before {
   bottom: 13px;
   left: 4px;
   -webkit-transform: rotate(-9deg);
@@ -5013,8 +5063,8 @@ a:hover {
           transform: rotate(-9deg);
 }
 
-.item-box.small::before,
-[class*="item-box-"].small::before {
+.item-box.small:before,
+[class*="item-box-"].small:before {
   bottom: 13px;
   left: 4px;
   -webkit-transform: rotate(-9deg);
@@ -5028,8 +5078,8 @@ a:hover {
 
 /*define box shadow for elements below 160 px in width/height*/
 
-.item-box.tiny::before,
-[class*="item-box-"].tiny::before {
+.item-box.tiny:before,
+[class*="item-box-"].tiny:before {
   bottom: 13px;
   left: 4px;
   -webkit-transform: rotate(-9deg);
@@ -5039,8 +5089,8 @@ a:hover {
           transform: rotate(-9deg);
 }
 
-.item-box.tiny::before,
-[class*="item-box-"].tiny::before {
+.item-box.tiny:before,
+[class*="item-box-"].tiny:before {
   bottom: 13px;
   left: 4px;
   -webkit-transform: rotate(-9deg);
@@ -5050,8 +5100,8 @@ a:hover {
           transform: rotate(-9deg);
 }
 
-.item-box.tiny::before,
-[class*="item-box-"].tiny::before {
+.item-box.tiny:before,
+[class*="item-box-"].tiny:before {
   bottom: 13px;
   left: 4px;
   -webkit-transform: rotate(-9deg);
@@ -5061,8 +5111,8 @@ a:hover {
           transform: rotate(-9deg);
 }
 
-.item-box.tiny::before,
-[class*="item-box-"].tiny::before {
+.item-box.tiny:before,
+[class*="item-box-"].tiny:before {
   bottom: 13px;
   left: 4px;
   -webkit-transform: rotate(-9deg);
@@ -5072,8 +5122,8 @@ a:hover {
           transform: rotate(-9deg);
 }
 
-.item-box.tiny::before,
-[class*="item-box-"].tiny::before {
+.item-box.tiny:before,
+[class*="item-box-"].tiny:before {
   bottom: 13px;
   left: 4px;
   -webkit-transform: rotate(-9deg);
@@ -5083,8 +5133,8 @@ a:hover {
           transform: rotate(-9deg);
 }
 
-.item-box.tiny::before,
-[class*="item-box-"].tiny::before {
+.item-box.tiny:before,
+[class*="item-box-"].tiny:before {
   bottom: 13px;
   left: 4px;
   -webkit-transform: rotate(-9deg);
@@ -5199,6 +5249,12 @@ html:not(.lt-ie9) .corner-promo-orange > span {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffb300', endColorstr='#ffcb00', GradientType=0);
 }
 
+.lt-ie9 .corner-promo-green,
+.lt-ie9 .corner-promo-orange {
+  top: 0;
+  left: 0;
+}
+
 .lt-ie9 .corner-promo-green > span {
   background: #64ad23;
 }
@@ -5207,17 +5263,11 @@ html:not(.lt-ie9) .corner-promo-orange > span {
   background: #ffcb00;
 }
 
-.lt-ie9 .corner-promo-green > span,
-.lt-ie9 .corner-promo-orange > span {
-  margin-top: -40px;
-  margin-left: 11px;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.7660444431189781, M12=0.6427876096865391, M21=-0.6427876096865391, M22=0.7660444431189781, SizingMethod='auto expand')";
-}
-
-.lt-ie9 .large > .corner-promo-green > span,
-.lt-ie9 .large > .corner-promo-orange > span {
-  margin-top: -57px;
-  margin-left: 10px;
+.lt-ie9 .corner-promo-green:before,
+.lt-ie9 .corner-promo-green:after,
+.lt-ie9 .corner-promo-orange:before,
+.lt-ie9 .corner-promo-orange:after {
+  display: none;
 }
 
 /**/
@@ -6766,15 +6816,22 @@ html:not(.lt-ie9) .corner-promo-orange > span {
 
 /**/
 
-.pagination > [rel="next"],
-.pagination > [rel="prev"] {
+.pagination li {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+.pagination [rel="next"],
+.pagination [rel="prev"] {
   position: relative;
+  top: -1px;
   display: inline-block;
   width: 37px;
   height: 36px;
   padding: 0;
   margin: 0;
-  vertical-align: top;
+  vertical-align: middle;
   background-image: url('http://p.ebaystatic.com/aw/cmp/ds3/skin_sprite2.png');
   background-position: -3px -165px;
   border: none;
@@ -6786,19 +6843,19 @@ html:not(.lt-ie9) .corner-promo-orange > span {
           box-shadow: none;
 }
 
-.pagination > [rel="prev"]:disabled {
+.pagination [rel="prev"]:disabled {
   background-position: -167px -165px;
 }
 
-.pagination > [rel="next"] {
+.pagination [rel="next"] {
   background-position: -85px -165px;
 }
 
-.pagination > [rel="next"]:disabled {
+.pagination [rel="next"]:disabled {
   background-position: -208px -165px;
 }
 
-.pagination > a {
+.pagination a {
   display: inline-block;
   width: 34px;
   height: 34px;
@@ -6812,7 +6869,7 @@ html:not(.lt-ie9) .corner-promo-orange > span {
           border-radius: 3px;
 }
 
-.pagination > a.current {
+.pagination a.current {
   color: #333333;
   text-decoration: none;
   background-color: #fff;
@@ -6826,7 +6883,13 @@ html:not(.lt-ie9) .corner-promo-orange > span {
           transition: background-color 0.17s ease;
 }
 
-.no-touch .pagination > [rel="prev"]:hover {
+ul.pagination {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.no-touch .pagination [rel="prev"]:hover {
   background-position: -43px -165px;
   border: none;
   -webkit-transition: box-shadow 0.05s linear;
@@ -6835,7 +6898,7 @@ html:not(.lt-ie9) .corner-promo-orange > span {
           transition: box-shadow 0.05s linear;
 }
 
-.no-touch .pagination > [rel="next"]:hover {
+.no-touch .pagination [rel="next"]:hover {
   background-position: -126px -165px;
   border: none;
   -webkit-transition: box-shadow 0.05s linear;
@@ -6844,7 +6907,7 @@ html:not(.lt-ie9) .corner-promo-orange > span {
           transition: box-shadow 0.05s linear;
 }
 
-.no-touch .pagination > a:hover {
+.no-touch .pagination a:hover {
   color: #333333;
   text-decoration: none;
   background-color: #fff;
@@ -6858,30 +6921,43 @@ html:not(.lt-ie9) .corner-promo-orange > span {
           transition: background-color 0.17s ease;
 }
 
-.no-touch .pagination > a.current:hover {
+.no-touch .pagination a.current:hover {
   cursor: default;
   border: 1px solid #dddddd;
   user-select: none;
 }
 
-.pagination-alternate > a {
+.pagination-alternate li {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+.pagination-alternate a {
   display: inline-block;
   width: 34px;
   height: 34px;
   line-height: 34px;
   text-align: center;
   text-decoration: none;
+  border: 1px solid transparent;
   -webkit-border-radius: 3px;
      -moz-border-radius: 3px;
           border-radius: 3px;
 }
 
-.pagination-alternate > a.current {
+.pagination-alternate a.current {
   color: #333333;
   text-decoration: none;
   cursor: default;
   background-color: #fff;
   border: 1px solid #c9dde9;
+}
+
+ul.pagination-alternate {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
 }
 
 .no-touch .pagination-alternate a:hover {

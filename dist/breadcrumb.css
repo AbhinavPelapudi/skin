@@ -1,10 +1,15 @@
 /*!
-Skin v0.0.5
+Skin v0.0.9
 Copyright 2013 eBay! Inc. All rights reserved.
 Licensed under the BSD License.
 https://github.com/eBay/skin/blob/master/LICENSE.txt"
 */
 /**/
+
+.breadcrumb li {
+  display: inline;
+  padding: 0;
+}
 
 .breadcrumb a {
   font-size: 12px;
@@ -59,6 +64,12 @@ https://github.com/eBay/skin/blob/master/LICENSE.txt"
   font-weight: normal;
   color: #333333;
   text-decoration: none;
+}
+
+ul.breadcrumb {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
 }
 
 .no-touch .breadcrumb a:hover {

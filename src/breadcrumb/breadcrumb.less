@@ -4,6 +4,11 @@
 
 
 .breadcrumb{
+	li{
+		display: 	inline;
+		padding:	0;
+	}
+
 	a{
 		.font-define(12px, normal, @breadCrumbFontColor, none);
 
@@ -43,6 +48,12 @@
 		.m-p-collapse(); //collapse margins and padding
 		.font-define(12px, normal, @breadCrumbCurrentColor, none);
 	}
+}
+
+ul.breadcrumb{
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
 }
 
 .no-touch{

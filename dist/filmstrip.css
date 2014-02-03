@@ -1,24 +1,30 @@
 /*!
-Skin v0.0.5
+Skin v0.0.9
 Copyright 2013 eBay! Inc. All rights reserved.
 Licensed under the BSD License.
 https://github.com/eBay/skin/blob/master/LICENSE.txt"
 */
 /**/
 
-.filmstrip {
+[class*="filmstrip-"] {
   position: relative;
   z-index: 0;
   display: block;
+  margin: 0 20px;
   white-space: nowrap;
 }
 
-.filmstrip > div {
+[class*="filmstrip-"].filmstrip-centered li > div {
+  margin: 0 auto;
+}
+
+[class*="filmstrip-"] > div {
   display: inline-block;
+  width: 100%;
   overflow: hidden;
 }
 
-.filmstrip > div > ul {
+[class*="filmstrip-"] > div > ul {
   position: relative;
   display: block;
   padding: 0;
@@ -26,24 +32,17 @@ https://github.com/eBay/skin/blob/master/LICENSE.txt"
   word-spacing: -4px;
 }
 
-.filmstrip > div > ul:before,
-.filmstrip > div > ul:after {
-  display: table;
-  content: " ";
-}
-
-.filmstrip > div > ul:after {
-  clear: both;
-}
-
-.filmstrip > div > ul > li {
+[class*="filmstrip-"] > div > ul > li {
   display: inline-block;
+  width: 99%;
+  margin: 0 .5%;
   word-spacing: normal;
   white-space: normal;
   list-style-type: none;
 }
 
-.filmstrip > button {
+[class*="filmstrip-"] > button {
+  position: absolute;
   display: inline-block;
   width: 13px;
   height: 20px;
@@ -59,31 +58,64 @@ https://github.com/eBay/skin/blob/master/LICENSE.txt"
           border-radius: 3px;
 }
 
-.filmstrip > button:first-child {
+[class*="filmstrip-"] > button:first-child {
+  left: -18px;
   background-position: -1px -138px;
 }
 
-.filmstrip > button[disabled] {
+[class*="filmstrip-"] > button[disabled] {
   background-position: -84px -138px;
 }
 
-.filmstrip > button[disabled]:first-child {
+[class*="filmstrip-"] > button[disabled]:first-child {
   background-position: -67px -138px;
 }
 
-.no-touch .filmstrip > button:hover {
+.filmstrip-2 > div > ul > li {
+  width: 49%;
+}
+
+.filmstrip-3 > div > ul > li {
+  width: 32.333333333333%;
+}
+
+.filmstrip-4 > div > ul > li {
+  width: 24%;
+}
+
+.filmstrip-5 > div > ul > li {
+  width: 19%;
+}
+
+.filmstrip-6 > div > ul > li {
+  width: 15.6666666666666666%;
+}
+
+.filmstrip-7 > div > ul > li {
+  width: 13.2857143%;
+}
+
+.filmstrip-8 > div > ul > li {
+  width: 11.5%;
+}
+
+.no-touch .filmstrip > button:hover,
+.no-touch [class*="filmstrip-"] > button:hover {
   background-position: -51px -138px;
   border: 1px solid transparent;
 }
 
-.no-touch .filmstrip > button:first-child:hover {
+.no-touch .filmstrip > button:first-child:hover,
+.no-touch [class*="filmstrip-"] > button:first-child:hover {
   background-position: -17px -138px;
 }
 
-.no-touch .filmstrip > button[disabled]:hover {
+.no-touch .filmstrip > button[disabled]:hover,
+.no-touch [class*="filmstrip-"] > button[disabled]:hover {
   background-position: -84px -138px;
 }
 
-.no-touch .filmstrip > button[disabled]:first-child:hover {
+.no-touch .filmstrip > button[disabled]:first-child:hover,
+.no-touch [class*="filmstrip-"] > button[disabled]:first-child:hover {
   background-position: -67px -138px;
 }

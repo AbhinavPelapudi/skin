@@ -74,37 +74,37 @@
 }
 
 html:not(.lt-ie9){
-	& .corner-promo-green > span{
+	.corner-promo-green > span{
 		.gradient(@itemBoxPromoGreenStart, @itemBoxPromoGreenStart, @itemBoxPromoGreenEnd);
 	}
 
-	& .corner-promo-orange > span{
+	.corner-promo-orange > span{
 		.gradient-to-top-left(@itemBoxPromoOrangeStart, @itemBoxPromoOrangeStart, @itemBoxPromoOrangeEnd);
 	}
 }
 
 .lt-ie9{
-	& .corner-promo-green > span{
+	.corner-promo-green,
+	.corner-promo-orange{
+		top: 0;
+		left: 0;
+	}
+
+	.corner-promo-green > span{
 		background:@itemBoxPromoGreenStart;
 	}
 
-	& .corner-promo-orange > span{
+	.corner-promo-orange > span{
 		background:@itemBoxPromoOrangeStart;
 	}
 
-	& .corner-promo-green > span,
-	& .corner-promo-orange > span{
-		/* IE8+ - must be on one line, unfortunately */ 
-   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.7660444431189781, M12=0.6427876096865391, M21=-0.6427876096865391, M22=0.7660444431189781, SizingMethod='auto expand')";
-		margin-left: 11px; 
-   		margin-top: -40px;
+	.corner-promo-green:before,
+	.corner-promo-green:after,
+	.corner-promo-orange:before,
+	.corner-promo-orange:after{
+		display: none;
 	}
 
-	& .large > .corner-promo-green > span,
-	& .large > .corner-promo-orange > span{
-		margin-left: 10px; 
-   		margin-top: -57px;
-	}
 }
 
 

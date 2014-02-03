@@ -1,20 +1,27 @@
 /*!
-Skin v0.0.5
+Skin v0.0.9
 Copyright 2013 eBay! Inc. All rights reserved.
 Licensed under the BSD License.
 https://github.com/eBay/skin/blob/master/LICENSE.txt"
 */
 /**/
 
-.pagination > [rel="next"],
-.pagination > [rel="prev"] {
+.pagination li {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+.pagination [rel="next"],
+.pagination [rel="prev"] {
   position: relative;
+  top: -1px;
   display: inline-block;
   width: 37px;
   height: 36px;
   padding: 0;
   margin: 0;
-  vertical-align: top;
+  vertical-align: middle;
   background-image: url('http://p.ebaystatic.com/aw/cmp/ds3/skin_sprite2.png');
   background-position: -3px -165px;
   border: none;
@@ -26,19 +33,19 @@ https://github.com/eBay/skin/blob/master/LICENSE.txt"
           box-shadow: none;
 }
 
-.pagination > [rel="prev"]:disabled {
+.pagination [rel="prev"]:disabled {
   background-position: -167px -165px;
 }
 
-.pagination > [rel="next"] {
+.pagination [rel="next"] {
   background-position: -85px -165px;
 }
 
-.pagination > [rel="next"]:disabled {
+.pagination [rel="next"]:disabled {
   background-position: -208px -165px;
 }
 
-.pagination > a {
+.pagination a {
   display: inline-block;
   width: 34px;
   height: 34px;
@@ -52,7 +59,7 @@ https://github.com/eBay/skin/blob/master/LICENSE.txt"
           border-radius: 3px;
 }
 
-.pagination > a.current {
+.pagination a.current {
   color: #333333;
   text-decoration: none;
   background-color: #fff;
@@ -66,7 +73,13 @@ https://github.com/eBay/skin/blob/master/LICENSE.txt"
           transition: background-color 0.17s ease;
 }
 
-.no-touch .pagination > [rel="prev"]:hover {
+ul.pagination {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.no-touch .pagination [rel="prev"]:hover {
   background-position: -43px -165px;
   border: none;
   -webkit-transition: box-shadow 0.05s linear;
@@ -75,7 +88,7 @@ https://github.com/eBay/skin/blob/master/LICENSE.txt"
           transition: box-shadow 0.05s linear;
 }
 
-.no-touch .pagination > [rel="next"]:hover {
+.no-touch .pagination [rel="next"]:hover {
   background-position: -126px -165px;
   border: none;
   -webkit-transition: box-shadow 0.05s linear;
@@ -84,7 +97,7 @@ https://github.com/eBay/skin/blob/master/LICENSE.txt"
           transition: box-shadow 0.05s linear;
 }
 
-.no-touch .pagination > a:hover {
+.no-touch .pagination a:hover {
   color: #333333;
   text-decoration: none;
   background-color: #fff;
@@ -98,30 +111,43 @@ https://github.com/eBay/skin/blob/master/LICENSE.txt"
           transition: background-color 0.17s ease;
 }
 
-.no-touch .pagination > a.current:hover {
+.no-touch .pagination a.current:hover {
   cursor: default;
   border: 1px solid #dddddd;
   user-select: none;
 }
 
-.pagination-alternate > a {
+.pagination-alternate li {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+.pagination-alternate a {
   display: inline-block;
   width: 34px;
   height: 34px;
   line-height: 34px;
   text-align: center;
   text-decoration: none;
+  border: 1px solid transparent;
   -webkit-border-radius: 3px;
      -moz-border-radius: 3px;
           border-radius: 3px;
 }
 
-.pagination-alternate > a.current {
+.pagination-alternate a.current {
   color: #333333;
   text-decoration: none;
   cursor: default;
   background-color: #fff;
   border: 1px solid #c9dde9;
+}
+
+ul.pagination-alternate {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
 }
 
 .no-touch .pagination-alternate a:hover {

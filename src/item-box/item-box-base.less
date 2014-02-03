@@ -5,12 +5,18 @@
 .item-box,
 [class *= "item-box-"]{
 	position: 		relative;
-	display: 		table-cell;
-	vertical-align:	middle;
+	display: 		inline-block;
 	border: 		@itemBoxBorder;
 	background: 	#fff;
 	text-align:		center;
 	.border-radius(3px);
+
+	& > div:first-child{
+		height: 100%;
+		width: 0;
+		display: inline-block;
+		vertical-align: middle;
+	}
 
 	&:before{
 		content: 	"";
