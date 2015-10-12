@@ -1,0 +1,44 @@
+@import "../core/mixins.less";
+
+.spinner-icon() {
+    display: inline-block;
+}
+
+.spinner-svg-icon() {
+    .spinner-icon();
+    background: url("//secureir.ebaystatic.com/pictures/skin/gif/spinner.svg") no-repeat center center;
+    background-size: cover;
+    animation: spin 600ms linear infinite;
+    @keyframes spin { 
+        from { 
+            transform: rotate(0deg); 
+        } to { 
+            transform: rotate(360deg); 
+        }
+    }
+    
+}
+
+.spinner {
+   .spinner-svg-icon();
+   .size(30px, 30px);
+}
+
+.spinner--large {
+    .size(60px, 60px);
+}
+
+/* Fallback for Andriod Browsers */
+
+.spinner-gif {
+	&.spinner {
+	   .spinner-icon();
+       background: url("//secureir.ebaystatic.com/pictures/skin/gif/spinner.gif") no-repeat center center;
+       animation: none;
+	}
+    
+    &.spinner--large {
+        .spinner-icon();
+        background: url("//secureir.ebaystatic.com/pictures/skin/gif/spinner@2x.gif") no-repeat center center;
+    }
+}

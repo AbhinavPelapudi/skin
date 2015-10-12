@@ -1,0 +1,176 @@
+@import "../core/mixins.less";
+
+// Dialog Module variables
+@dialog-bg-mask: rgba(0, 0, 0, 0.6);
+@dialog-default-width: 100%;
+@dialog-padding: .5rem;
+@dialog-zindex: 1000;
+
+.dialog[role=dialog] {
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    position: fixed;
+    background: @color-cell-background;
+    z-index: @dialog-zindex;
+    -webkit-overflow-scrolling: touch;
+
+    &[aria-hidden="true"] {
+        opacity: 0;
+        backface-visibility: hidden;
+    }
+    > [role=document] {
+        background: @color-view-background;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        overflow-x: hidden;
+        position: relative;
+        div {
+            padding: @dialog-padding;
+        }
+    }
+    header,
+    > [role=document] > div:first-child {
+        border-bottom: @border-grey;
+        background: @color-cell-background;
+        padding: 0;
+        > button {
+            .font-mixin;
+            font-size: @font-size-medium;
+            float: right;
+            border: none;
+            background: none;
+            position: relative;
+            padding: .75rem;
+            &:after {
+                .icon-close-mixin;
+            }
+        }
+        > h2 {
+            margin: 0;
+            padding: .75rem;
+            text-align: center;
+            font-size: @font-size-large;
+            font-weight: @font-weight-regular;
+        }
+    }
+}
+.dialog[role=dialog] {
+    &.dialog--fullpage {
+        top: 0;
+        left: 0;
+        bottom: 0;
+        transition: opacity .15s ease-out;
+        &[aria-hidden="false"] {
+            transition: opacity .15s ease-in;
+        }
+    }
+}
+
+.dialog[role=dialog] {
+    &.dialog--subpage {
+        right: 0;
+        opacity: 1;
+        overflow-y: scroll;
+        transform: translateX(100%);
+        transition: transform 0.35s;
+        &[aria-hidden="false"] {
+            transform: translateX(0);
+        }
+        header,
+        > [role=document] > div:first-child {
+            > button {
+                cursor: pointer;
+                color: @charcoal;
+                font-size: @font-size-large;
+                vertical-align: middle;
+                float: left;
+                &:after {
+                    .icon-header-chevronleft-mixin;
+                }
+            }
+        }
+    }
+}
+
+.mask {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    background: @black;
+    opacity: 0;
+    transition: opacity 0.35s, width 0s 0.35s, height 0s 0.35s;
+}
+.dialog[aria-hidden="false"] + .mask {
+    width: 100%;
+    height: 100%;
+    opacity: .6;
+    transition: opacity 0.35s;
+}
+.dialog[role=dialog] {
+    &.dialog--panel {
+        left: 0;
+        opacity: 1;
+        overflow-y: scroll;
+        transform: translateX(-100%);
+        transition: transform 0.35s;
+        &[aria-hidden="false"] {
+            transform: translateX(0);
+        }
+        header,
+        > [role=document] > div:first-child {
+            background: @color-view-background;
+            > button {
+                .mixin-clipped;
+                &:focus {
+                    clip: auto;
+                    height: auto;
+                    width: auto;
+                    z-index: 1;
+                    padding: .75rem;
+                }
+            }
+        }
+
+    }
+}
+
+@media (min-width: 320px) {
+    .dialog[role=dialog] {
+        &.dialog--panel {
+            width: 300px;
+            transform: translateX(-300px);
+        }
+    }
+}
+
+.dialog[role=dialog][aria-hidden="true"] {
+    display: none;
+}
+.dialog[role=dialog][aria-hidden="false"] {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+// Large screens
+.skin-large .dialog[role=dialog] {
+    background: @dialog-bg-mask;
+    > [role=document] {
+        max-width: 800px;
+        position: absolute;
+        margin: auto;
+        height: auto;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+}

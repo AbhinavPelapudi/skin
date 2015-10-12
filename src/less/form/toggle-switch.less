@@ -1,0 +1,79 @@
+@import "../core/variables.less";
+@import "../core/mixins.less";
+
+// Switch 
+//-----------------
+.switch {
+    position: relative;
+    display: flex;
+    width: 100%;
+    > label {
+        flex: 1;
+        font-size: @font-size-medium;
+        padding: .875rem;
+        vertical-align: middle;
+    }
+    > input {
+        opacity: 0;
+        padding: 0;
+        z-index: 5;
+        position: absolute;
+        height: 1.5rem;
+        width: 2.25rem;
+        margin: .625rem 0 .625rem 1rem;
+        cursor: pointer;
+        &[disabled], &.disabled, fieldset[disabled] & {
+            cursor: not-allowed;
+            + span {
+                cursor: not-allowed;
+                .opacity(.5);
+            }
+        }
+        &:checked {
+            margin-left: 0.75rem;
+        }
+        + span {
+            margin: .625rem;
+            background: #B9B8B8 none repeat scroll 0 0;
+            border-radius: 25rem;
+            color: transparent;
+            cursor: pointer;
+            display: block;
+            position: relative;
+            text-indent: 100%;
+            transition: left 0.15s ease-out 0s;
+            width: 2.5rem;
+            height: 1.5rem;
+            &:after {
+                background: #ffffff none repeat scroll 0 0;
+                border-radius: 50%;
+                content: "";
+                display: block;
+                height: 1rem;
+                left: 0.25rem;
+                position: absolute;
+                top: 0.25rem;
+                transform: translate3d(0, 0, 0);
+                transition: left 0.15s ease-out 0s;
+                width: 1rem;
+            }
+        }
+    }
+}
+
+.switch input:checked + span {
+    background: #0554BA none repeat scroll 0 0;
+    &:after {
+        left: 1.25rem;
+    }
+}
+/* Focus state */
+
+.switch input:focus + span {
+    outline: 1px dotted #666;
+}
+@media screen and (-ms-high-contrast: active) {
+    .switch > input {
+        opacity: 1;
+    }
+}

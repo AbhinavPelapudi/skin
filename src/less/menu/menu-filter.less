@@ -1,0 +1,81 @@
+@import "../core/variables.less";
+@import "../core/mixins.less";
+
+// Dropdown Menu
+
+ @menu-item-padding-x: @font-size-medium;
+ @menu-item-padding-y: @menu-item-padding-x * .75;
+ @menu-line-height: @font-size-medium * 1.5;
+
+.menu {
+    > .btn {
+        font-size: @font-size-large;
+        padding: @menu-item-padding-y @menu-item-padding-x;
+        color: #000;
+        &:after {
+            .mixin-arrow;
+            .font-mixin;
+        }
+    }
+    > .btn[aria-expanded="false"] {
+        &:after {
+            .mixin-arrow-down-content;
+        }
+    }
+    > .btn[aria-expanded="true"] {
+        &:after {
+            .mixin-arrow-up-content;
+        }
+    }
+    > .btn[aria-expanded="true"] + [role=menu] {
+        display: block;
+    }
+    > [role=menu] {
+        background-color: @color-cell-background;
+        border-bottom: 1px solid @smoke;
+        display: none;
+        .ul-reset();
+
+        > [role=menuitemradio], [role=menuitemcheckbox] {
+            position: relative;
+            padding-left: @menu-item-padding-x;
+            line-height: 2.5rem;
+            white-space: nowrap;
+            font-size: @font-size-medium;
+            cursor: pointer;
+            &:first-child {
+                border-top: 0;
+            }
+            &:before {
+                display: none;
+            }
+        }
+        > [aria-checked=true] {
+            font-weight: 400;
+            &:after {
+               .mixin-checkbox-icon();
+            }
+        }
+    }
+}
+
+//Tablet Rules
+.menu-medium {
+    position: relative;
+    > .btn {
+        font-size: @font-size-large;
+        padding: 0.75rem 7rem;
+        background: @smoke;
+        border: 1px solid #ccc;
+    }
+    > [role=menu] {
+        border-bottom: none;
+        position: absolute;
+        min-width: 225px;
+        left: 2rem;
+        > [role=menuitemradio], [role=menuitemcheckbox] {
+            border-top: none;
+            padding: .75rem 2rem;
+        }
+    }
+}

@@ -1,0 +1,42 @@
+@import "../core/mixins.less";
+
+.mixin-list-nav() {
+    line-height: 2.5rem;
+    font-size: @font-size-small;
+    font-weight: 300;
+}
+.mixin-list-icons() {
+    .font-mixin;
+    position: absolute;
+    font-size: .714rem;
+    display: inline-block;
+    text-align: center;
+}
+
+.mixin-icon-chevronup() {
+    .icon-chevronup-mixin;
+    left: .7rem;
+}
+.mixin-icon-chevronup, .mixin-icon-chevrondown {
+    .mixin-list-icons;
+}
+
+.mixin-icon-chevrondown() {
+    .icon-chevrondown-mixin;
+}
+.mixin-list-nav-button() {
+    text-align: left;
+    width: 100%;
+    border: 0;
+    padding: 0;
+    display: block;
+    background-color: transparent;
+    line-height: 2.5rem;
+    color: @list-item-text-color;
+}
+.mixin-list-nav-span() {
+    margin-left: 2.1rem;
+    display: block;
+    height: 100%;
+    border-bottom: @list-item-border-bottom;
+}

@@ -1,0 +1,14 @@
+
+@btn-link-color: #0654ba;
+@btn-link-hover-color: #00489f;
+
+a.btn--link {
+    .font-define(@font-size-medium, 500, @color-cta, none);
+    border: none;
+    
+    &[aria-pressed="true"] {
+        color: @btn-link-hover-color;
+        text-decoration: none;
+    }
+
+}

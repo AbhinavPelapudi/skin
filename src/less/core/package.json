@@ -1,0 +1,8 @@
+{
+    "description": "skin core less - variables, mixins, atoms",
+    "raptor": {
+        "dependencies": [
+            {"path": "core.less"}
+        ]
+    }
+}

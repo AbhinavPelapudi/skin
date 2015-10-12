@@ -1,0 +1,90 @@
+// Checkboxes and radios
+//
+// Indent the labels to position radios buttons and checkboxes
+.radios,
+.checkboxes {
+    > fieldset > span {
+        margin: 0 1.625rem 1rem 0;
+    }
+    > fieldset > div {
+        margin-bottom: .625rem;
+    }
+    label {
+        font-weight: normal;
+    }
+    legend {
+        font-size: @font-size-medium;
+        margin-bottom: 1rem;
+        padding-bottom: .5rem;
+    }
+    fieldset {
+        border: 0;
+    }
+    input[type=radio],
+    input[type=checkbox] {
+        position: absolute;
+        opacity: 0;
+        z-index: 2;
+        &[disabled] {
+            + label,
+            + span,
+            + span + label {
+                .opacity(.5);
+            }
+        }
+        + label,
+        + span {
+            position: relative;
+            padding-left: 1.5rem;
+            font-size: @font-size-small;
+            color: @charcoal;
+            &:before {
+                .mixin-radiocheckbox-icons;
+                color: #B9B8B8;
+            }
+        }
+    }
+    input[type="radio"] + label,
+    input[type="radio"] + span {
+        &:before {
+            .icon-radio-unchecked-mixin;
+        }
+    }
+    input[type="checkbox"] + label,
+    input[type="checkbox"] + span {
+        &:before {
+            .icon-chkbox-unchecked-mixin;
+        }
+    }
+    input[type="radio"]:checked + label,
+    input[type="radio"]:checked + span,
+    input[type="checkbox"]:checked + label,
+    input[type="checkbox"]:checked + span {
+        &:before {
+           .mixin-radiocheckbox-icons();
+            color: #0556ba;
+        }
+    }
+    input[type="radio"]:checked + label,
+    input[type="radio"]:checked + span {
+        &:before {
+            .icon-radio-checked-mixin;
+            .mixin-bounce-animation();
+        }
+    }
+    input[type="checkbox"]:checked + label,
+    input[type="checkbox"]:checked + span {
+        &:before {
+            .icon-chkbox-checked-mixin;
+            .mixin-bounce-animation();
+        }
+    }
+    input[type="radio"]:focus + label,
+    input[type="radio"]:focus + span,
+    input[type="checkbox"]:focus + label,
+    input[type="checkbox"]:focus + span {
+        &:before {
+            outline: 1px dotted #666;
+        }
+    }
+}
